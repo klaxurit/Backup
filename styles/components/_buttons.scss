@@ -3,24 +3,35 @@ $white-hover-color: #FFFFFF1F;
 $white-pressed-color: #FFFFFF29;
 @import '../utils/variables';
 
+.test {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
 .button {
   &__primary {
     background: $primary-lighter;
     color: white;
     font-weight: 600;
-
+    
     &:focus {
       background: $primary-focus-gradient;
       border: 1px solid $primary-light;
       box-shadow: $primary-box-shadow;
     }
-
+    
     &:hover {
       background: $primary-pure;
     }
-
+    
     &:active {
       background: $primary-medium;
+    }
+    
+    &--spinner {
+      color: $primary-blacker-bis;
+      background: $primary-lighter;
     }
   }
 
@@ -42,6 +53,11 @@ $white-pressed-color: #FFFFFF29;
     &:active {
       background: $primary-dark;
     }
+
+    &--spinner {
+      background: $primary-black;
+      color: $primary-lighter;
+    }
   }
 
   &__white {
@@ -62,6 +78,11 @@ $white-pressed-color: #FFFFFF29;
     &:active {
       background: $white-pressed-color;
     }
+
+    &--spinner {
+      background: $white-hover-color;
+      color: white;
+    }
   }
 
   &--L, &--M, &--S {
@@ -78,7 +99,7 @@ $white-pressed-color: #FFFFFF29;
     height: 56px;
     width: 110px;
     border-radius: 16px;
-    padding: 16px 20px 18px 20px;
+    // padding: 16px 20px 18px 20px;
   }
   
   &--M {
@@ -87,7 +108,7 @@ $white-pressed-color: #FFFFFF29;
     height: 48px;
     width: 94px;
     border-radius: 14px;
-    padding: 16px 16px 18px 16px;
+    // padding: 16px 16px 18px 16px;
   }
   
   &--S {
@@ -96,6 +117,11 @@ $white-pressed-color: #FFFFFF29;
     height: 40px;
     width: 82px;
     border-radius: 12px;
-    padding: 8px 14px 10px 14px;
+    // padding: 8px 14px 10px 14px;
+  }
+
+  &--disabled {
+    color: $neutral-medium;
+    background-color: $neutral-black;
   }
 }
