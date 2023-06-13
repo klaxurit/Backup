@@ -1,0 +1,77 @@
+// COLORS
+
+/* Primary - Tanzanite */
+$primary-lighter: #9a78ff;
+$primary-light: #7950f2;
+$primary-light-bis: #724be5;
+$primary-pure: #6341c8;
+$primary-medium: #4d319d;
+$primary-dark: #241550;
+$primary-darker: #1b103f;
+$primary-black: #16102c;
+$primary-blacker: #100a25;
+$primary-blacker-bis: #09031d;
+
+/* Neutral - Onyx */
+$white: #ffffff;
+$neutral-lighter: #d0cfd5;
+$neutral-light: #a29fab;
+$neutral-pure: #868391;
+$neutral-pure-bis: #5c586c;
+$neutral-medium: #4e495f;
+$neutral-dark: #423c58;
+$neutral-darker: #362f50;
+$neutral-black: #29233d;
+$neutral-blacker: #1f1a34;
+
+/* Success - Amazonite */
+$success: #00ffa3;
+
+// Types
+body {
+  line-height: 160%;
+  font-size: 16px;
+}
+h1 {
+  font-size: 56px;
+  line-height: 120%;
+}
+h2 {
+  font-size: 48px;
+  line-height: 120%;
+}
+h3 {
+  font-size: 40px;
+  line-height: 120%;
+}
+h4 {
+  font-size: 32px;
+  line-height: 120%;
+}
+h5 {
+  font-size: 28px;
+  line-height: 120%;
+}
+h6 {
+  font-size: 24px;
+  line-height: 120%;
+}
+p {
+  font-size: 18px;
+  .large {
+    font-size: 20px;
+  }
+  .small {
+    font-size: 12px;
+  }
+  .mini {
+    font-size: 10px;
+  }
+  .micro {
+    font-size: 8px;
+    line-height: 120%;
+  }
+}
+a {
+  font-size: 14px;
+}
