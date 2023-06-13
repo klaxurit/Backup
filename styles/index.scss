@@ -1,8 +1,9 @@
 @import "./utils/variables";
-@import "./components/buttons";
+@import "./components/button";
 @import "./components/favicon";
 @import "./components/logo";
-@import "./components/links";
+@import "./components/link";
+@import "./components/icon";
 
 body {
   background-color: $primary-blacker-bis;

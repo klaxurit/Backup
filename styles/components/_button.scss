@@ -1,7 +1,7 @@
 $white-color: #ffffff14;
-$white-hover-color: #FFFFFF1F;
-$white-pressed-color: #FFFFFF29;
-@import '../utils/variables';
+$white-hover-color: #ffffff1f;
+$white-pressed-color: #ffffff29;
+@import "../utils/variables";
 
 .test {
   display: grid;
@@ -9,26 +9,30 @@ $white-pressed-color: #FFFFFF29;
   grid-template-rows: repeat(4, 1fr);
 }
 
-.button {
+.btn {
   &__primary {
     background: $primary-lighter;
     color: white;
     font-weight: 600;
-    
+
     &:focus {
       background: $primary-focus-gradient;
       border: 1px solid $primary-light;
       box-shadow: $primary-box-shadow;
     }
-    
+
     &:hover {
+      border: none;
+      box-shadow: none;
       background: $primary-pure;
     }
-    
+
     &:active {
+      border: none;
+      box-shadow: none;
       background: $primary-medium;
     }
-    
+
     &--spinner {
       color: $primary-blacker-bis;
       background: $primary-lighter;
@@ -47,10 +51,14 @@ $white-pressed-color: #FFFFFF29;
     }
 
     &:hover {
+      border: none;
+      box-shadow: none;
       background: $primary-darker;
     }
 
     &:active {
+      box-shadow: none;
+      box-shadow: none;
       background: $primary-dark;
     }
 
@@ -72,10 +80,14 @@ $white-pressed-color: #FFFFFF29;
     }
 
     &:hover {
+      border: none;
+      box-shadow: none;
       background: $white-hover-color;
     }
 
     &:active {
+      box-shadow: none;
+      box-shadow: none;
       background: $white-pressed-color;
     }
 
@@ -85,7 +97,9 @@ $white-pressed-color: #FFFFFF29;
     }
   }
 
-  &--L, &--M, &--S {
+  &--large,
+  &--medium,
+  &--small {
     border: none;
     margin: 5px;
     display: flex;
@@ -93,7 +107,7 @@ $white-pressed-color: #FFFFFF29;
     align-items: center;
   }
 
-  &--L {
+  &--large {
     font-size: 18px;
     line-height: 29px;
     height: 56px;
@@ -101,8 +115,8 @@ $white-pressed-color: #FFFFFF29;
     border-radius: 16px;
     // padding: 16px 20px 18px 20px;
   }
-  
-  &--M {
+
+  &--medium {
     font-size: 16px;
     line-height: 26px;
     height: 48px;
@@ -110,8 +124,8 @@ $white-pressed-color: #FFFFFF29;
     border-radius: 14px;
     // padding: 16px 16px 18px 16px;
   }
-  
-  &--S {
+
+  &--small {
     font-size: 14px;
     line-height: 17px;
     height: 40px;
@@ -123,5 +137,6 @@ $white-pressed-color: #FFFFFF29;
   &--disabled {
     color: $neutral-medium;
     background-color: $neutral-black;
+    fill: $neutral-medium;
   }
 }
