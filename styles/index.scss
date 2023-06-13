@@ -1,1 +1,8 @@
-@use "./utils/variables";
+@import "./utils/variables";
+
+@import "./components/favicon";
+@import "./components/logo";
+
+body {
+  background-color: $primary-blacker-bis;
+}
