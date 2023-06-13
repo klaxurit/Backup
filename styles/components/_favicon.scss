@@ -1,0 +1,17 @@
+.Favicon {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--colored {
+    background-color: $primary-light;
+  }
+  &--white {
+    background-color: $white;
+    .Favicon__vector path {
+      fill: $primary-blacker-bis;
+    }
+  }
+}
