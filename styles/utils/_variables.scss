@@ -11,6 +11,10 @@ $primary-darker: #1b103f;
 $primary-black: #16102c;
 $primary-blacker: #100a25;
 $primary-blacker-bis: #09031d;
+$primary-box-shadow: 0px 0px 0px 6px #7950F23D;
+$primary-focus-gradient: linear-gradient(0deg, #7950F2, #7950F2), linear-gradient(0deg, #6341C8, #6341C8);
+$primary-black-focus-gradient: linear-gradient(0deg, #1B103F, #1B103F), linear-gradient(0deg, #7950F2, #7950F2);
+$white-focus-gradient: linear-gradient(0deg, #7950F2, #7950F2), linear-gradient(0deg, #ffffff1f, #ffffff1f);
 
 /* Neutral - Onyx */
 $white: #ffffff;
@@ -29,6 +33,7 @@ $success: #00ffa3;
 
 // Types
 body {
+  background-color: #09031D;
   line-height: 160%;
   font-size: 16px;
 }
@@ -37,10 +42,12 @@ h1 {
   line-height: 120%;
 }
 h2 {
+  color: white;
   font-size: 48px;
   line-height: 120%;
 }
 h3 {
+  color: white;
   font-size: 40px;
   line-height: 120%;
 }

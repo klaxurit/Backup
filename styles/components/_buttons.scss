@@ -1,0 +1,101 @@
+$white-color: #ffffff14;
+$white-hover-color: #FFFFFF1F;
+$white-pressed-color: #FFFFFF29;
+@import '../utils/variables';
+
+.button {
+  &__primary {
+    background: $primary-lighter;
+    color: white;
+    font-weight: 600;
+
+    &:focus {
+      background: $primary-focus-gradient;
+      border: 1px solid $primary-light;
+      box-shadow: $primary-box-shadow;
+    }
+
+    &:hover {
+      background: $primary-pure;
+    }
+
+    &:active {
+      background: $primary-medium;
+    }
+  }
+
+  &__shade {
+    background: $primary-black;
+    color: $primary-lighter;
+    font-weight: 600;
+
+    &:focus {
+      background: $primary-black-focus-gradient;
+      border: 1px solid $primary-light;
+      box-shadow: $primary-box-shadow;
+    }
+
+    &:hover {
+      background: $primary-darker;
+    }
+
+    &:active {
+      background: $primary-dark;
+    }
+  }
+
+  &__white {
+    background: $white-hover-color;
+    color: white;
+    font-weight: 600;
+
+    &:focus {
+      background: $white-hover-color;
+      border: 1px solid $primary-light;
+      box-shadow: $primary-box-shadow;
+    }
+
+    &:hover {
+      background: $white-hover-color;
+    }
+
+    &:active {
+      background: $white-pressed-color;
+    }
+  }
+
+  &--L, &--M, &--S {
+    border: none;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--L {
+    font-size: 18px;
+    line-height: 29px;
+    height: 56px;
+    width: 110px;
+    border-radius: 16px;
+    padding: 16px 20px 18px 20px;
+  }
+  
+  &--M {
+    font-size: 16px;
+    line-height: 26px;
+    height: 48px;
+    width: 94px;
+    border-radius: 14px;
+    padding: 16px 16px 18px 16px;
+  }
+  
+  &--S {
+    font-size: 14px;
+    line-height: 17px;
+    height: 40px;
+    width: 82px;
+    border-radius: 12px;
+    padding: 8px 14px 10px 14px;
+  }
+}
