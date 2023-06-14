@@ -1,7 +1,4 @@
-import Spinner from "./components/Spinner";
-import LogoTwitter from "./components/LogoTwitter";
-import LogoEqual from "./components/LogoEqual";
-import LogoArrows from "./components/LogoArrows";
+import { LogoTwitter, LogoEqual, LogoArrows, LogoCross, Spinner } from "./components/SVGs";
 
 const ButtonTest = () => {
   return (
@@ -26,10 +23,10 @@ const ButtonTest = () => {
       <button className="btn--medium btn__shade--spinner"><Spinner/></button>
       <button className="btn--small btn__white--spinner"><Spinner/></button>
 
-      <button className="link__primary">Links</button>
-      <button className="link__white">Links</button>
-      <button className="link__white link__white--disabled">Links</button>
-      <button className="link__primary link__primary--disabled">Links</button>
+      <a href="#" className="link__primary">Links</a>
+      <a href="#" className="link__white">Links</a>
+      <a href="#" className="link__white link__white--disabled">Links</a>
+      <a href="#" className="link__primary link__primary--disabled">Links</a>
 
       <button className="icon--medium icon__white"><LogoEqual/></button>
       <button className="icon--medium icon__grey"><LogoTwitter/></button>
@@ -38,6 +35,11 @@ const ButtonTest = () => {
       <button className="icon--small icon__grey"><LogoTwitter/></button>
       <button className="icon--small icon__shade"><LogoArrows/></button>
       <button className="icon--small icon--disabled"><LogoArrows/></button>
+      <button className="icon--small icon--disabled"><LogoTwitter/></button>
+      <button className="icon--small icon--disabled"><LogoEqual/></button>
+
+      <a href="#" className="iconLink"><LogoTwitter/></a>
+      <a href="#" className="iconLink iconLink--cancel"><LogoCross/></a>
     </div>
   );
 }

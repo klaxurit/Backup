@@ -1,0 +1,29 @@
+.iconLink {
+  width: 17px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  color: $neutral-pure-bis;
+  background-color: $primary-blacker-bis;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  &:focus {
+    border-radius: 5px;
+    color: $neutral-pure;
+    border: 1px solid $primary-light;
+  }
+  &:hover {
+    color: $neutral-pure;
+  }
+  &:active {
+    color: $neutral-light;
+  }
+  &--cancel {
+    &:focus {
+      box-shadow: 0px 0px 0px 6px #7950F23D;
+
+    }
+  }
+}

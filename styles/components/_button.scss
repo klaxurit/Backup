@@ -7,6 +7,7 @@ $white-pressed-color: #ffffff29;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .btn {
@@ -16,7 +17,7 @@ $white-pressed-color: #ffffff29;
     font-weight: 600;
 
     &:focus {
-      background: $primary-focus-gradient;
+      background: $primary-pure;
       border: 1px solid $primary-light;
       box-shadow: $primary-box-shadow;
     }
@@ -86,7 +87,7 @@ $white-pressed-color: #ffffff29;
     }
 
     &:active {
-      box-shadow: none;
+      border: none;
       box-shadow: none;
       background: $white-pressed-color;
     }
