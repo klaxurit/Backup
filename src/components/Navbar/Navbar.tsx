@@ -1,29 +1,21 @@
 import { useEffect, useState } from "react";
 import { Favicon, Logo, LogoMenu, LogoCross } from "../SVGs";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const Navbar = () => {
+  const displayFormat = useSelector((state: RootState) => state.displayFormat.displayFormat);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (displayFormat === 'desktop') {
+      setIsMenuOpen(false);
+    }
+  }, [displayFormat]);
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  // Écouteur d'événements pour le redimensionnement de la fenêtre
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    // Ajoute l'écouteur d'événements lors du montage du composant
-    window.addEventListener('resize', handleResize);
-
-    // Supprime l'écouteur d'événements lors du démontage du composant
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <nav className="navbar">
