@@ -1,9 +1,11 @@
 import ButtonTest from './ButtonTest';
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return(
     <>
-      <ButtonTest/>
+      <Navbar/>
+      {/* <ButtonTest/> */}
     </>
   );
 }

@@ -1,0 +1,117 @@
+@import '../utils/variables';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px;
+
+
+  &__logo {
+    &--mobile {
+      .Favicon {
+        &--white {
+          width: 32px;
+          height: 32px;
+        }
+        &__vector {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+        .Favicon {
+          &--white {
+            width: 24px;
+            height: 24px;
+          }
+          &__vector{
+            width: 14px;
+            height: 14px;
+          }
+        }
+        .Logo__brand {
+          width: 87px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    &--mobile {
+      display: block;
+      .icon--small {
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+      }
+      .icon--small--cross {
+        padding: 13px;
+        width: 14px;
+        height: 14px;
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+      align-items: center;
+      gap: 32px;
+      .btn--small {
+        height: 40px;
+        width: 65px;
+        border-radius: 12px;
+        padding: 8px 14px 8px 14px;
+      }
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-blacker-bis;
+        z-index: 1000;
+        .btn--small {
+          margin-bottom: 300px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        &.open {
+          display: flex;
+          position: static;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    width: 20px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+}

@@ -5,7 +5,9 @@
 @import "./components/link";
 @import "./components/icon";
 @import "./components/iconLink";
+@import "./components/navbar";
 
 body {
   background-color: $primary-blacker-bis;
+  overflow-x: hidden;
 }
