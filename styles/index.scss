@@ -1,4 +1,6 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./layout/default.scss";
 @import "./components/button";
 @import "./components/favicon";
 @import "./components/logo";
@@ -6,8 +8,3 @@
 @import "./components/icon";
 @import "./components/iconLink";
 @import "./components/navbar";
-
-body {
-  background-color: $primary-blacker-bis;
-  overflow-x: hidden;
-}

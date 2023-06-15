@@ -1,45 +1,32 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Favicon, Logo, LogoMenu, LogoCross } from "../SVGs";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
 
 const Navbar = () => {
-  const displayFormat = useSelector((state: RootState) => state.displayFormat.displayFormat);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (displayFormat === 'desktop') {
-      setIsMenuOpen(false);
-    }
-  }, [displayFormat]);
-
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar__logo--mobile">
+    <nav className="Navbar">
+      <div className="Navbar__logo--mobile">
         {/* Mobile */}
         <Favicon color={false} />
       </div>
-      <div className="navbar__logo--desktop">
+      <div className="Navbar__logo--desktop">
         {/* Desktop */}
         <Logo color={false} />
       </div>
 
-      <div className="navbar__menu">
+      <div className="Navbar__menu">
         {/* Mobile */}
-        <div className="navbar__menu--mobile" onClick={handleMenuClick}>
-          { isMenuOpen ? <LogoCross className="icon--small icon--small--cross icon__white" /> : <LogoMenu className="icon--small icon__white" /> }
+        <div className="Navbar__menu--mobile" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          { isMenuOpen ? <LogoCross className="Icon--small Icon--small--cross Icon__white" /> : <LogoMenu className="Icon--small Icon__white" /> }
         </div>
 
         {/* Desktop */}
-        <div className={`navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#" className="link__white">Product</a>
-          <a href="#" className="link__white">Network</a>
-          <a href="#" className="link__white">About</a>
-          <a href="#" className="link__white">FAQ</a>
+        <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
+          <a href="#" className="Navbar__link--white">Product</a>
+          <a href="#" className="Navbar__link--white">Network</a>
+          <a href="#" className="Navbar__link--white">About</a>
+          <a href="#" className="Navbar__link--white">FAQ</a>
           <button className="btn--small btn__primary">Stake</button>
         </div>
       </div>

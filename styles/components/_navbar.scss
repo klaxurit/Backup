@@ -1,11 +1,10 @@
 @import '../utils/variables';
 
-.navbar {
+.Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center; 
   padding: 20px;
-
 
   &__logo {
     &--mobile {
@@ -48,18 +47,18 @@
   &__menu {
     &--mobile {
       display: block;
-      .icon--small {
+      .Icon--small {
         padding: 10px;
         width: 20px;
         height: 20px;
       }
-      .icon--small--cross {
+      .Icon--small--cross {
         padding: 13px;
         width: 14px;
         height: 14px;
       }
 
-      @media screen and (min-width: 768px) {
+      @media #{$sm}{
         display: none;
       }
     }
@@ -91,12 +90,17 @@
         }
       }
 
-      @media screen and (min-width: 768px) {
+      @media #{$sm} {
         display: flex;
+        flex-direction: row;
         &.open {
           display: flex;
+          flex-direction: row;
           position: static;
           background-color: transparent;
+          .btn--small {
+            margin-bottom: 0px;
+        }
         }
       }
     }
@@ -106,12 +110,74 @@
     display: flex;
     width: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media #{$sm} {
       display: none;
     }
   }
 
-  &__links {
-    display: flex;
+  &__link {
+
+    &--primary {
+      color: $primary-light;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 29px;
+      height: 56px;
+      width: 110px;
+      border-radius: 16px;
+      padding: 0;
+      margin: 0;
+
+      &:hover {
+        color: $primary-lighter;
+      }
+
+      &:active {
+        color: $primary-light;
+      }
+    }
+
+    &--white {
+      color: #FFFFFF;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 500;
+      height: 17px;
+      width: 50px;
+      border-radius: 5px;
+      padding: 2px;
+    }
+
+    &--primary, &--white {
+      background: none;
+      border: solid 1px transparent;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-light;
+        box-shadow: 0px 0px 0px 6px #7950F23D;
+      }
+
+      &--disabled {
+        color: $neutral-dark;
+
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
+
+        &:active {
+          color: $neutral-dark;
+        }
+
+        &:hover {
+          color: $neutral-dark;
+        }
+      }
+    }
   }
 }

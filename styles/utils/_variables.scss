@@ -31,54 +31,10 @@ $neutral-blacker: #1f1a34;
 /* Success - Amazonite */
 $success: #00ffa3;
 
-// Types
-body {
-  background-color: #09031D;
-  line-height: 160%;
-  font-size: 16px;
-}
-h1 {
-  font-size: 56px;
-  line-height: 120%;
-}
-h2 {
-  color: white;
-  font-size: 48px;
-  line-height: 120%;
-}
-h3 {
-  color: white;
-  font-size: 40px;
-  line-height: 120%;
-}
-h4 {
-  font-size: 32px;
-  line-height: 120%;
-}
-h5 {
-  font-size: 28px;
-  line-height: 120%;
-}
-h6 {
-  font-size: 24px;
-  line-height: 120%;
-}
-p {
-  font-size: 18px;
-  .large {
-    font-size: 20px;
-  }
-  .small {
-    font-size: 12px;
-  }
-  .mini {
-    font-size: 10px;
-  }
-  .micro {
-    font-size: 8px;
-    line-height: 120%;
-  }
-}
-a {
-  font-size: 14px;
-}
+/* Media Queries */
+$sm: "(min-width: 576px)";
+$md: "(min-width: 768px)";
+$lg: "(min-width: 992px)";
+$xl: "(min-width: 1200px)";
+$xxl: "(min-width: 1400px)";
+
