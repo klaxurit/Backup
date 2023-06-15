@@ -44,7 +44,7 @@
     }
   }
 
-  &__menu {
+  &__menu { 
     &--mobile {
       display: block;
       .Icon--small {
@@ -65,13 +65,25 @@
     &--desktop {
       display: none;
       align-items: center;
-      gap: 32px;
+      gap: 50px;
       .btn--small {
         height: 40px;
         width: 65px;
         border-radius: 12px;
         padding: 8px 14px 8px 14px;
       }
+      &__item  {
+        position: relative; // position relative pour le parent
+
+        @media #{$sm} {
+          &:hover {
+            .Navbar__dropdown {
+              display: flex; // affiche le menu déroulant lors du survol
+            }
+          }
+        }
+      }
+
 
       &.open {
         display: flex;
@@ -100,8 +112,37 @@
           background-color: transparent;
           .btn--small {
             margin-bottom: 0px;
+          }
         }
-        }
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none; // cache le menu déroulant par défaut
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -20px;
+    top: 30px; // positionne le menu déroulant juste en dessous de l'élément parent
+    background: $primary-black;
+    box-shadow: 0px 8px 8px rgba(5, 1, 20, 0.64);
+    border-radius: 16px;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 12px;
+      gap: 14px;
+      width: 192px;
+      height: 64px;
+      &__img {
+        width: 40px;
+        height: 40px;
       }
     }
   }
@@ -138,14 +179,30 @@
     }
 
     &--white {
-      color: #FFFFFF;
-      font-size: 10px;
+      color: #FFFFFF;  
+      font-size: 14px;
       line-height: 16px;
       font-weight: 500;
       height: 17px;
       width: 50px;
       border-radius: 5px;
       padding: 2px;
+      margin: 0;
+
+      &:hover {
+        color: $neutral-lighter;
+      }
+
+      &:active {
+        color: white;
+      }
+      &--mini {
+        color: $neutral-pure;
+        font-size: 12px;
+        line-height: 19px;
+        margin-top: 0;
+        margin-right: 10px;
+      }
     }
 
     &--primary, &--white {
@@ -179,5 +236,11 @@
         }
       }
     }
+  }
+
+  &__links__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
