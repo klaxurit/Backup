@@ -12,6 +12,7 @@ $white-pressed-color: #ffffff29;
 
 .btn {
   &__primary {
+    cursor: pointer;
     background: $primary-lighter;
     color: white;
     font-weight: 600;
@@ -114,7 +115,6 @@ $white-pressed-color: #ffffff29;
     height: 56px;
     width: 110px;
     border-radius: 16px;
-    // padding: 16px 20px 18px 20px;
   }
 
   &--medium {
@@ -123,7 +123,6 @@ $white-pressed-color: #ffffff29;
     height: 48px;
     width: 94px;
     border-radius: 14px;
-    // padding: 16px 16px 18px 16px;
   }
 
   &--small {
@@ -132,7 +131,6 @@ $white-pressed-color: #ffffff29;
     height: 40px;
     width: 82px;
     border-radius: 12px;
-    // padding: 8px 14px 10px 14px;
   }
 
   &--disabled {

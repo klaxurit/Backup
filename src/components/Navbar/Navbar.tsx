@@ -1,10 +1,33 @@
 import { useState } from "react";
+
+import { Dropdown } from "./Dropdown";
 import { Favicon, Logo, LogoMenu, LogoCross } from "../SVGs";
 
 import stakeLab from "../../assets/images/stakelab.svg"
+import appLab from "../../assets/images/applab.svg"
+import dataLab from "../../assets/images/datalab.svg"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dropdownItems = [
+    {
+      image: stakeLab,
+      title: 'StakeLab',
+      subtitle: 'Live',
+    },
+    {
+      image: appLab,
+      title: 'AppLab',
+      subtitle: 'Coming soon',
+      disabled: true,
+    },
+    {
+      image: dataLab,
+      title: 'DataLab',
+      subtitle: 'Coming soon',
+      disabled: true,
+    },
+  ];
 
   return (
     <nav className="Navbar">
@@ -27,16 +50,8 @@ const Navbar = () => {
         <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
           <div className="Navbar__menu--desktop__item">
             <a href="#" className="Navbar__link--white">Product</a>
-            <div className="Navbar__dropdown">
-              <div className="Navbar__dropdown__item">
-                <img src={stakeLab} alt="StakeLab icon" className="Navbar__dropdown__item__img" />
-                <div className="Navbar__links__wrapper">
-                  <p className="Navbar__link--white">StakeLab</p>
-                  <p className="Navbar__link--white--mini">Live</p>
-                </div>
-              </div>
-              {/* Ajoutez plus d'items ici */}
-            </div>
+            <span className="Navbar__menu--desktop__item__spacer"></span>
+            <Dropdown items={dropdownItems}/>
           </div>
           <a href="#" className="Navbar__link--white">Network</a>
           <a href="#" className="Navbar__link--white">About</a>
