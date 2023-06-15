@@ -58,30 +58,6 @@ const Navbar = () => {
           <a href="#" className="Navbar__link--white">FAQ</a>
           <button className="btn--small btn__primary">Stake</button>
         </div>
-        <div className="Navbar__dropdown">
-          <div className="Navbar__dropdown__item">
-            <img src="path/to/image" alt="Item 1" />
-            <div>
-              <h3>Item Title</h3>
-              <p>Item Subtitle</p>
-            </div>
-          </div>
-          <div className="Navbar__dropdown__item">
-            <img src="path/to/image" alt="Item 1" />
-            <div>
-              <h3>Item Title</h3>
-              <p>Item Subtitle</p>
-            </div>
-          </div>
-          <div className="Navbar__dropdown__item">
-            <img src="path/to/image" alt="Item 1" />
-            <div>
-              <h3>Item Title</h3>
-              <p>Item Subtitle</p>
-            </div>
-          </div>
-          {/* Ajoutez plus d'items ici */}
-        </div>
       </div>
     </nav>
   );

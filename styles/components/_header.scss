@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .header__firstBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+}

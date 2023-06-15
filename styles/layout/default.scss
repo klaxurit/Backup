@@ -1,7 +1,35 @@
+@font-face {
+  font-family: 'TT Hoves Bold Italic';
+  src: url('../../src/assets/fonts/TT Hoves Bold Italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Hoves Bold';
+  src: url('../../src/assets/fonts/TT Hoves Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Hoves Thin';
+  src: url('../../src/assets/fonts/TT Hoves Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Hoves Thin Italic';
+  src: url('../../src/assets/fonts/TT Hoves Thin Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Hoves Regular';
+  src: url('../../src/assets/fonts/TT Hoves Regular.otf') format('opentype');
+}
+
 body {
   background-color: $primary-blacker-bis;
   line-height: 160%;
   font-size: 16px;
+  font-family: 'TT Hoves Regular', sans-serif;
 }
 h1 {
   font-size: 56px;

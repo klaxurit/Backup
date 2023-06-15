@@ -16,8 +16,8 @@ export const Dropdown: React.FC<DropdownProps> = ({ items }) => {
         <a href="#" className={`Navbar__dropdown__item ${item.disabled ? 'isDisabled' : ''}`} key={index}>
           <img src={item.image} alt={item.title} className="Navbar__dropdown__item__img" />
           <div className="Navbar__links__wrapper">
-            <p className={`Navbar__link${item.disabled ? '--disabled' : ''} Navbar__link--title`}>{item.title}</p>
-            <p className="Navbar__link Navbar__link--subtitle">{item.subtitle}</p>
+            <p className={`Navbar__link Navbar__link--title ${item.disabled ? 'Navbar__link--title--disabled' : ''}`}>{item.title}</p>
+            <p className={`Navbar__link Navbar__link--subtitle ${item.disabled ? 'Navbar__link--subtitle--disabled' : ''}`}>{item.subtitle}</p>
           </div>
         </a>
       ))}
