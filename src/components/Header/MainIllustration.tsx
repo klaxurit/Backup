@@ -1,4 +1,4 @@
-import MainIllustrationSVG from "../../assets/images/b.png";
+import MainIllustrationSVG from "../../assets/images/mainillustration.png";
 
 export const MainIllustration: React.FC = () => {
   return (

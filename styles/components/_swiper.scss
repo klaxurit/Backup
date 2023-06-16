@@ -1,0 +1,38 @@
+.swiper-container {
+  width: 100%;
+  height: auto;
+  touch-action: pan-y;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.swiper-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+
+.swiper-list.is-swiping {
+  transition: none;
+}
+
+.swiper-list.is-not-swiping {
+  transition: transform 0.3s ease-out;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
