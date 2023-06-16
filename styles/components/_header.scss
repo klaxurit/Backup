@@ -3,8 +3,17 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  .header__firstBlock {
+    .header__firstBlock {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media #{$lg} {
+    .header__firstBlock {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+    }
   }
 }

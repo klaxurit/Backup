@@ -1,6 +1,8 @@
 export { LogoArrows } from "./LogoArrows";
 export { LogoCross } from "./LogoCross";
 export { LogoTwitter } from "./LogoTwitter";
+export { LogoMail } from "./LogoMail";
+export { LogoGithub } from "./LogoGithub";
 export { LogoMenu } from "./LogoMenu";
 export { Favicon } from "./Favicon";
 export { Logo } from "./Logo";

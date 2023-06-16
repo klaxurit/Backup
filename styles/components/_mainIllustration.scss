@@ -1,7 +1,8 @@
-// .main-illustration {
-//   position: absolute;
-//   left: -29.64%;
-//   right: -29.71%;
-//   top: -30.21%;
-//   bottom: -30.4%;
-// }
+.main-illustration {
+  .illustration {
+    width: 450px;
+  }
+  @media #{$lg} {
+    width: 500px;
+  }
+}

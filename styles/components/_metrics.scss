@@ -1,12 +1,111 @@
 .metrics {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 140px 128px 100px;
-  gap: 81px;
-  width: 1440px;
-  height: 386px;
-  background: #7950F2;
-  z-index: 5;
+  width: 100vw;
+  padding: 0 20px;
+  gap: 28px;
+  background: #7950f2;
+  z-index: 0;
+  @media #{$lg} {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    margin-top: -50px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 0;
+    white-space: nowrap;
+    margin-right: 50px;
+    @media #{$lg} {
+      margin-right: 0;
+      padding-right: 50px;
+      font-size: 48px;
+      line-height: 57px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    @media #{$lg} {
+      margin-bottom: 65px;
+      gap: 80px;
+    }
+    &__firstMetric {
+      color: white;
+      width: 100px;
+    }
+    &__secondMetric {
+      color: white;
+      width: 110px;
+    }
+    &__thirdMetric {
+      color: white;
+      width: 90px;
+    }
+    &__firstMetric,
+    &__secondMetric,
+    &__thirdMetric {
+      h5 {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+      }
+      @media #{$lg} {
+        h5 {
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
+    }
+  }
+  &__btn {
+    white-space: nowrap;
+    width: 187px;
+    margin-right: 160px;
+    margin-bottom: 32px;
+    &--desktop {
+      display: none;
+    }
+    @media #{$lg} {
+      margin-left: 1px;
+      margin-right: 0;
+      margin-bottom: 50px;
+      &--mobile {
+        display: none;
+      }
+      &--desktop {
+        display: flex;
+      }
+    }
+  }
+}
+
+.metrics__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  @media #{$lg} {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
 }

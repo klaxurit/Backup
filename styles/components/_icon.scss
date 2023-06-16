@@ -15,7 +15,7 @@
   }
   &__grey {
     color: white;
-    background: $primary-lighter;
+    background: $neutral-darker;
     &:focus {
       border: 1px solid $primary-light;
       background: $neutral-dark;
@@ -45,8 +45,7 @@
   }
 
   &--medium, &--small {
-    border: none;
-    margin: 5px;
+    // border: none;
     display: flex;
     justify-content: center;
     align-items: center;

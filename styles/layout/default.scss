@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: 'TT Hoves DemiBold';
+  src: url('../../src/assets/fonts/TT Hoves Bold.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
   font-family: 'TT Hoves Thin';
   src: url('../../src/assets/fonts/TT Hoves Thin.otf') format('opentype');
 }
@@ -29,9 +35,11 @@ body {
   background-color: $primary-blacker-bis;
   line-height: 160%;
   font-size: 16px;
-  font-family: 'TT Hoves Regular', sans-serif;
+  font-family: 'TT Hoves DemiBold', sans-serif;
+  font-weight: 500;
 }
 h1 {
+  font-family: 'TT Hoves Bold', sans-serif;
   font-size: 56px;
   line-height: 120%;
 }
@@ -44,6 +52,8 @@ h3 {
   color: white;
   font-size: 40px;
   line-height: 120%;
+  font-family: 'TT Hoves Bold', sans-serif;
+  font-weight: 700;
 }
 h4 {
   font-size: 32px;
@@ -52,6 +62,8 @@ h4 {
 h5 {
   font-size: 28px;
   line-height: 120%;
+  font-family: 'TT Hoves Bold', sans-serif;
+  font-weight: 700;
 }
 h6 {
   font-size: 24px;
