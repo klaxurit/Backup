@@ -37,6 +37,10 @@ body {
   font-size: 16px;
   font-family: 'TT Hoves DemiBold', sans-serif;
   font-weight: 500;
+  @media #{$lg} {
+    font-family: 'TT Hoves Regular';
+    font-weight: 400;
+  }
 }
 h1 {
   font-family: 'TT Hoves Bold', sans-serif;
@@ -45,6 +49,7 @@ h1 {
 }
 h2 {
   color: white;
+  font-family: 'TT Hoves Bold', sans-serif;
   font-size: 48px;
   line-height: 120%;
 }
