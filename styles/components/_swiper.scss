@@ -1,38 +1,52 @@
-.swiper-container {
-  width: 100%;
-  height: auto;
-  touch-action: pan-y;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.swiper-list {
+.Networks {
   display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  will-change: transform;
-}
-
-.swiper-list.is-swiping {
-  transition: none;
-}
-
-.swiper-list.is-not-swiping {
-  transition: transform 0.3s ease-out;
-}
-
-.swiper-container {
-  position: relative;
-}
-
-.swiper-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 0 20px;
+  gap: 80px;
+  background: $primary-blacker;
+  z-index: 0;
+  margin-top: 120px;
+  &__title {
+    margin-top: 120px;
+  }
+  &__btn {
+    margin-bottom: 80px;
+    width: auto;
+    padding: 0 20px;
+  }
+  &__swiper__container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    touch-action: pan-y;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+  &__swiper__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+    will-change: transform;
+  }
+  &_swiper__list.is-swiping {
+    transition: none;
+  }
+  &__swiper__list.is-not-swiping {
+    transition: transform 0.3s ease-out;
+  }
 }

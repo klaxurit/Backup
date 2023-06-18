@@ -1,27 +1,25 @@
-import { useState } from "react";
+import { Project } from "../../types";
 
-interface Project {
-  imageUrl: string;
-  title: string;
-  description: string;
+interface SwiperItemProps {
+  project: Project;
 }
 
-const SwiperItem: React.FC<{ project: Project }> = ({ project }) => {
-
+const SwiperItem: React.FC<SwiperItemProps> = ({ project }: SwiperItemProps) => {
   return (
-    <li 
-      className="swiper-item"
-    >
-      <div className="swiper-item-image-container">
-          <div className="swiper-item-content">
-            <img src={project.imageUrl} className="swiper-img" draggable={false} />
-            <h3 className="swiper-project--name">
-              {project.title}
-            </h3>
-            <p>
+    <li className="Swiper__item">
+      <div className="Swiper__item__content">
+        <img src={project.imageUrl} className="Swiper__item__content__img" draggable={false} />
+        <div className="Swiper__item__content__text">
+          <h3 className="Swiper__item__content__text__title">
+            {project.title}
+          </h3>
+          <p className="Swiper__item__content__text__desc">
             {project.description}
-            </p>
-          </div>
+          </p>
+        </div>
+        <span className="Swiper__item__content__metrics">
+          {project.metrics}% APR
+        </span>
       </div>
     </li>
   );
