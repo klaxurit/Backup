@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   gap: 80px;
   background: $primary-blacker;
   z-index: 0;
@@ -25,6 +25,14 @@
     touch-action: pan-y;
     padding-bottom: 20px;
     padding-top: 20px;
+    overflow-x: scroll;
+    margin-bottom: -18px;
+    padding-bottom: 18px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &::before {
       content: "";
       position: absolute;

@@ -49,11 +49,11 @@ const Navbar = () => {
         {/* Desktop */}
         <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
           <div className="Navbar__menu--desktop__item">
-            <a href="#" className="Navbar__link--white">Product</a>
+            <a href="#" className="Navbar__link--white">Products</a>
             <span className="Navbar__menu--desktop__item__spacer"></span>
             <Dropdown items={dropdownItems}/>
           </div>
-          <a href="#" className="Navbar__link--white">Network</a>
+          <a href="#" className="Navbar__link--white">Networks</a>
           <a href="#" className="Navbar__link--white">About</a>
           <a href="#" className="Navbar__link--white">FAQ</a>
           <button className="btn--small btn__primary">Stake</button>
