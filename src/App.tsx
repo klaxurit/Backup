@@ -6,6 +6,7 @@ import Products from './components/Products/Products';
 import Swiper from './components/Networks/Swiper';
 import Contact from './components/Contact/Contact';
 import Cosmos from './components/Cosmos/Cosmos';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return(
@@ -16,6 +17,7 @@ function App() {
       <Swiper/>
       <Contact/>
       <Cosmos/>
+      <Footer/>
       {/* <ButtonTest/> */}
     </>
   );

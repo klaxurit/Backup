@@ -1,9 +1,12 @@
-@import '../utils/variables';
+@import "../utils/variables";
 
 .link {
+  font-family: "TT Hoves", sans-serif;
+  font-weight: 500;
   &__primary {
+    font-family: "TT Hoves", sans-serif;
+    font-weight: 500;
     color: $primary-light;
-    font-weight: 600;
     font-size: 18px;
     line-height: 29px;
     height: 56px;
@@ -22,27 +25,26 @@
   }
 
   &__white {
-    color: #FFFFFF;
+    font-family: "TT Hoves", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
     font-size: 10px;
     line-height: 16px;
-    font-weight: 600;
     height: 17px;
     width: 50px;
     border-radius: 5px;
     padding: 2px;
   }
-  &__primary, &__white {
+  &__primary,
+  &__white {
+    font-family: "TT Hoves", sans-serif;
+    font-weight: 500;
     background: none;
     border: solid 1px transparent;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    &:focus {
-      outline: none;
-      border-color: $primary-light;
-      box-shadow: 0px 0px 0px 6px #7950F23D;
-    }
     &--disabled {
       color: $neutral-dark;
       &:focus {
