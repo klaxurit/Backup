@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding: 0 20px;
   gap: 80px;
   background: $primary-blacker;
   z-index: 0;
   margin-top: 120px;
   &__title {
     margin-top: 120px;
+    font-size: 32px;
+    line-height: 38px;
   }
   &__btn {
     margin-bottom: 80px;
@@ -48,5 +49,11 @@
   }
   &__swiper__list.is-not-swiping {
     transition: transform 0.3s ease-out;
+  }
+  @media #{$lg} {
+    &__title {
+      font-size: 48px;
+      line-height: 57px;
+    }
   }
 }

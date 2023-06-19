@@ -2,7 +2,7 @@ import StakeLab from "../../assets/images/stakelab.svg";
 import AppLab from "../../assets/images/applab.svg";
 import DataLab from "../../assets/images/datalab.svg";
 
-const Header: React.FC = () => {
+const Products: React.FC = () => {
   return (
     <div className="products">
       <div className="products__content">
@@ -42,4 +42,4 @@ const Header: React.FC = () => {
   );
 }
 
-export default Header;
+export default Products;

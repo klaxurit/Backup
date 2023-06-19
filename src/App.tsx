@@ -3,7 +3,9 @@
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Products from './components/Products/Products';
-import Swiper from './components/Slider/Swiper';
+import Swiper from './components/Networks/Swiper';
+import Contact from './components/Contact/Contact';
+import Cosmos from './components/Cosmos/Cosmos';
 
 function App() {
   return(
@@ -12,6 +14,8 @@ function App() {
       <Header/>
       <Products/>
       <Swiper/>
+      <Contact/>
+      <Cosmos/>
       {/* <ButtonTest/> */}
     </>
   );

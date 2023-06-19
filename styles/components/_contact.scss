@@ -1,0 +1,55 @@
+.Contact {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0;
+      padding: 0;
+    }
+    &__desc {
+      font-family: "TT Hoves", sans-serif;
+      color: white;
+      font-size: 16px;
+      line-height: 25px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    &__mail {
+      font-family: "TT Hoves", sans-serif;
+      color: $primary-light;
+      font-size: 18px;
+      line-height: 29px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+  @media #{$lg} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 120px;
+      margin-bottom: 122px;
+      &__content {
+        max-width: 800px;
+        max-height: 170px;
+        &__desc {
+          font-size: 18px;
+          line-height: 29px;
+        }
+        &__title {
+          font-size: 48px;
+          line-height: 57px;
+        }
+      }
+  }
+}
