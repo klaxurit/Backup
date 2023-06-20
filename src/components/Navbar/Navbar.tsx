@@ -6,6 +6,7 @@ import { Favicon, Logo, LogoMenu, LogoCross } from "../SVGs";
 import stakeLab from "../../assets/images/stakelab.svg"
 import appLab from "../../assets/images/applab.svg"
 import dataLab from "../../assets/images/datalab.svg"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,11 +34,11 @@ const Navbar = () => {
     <nav className="Navbar">
       <div className="Navbar__logo--mobile">
         {/* Mobile */}
-        <Favicon color={false} />
+        <Link to={`/`}><Favicon color={false} /></Link>
       </div>
       <div className="Navbar__logo--desktop">
         {/* Desktop */}
-        <Logo color={false} />
+        <Link to={`/`}><Logo color={false} /></Link>
       </div>
 
       <div className="Navbar__menu">
@@ -49,13 +50,13 @@ const Navbar = () => {
         {/* Desktop */}
         <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
           <div className="Navbar__menu--desktop__item">
-            <a href="#" className="Navbar__link--white">Products</a>
+            <Link to={`products`} className="Navbar__link--white">Products</Link>
             <span className="Navbar__menu--desktop__item__spacer"></span>
             <Dropdown items={dropdownItems}/>
           </div>
-          <a href="#" className="Navbar__link--white">Networks</a>
-          <a href="#" className="Navbar__link--white">About</a>
-          <a href="#" className="Navbar__link--white">FAQ</a>
+          <Link to={`networks`} className="Navbar__link--white">Networks</Link>
+          <Link to={`about`} className="Navbar__link--white">About</Link>
+          <Link to={`faq`} className="Navbar__link--white">FAQ</Link>
           <button className="btn--small btn__primary">Stake</button>
         </div>
       </div>

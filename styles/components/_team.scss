@@ -1,0 +1,83 @@
+.Team {
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 100px;
+    margin-bottom: 64px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+    &__member {
+      display: flex;
+      flex-direction: column;
+      background-color: $primary-black;
+      width: auto;
+      border-radius: 48px;
+      padding: 40px 39px;
+      &__draw {
+        width: 320px;
+        border-radius: 32px;
+        margin-bottom: 32px;
+      }
+      &__twitter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+        &__link {
+          color: white;
+          font-family: "TT Hoves Bold", sans-serif;
+          font-size: 18px;
+          line-height: 25px;
+          border: none;
+          height: inherit;
+          width: inherit;
+          padding: inherit;
+        }
+        &__icon {
+          color: $neutral-pure-bis;
+          cursor: pointer;
+          width: 15px;
+          height: 16px;
+          // padding: 0;
+          // margin: 0;
+          margin-top: 2px;
+          margin-left: 10px;
+          color: $neutral-pure-bis;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid transparent;
+          &:focus {
+            border-radius: 5px;
+            color: $neutral-pure;
+            border: 1px solid $primary-light;
+          }
+          &:hover {
+            color: $neutral-pure;
+          }
+          &:active {
+            color: $neutral-light;
+          }
+        }
+      }
+      &__job {
+        color: white;
+        font-family: "TT Hoves", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    @media #{$lg} {
+      flex-direction: row;
+    }
+  }
+}

@@ -22,6 +22,6 @@ export const Metrics: React.FC = () => {
         </div>
       </div>
       <button className="metrics__btn metrics__btn--mobile btn--large btn__white">Explore networks</button>
-    </div>
+    </div> 
   );
 }
