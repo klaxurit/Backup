@@ -50,12 +50,12 @@
   &__menu {
     &--mobile {
       display: block;
-      .Icon--small {
+      .icon--small {
         padding: 10px;
         width: 20px;
         height: 20px;
       }
-      .Icon--small--cross {
+      .icon--small--cross {
         padding: 13px;
         width: 14px;
         height: 14px;
@@ -172,6 +172,8 @@
 
   &__link {
     &--primary {
+      font-family: "TT Hoves", sans-serif;
+      font-style: normal;
       color: $primary-light;
       font-weight: 500;
       font-size: 18px;
@@ -192,8 +194,10 @@
     }
 
     &--white {
+      font-family: "TT Hoves", sans-serif;
+      font-style: normal;
       color: #ffffff;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 17px;
       font-weight: 600;
       border-radius: 5px;

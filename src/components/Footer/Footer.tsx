@@ -25,7 +25,6 @@ export const Footer: React.FC = () => {
           <LogoGithub className="Footer__content__iconWrapper__icon icon__link" />
         </div>
       </div>
-      {/* Ajoutez vos icônes ici */}
     </div>
   );
 }

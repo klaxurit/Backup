@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-import { Dropdown } from "./Dropdown";
-import { Favicon, Logo } from "../SVGs";
-
 import stakeLab from "../../assets/images/stakelab.svg"
 import appLab from "../../assets/images/applab.svg"
 import dataLab from "../../assets/images/datalab.svg"
+import { Dropdown } from "./Dropdown";
 import { Link } from "react-router-dom";
-import { LogoCross, LogoMenu } from "../SVGs";
+import { LogoCross, LogoMenu, Favicon, Logo } from "../SVGs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +43,7 @@ const Navbar = () => {
       <div className="Navbar__menu">
         {/* Mobile */}
         <div className="Navbar__menu--mobile" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          { isMenuOpen ? <LogoCross className="Icon--small Icon--small--cross Icon__white" /> : <LogoMenu className="Icon--small Icon__white" /> }
+          { isMenuOpen ? <LogoCross className="icon--small icon--small--cross icon__white" /> : <LogoMenu className="icon--small icon__white" /> }
         </div>
 
         {/* Desktop */}
@@ -57,7 +55,7 @@ const Navbar = () => {
           </div>
           <Link to={`#`} className="Navbar__link--white">Networks</Link>
           <Link to={`about`} className="Navbar__link--white">About</Link>
-          <Link to={`#`} className="Navbar__link--white">FAQ</Link>
+          <Link to={`faq`} className="Navbar__link--white">FAQ</Link>
           <button className="btn--small btn__primary">Stake</button>
         </div>
       </div>

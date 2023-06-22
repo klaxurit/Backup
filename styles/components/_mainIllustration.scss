@@ -3,6 +3,8 @@
     width: 350px;
   }
   @media #{$lg} {
-    width: 500px;
+    .illustration {
+      width: 500px;
+    }
   }
 }

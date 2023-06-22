@@ -13,7 +13,14 @@
     font-size: 32px;
     line-height: 38px;
   }
+  &__title.desktop {
+    display: none;
+  }
+  &__title.mobile {
+    display: block;
+  }
   &__btn {
+    display: none;
     margin-bottom: 80px;
     width: auto;
     padding: 0 20px;
@@ -26,7 +33,7 @@
     padding-bottom: 20px;
     padding-top: 20px;
     overflow-x: scroll;
-    margin-bottom: -18px;
+    margin-bottom: 80px;
     padding-bottom: 18px;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -59,9 +66,21 @@
     transition: transform 0.3s ease-out;
   }
   @media #{$lg} {
+    &__swiper__container {
+      margin-bottom: 10px;
+    }
     &__title {
       font-size: 48px;
       line-height: 57px;
+    }
+    &__title.desktop {
+      display: block;
+    }
+    &__title.mobile {
+      display: none;
+    }
+    &__btn {
+      display: flex;
     }
   }
 }

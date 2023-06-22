@@ -13,3 +13,4 @@ export { Logo } from "./Logo";
 export { Spinner } from "./Spinner";
 export { LogoNext } from "./SVGs";
 export { LogoPrevious } from "./SVGs";
+export { LogoArrowLink } from "./SVGs";
