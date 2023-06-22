@@ -17,11 +17,11 @@
       flex-direction: column;
       background-color: $primary-black;
       width: auto;
-      border-radius: 48px;
-      padding: 40px 39px;
+      border-radius: 32px;
+      padding: 32px 24px;
       &__draw {
-        width: 320px;
-        border-radius: 32px;
+        width: 280px;
+        border-radius: 28px;
         margin-bottom: 32px;
       }
       &__twitter {
@@ -44,8 +44,6 @@
           cursor: pointer;
           width: 15px;
           height: 16px;
-          // padding: 0;
-          // margin: 0;
           margin-top: 2px;
           margin-left: 10px;
           color: $neutral-pure-bis;
@@ -70,13 +68,52 @@
         color: white;
         font-family: "TT Hoves", sans-serif;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 20px;
         padding: 0;
         margin: 0;
       }
     }
-    @media #{$lg} {
+  }
+  @media #{$lg} {
+    &__content {
+    gap: 40px;
+    margin-bottom: 100px;
+    &__member {
+      width: auto;
+      border-radius: 32px;
+      padding: 40px 39px;
+      &__draw {
+        width: 280px;
+        border-radius: 32px;
+        margin-bottom: 32px;
+      }
+      &__twitter {
+        margin-bottom: 8px;
+        &__link {
+          font-size: 18px;
+          line-height: 25px;
+          border: none;
+          height: inherit;
+          width: inherit;
+          padding: inherit;
+        }
+        &__icon {
+          width: 15px;
+          height: 16px;
+          margin-top: 2px;
+          margin-left: 10px;
+        }
+      }
+      &__job {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    }
+  }
+  @media#{$xl} {
+    &__content {
       flex-direction: row;
     }
   }

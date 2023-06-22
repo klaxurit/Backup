@@ -8,20 +8,19 @@
     &__card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       justify-content: center;
       align-items: center;
       background-color: $primary-black;
-      border-radius: 72px;
-      width: 1000px;
-      padding: 80px 30px 64px 30px;
+      border-radius: 32px;
+      width: 350px;
+      padding: 32px 24px;
       z-index: 1;
       &__body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 32px;
-        width: 770px;
+        gap: 28px;
+        width: 300px;
         &__title {
           color: white;
           font-size: 32px;
@@ -108,13 +107,48 @@
       }
     }
   }
+  @media #{$md} {
+    &__content{
+      &__card {
+        width: 800px;
+        &__body {
+          gap: 32px;
+          width: 600px;
+          padding: 44px 0;
+          &__title {
+            font-size: 42px;
+            line-height: 48px;
+          }
+          &__intro {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
   @media #{$lg} {
     &__content {
       &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-black;
+        border-radius: 72px;
+        width: 1100px;
+        padding: 64px 0px;
+        z-index: 1;
         &__body {
+          width: 850px;
           h1 {
             font-size: 48px;
             line-height: 57px;
+          }
+          &__intro {
+            font-size: 18px;
+            line-height: 28px;
           }
         }
       }
