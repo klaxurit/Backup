@@ -6,6 +6,11 @@ import Stride from "../../assets/images/stride.svg";
 import Kava from "../../assets/images/kava.svg";
 import Osmosis from "../../assets/images/osmosis.svg";
 import FetchAi from "../../assets/images/fetch.svg";
+import Injective from "../../assets/images/injective.svg";
+import Iris from "../../assets/images/iris.svg";
+import Idep from "../../assets/images/idep.svg";
+import Gravity from "../../assets/images/gravity.svg";
+import Gitopia from "../../assets/images/gitopia.svg";
 
 export const projects = [
   {
@@ -55,5 +60,35 @@ export const projects = [
     title: 'Fetch.ai',
     description: 'FET',
     metrics: '48'
+  },
+  {
+    imageUrl: Gitopia,
+    title: 'Gitopia',
+    description: 'GIT',
+    metrics: '65'
+  },
+  {
+    imageUrl: Gravity,
+    title: 'Gravity Bridge',
+    description: 'LORE',
+    metrics: '5'
+  },
+  {
+    imageUrl: Iris,
+    title: 'Iris Network',
+    description: 'IRIS',
+    metrics: '12'
+  },
+  {
+    imageUrl: Idep,
+    title: 'Idep',
+    description: 'IDEP',
+    metrics: '112'
+  },
+  {
+    imageUrl: Injective,
+    title: 'Injective',
+    description: 'INJ',
+    metrics: '26'
   },
 ];

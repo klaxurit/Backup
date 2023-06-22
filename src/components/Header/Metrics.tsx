@@ -20,8 +20,8 @@ export const Metrics: React.FC = () => {
             <p>Delegators</p>
           </div>
         </div>
+        <button className="metrics__btn metrics__btn--mobile btn--large btn__white">Explore networks</button>
       </div>
-      <button className="metrics__btn metrics__btn--mobile btn--large btn__white">Explore networks</button>
     </div> 
   );
 }

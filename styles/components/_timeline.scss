@@ -1,0 +1,112 @@
+.Timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $primary-blacker;
+  padding: 120px;
+  gap: 80px;
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    overflow-x: hidden;
+    &__title {
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: "TT Hoves Bold", sans-serif;
+      font-size: 48px;
+      line-height: 57px;
+    }
+    &__iconsWrapper {
+      display: flex;
+      gap: 10px;
+      &__icon {
+        color: white;
+        background: #ffffff14;
+        height: 20px;
+        width: 20px;
+        border-radius: 12px;
+        padding: 8px;
+        stroke: white;
+        &:focus {
+          border: 1px solid $primary-light;
+        }
+        &:hover {
+          background: #ffffff1f;
+        }
+        &:active {
+          background: #ffffff29;
+        }
+        &--disabled {
+          background: $neutral-black;
+          height: 20px;
+          width: 20px;
+          border-radius: 12px;
+          padding: 8px;
+          stroke: $neutral-medium;
+          &:focus {
+            border: none;
+          }
+          &:hover {
+            background: $neutral-black;
+          }
+          &:active {
+            background: $neutral-black;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-left: 120px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__story {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: $primary-black;
+      border-radius: 32px;
+      flex: 0 0 230px; /* Ajouté */
+      gap: 40px;
+      padding: 40px;
+      &__date {
+        font-family: "TT Hoves Bold", sans-serif;
+        color: white;
+        font-size: 40px;
+        line-height: 48px;
+        margin: 0;
+        padding: 0;
+      }
+      &__desc {
+        font-family: "TT Hoves", sans-serif;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  &__btn {
+    font-size: 18px;
+    line-height: 28px;
+    width: 153px;
+    padding: 16px;
+    white-space: nowrap;
+    align-self: center;
+  }
+}

@@ -13,7 +13,7 @@
     justify-content: center;
     flex-direction: column;
     border: solid 2px #bea8ff3d;
-    padding: 32px;
+    padding: 28px;
     border-radius: 32px;
     gap: 12px;
     &__mobileIMG {
@@ -79,13 +79,13 @@
     }
     &__iconWrapper {
       display: flex;
-      gap: 24px;
+      gap: 16px;
       margin-bottom: 3px;
       &__icon {
         cursor: pointer;
-        width: 18px;
-        height: 15px;
-        padding: 10px;
+        width: 16px;
+        height: 16px;
+        padding: 8px;
         @media #{$lg} {
           width: 24px;
           height: 20px;

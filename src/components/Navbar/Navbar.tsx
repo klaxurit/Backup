@@ -1,12 +1,13 @@
 import { useState } from "react";
 
 import { Dropdown } from "./Dropdown";
-import { Favicon, Logo, LogoMenu, LogoCross } from "../SVGs";
+import { Favicon, Logo } from "../SVGs";
 
 import stakeLab from "../../assets/images/stakelab.svg"
 import appLab from "../../assets/images/applab.svg"
 import dataLab from "../../assets/images/datalab.svg"
 import { Link } from "react-router-dom";
+import { LogoCross, LogoMenu } from "../SVGs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,13 +51,13 @@ const Navbar = () => {
         {/* Desktop */}
         <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
           <div className="Navbar__menu--desktop__item">
-            <Link to={`products`} className="Navbar__link--white">Products</Link>
+            <Link to={`#`} className="Navbar__link--white">Products</Link>
             <span className="Navbar__menu--desktop__item__spacer"></span>
             <Dropdown items={dropdownItems}/>
           </div>
-          <Link to={`networks`} className="Navbar__link--white">Networks</Link>
+          <Link to={`#`} className="Navbar__link--white">Networks</Link>
           <Link to={`about`} className="Navbar__link--white">About</Link>
-          <Link to={`faq`} className="Navbar__link--white">FAQ</Link>
+          <Link to={`#`} className="Navbar__link--white">FAQ</Link>
           <button className="btn--small btn__primary">Stake</button>
         </div>
       </div>

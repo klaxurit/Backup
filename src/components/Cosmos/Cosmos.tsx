@@ -33,12 +33,12 @@ const Cosmos: React.FC = () => {
           As french native speakers, we are devoted to grow this community and create contents on this whole ecosystem, for francophones
         </p>
         <div className="Cosmos__content__iconWrapper">
-          <LogoMail className="Hero__icon icon__grey icon--small" />
-          <LogoTwitter className="Hero__icon icon__grey icon--small" />
-          <LogoYoutube className="Hero__icon icon__grey icon--small" />
-          <LogoMedium className="Hero__icon icon__grey icon--small" />
-          <LogoTwitch className="Hero__icon icon__grey icon--small" />
-          <LogoSpotify className="Hero__icon icon__grey icon--small" />
+          <LogoMail className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
+          <LogoTwitter className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
+          <LogoYoutube className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
+          <LogoMedium className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
+          <LogoTwitch className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
+          <LogoSpotify className="Cosmos__content__iconWrapper__icon icon__grey icon--small" />
         </div>
       </div>
     </section>
