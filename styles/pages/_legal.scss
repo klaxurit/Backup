@@ -1,0 +1,163 @@
+.Legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 24px 0px;
+  gap: 40px;
+  height: auto;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  &__privacy,
+  &__terms {
+    &__head {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 4px;
+      align-self: flex-start;
+
+      &__subtitle,
+      &__updated {
+        font-family: "TT Hoves", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: $neutral-pure;
+        margin: 0;
+      }
+
+      &__title {
+        font-family: "TT Hoves", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 120%;
+        color: #ffffff;
+        margin: 0;
+        margin-bottom: 40px;
+      }
+
+      &__intro {
+        color: white;
+        font-family: "TT Hoves", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    &__body {
+      &__article {
+        h4 {
+          color: white;
+          font-family: "TT Hoves", sans-serif;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 34px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+        p,
+        li {
+          color: white;
+          font-family: "TT Hoves", sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+    &__btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px 12px 20px;
+      gap: 8px;
+      border: 2px solid #1f1a34;
+      border-radius: 16px;
+      flex-grow: 1;
+      p {
+        color: $neutral-pure;
+        font-family: "TT Hoves", sans-serif;
+        cursor: pointer;
+        font-weight: 500;
+        color: $neutral-pure;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        flex-grow: 1;
+      }
+      &__icon {
+        width: 10px;
+        stroke: $neutral-pure;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+.Sidebar {
+  display: none;
+}
+
+@media #{$lg} {
+  .Legal {
+    width: 60%;
+    padding: 0;
+  }
+  .Sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+    height: 30px;
+    margin-top: 35px;
+    &__btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px 12px 20px;
+      gap: 8px;
+      border: 2px solid #1f1a34;
+      border-radius: 16px;
+      flex-grow: 1;
+      &--active {
+        color: white;
+        border-radius: 16px;
+        border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 12px 14px 12px 20px;
+        gap: 8px;
+        p {
+          color: white;
+          font-family: "TT Hoves", sans-serif;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          margin: 0;
+          flex-grow: 1;
+        }
+      }
+      p {
+        font-family: "TT Hoves", sans-serif;
+        cursor: pointer;
+        font-weight: 500;
+        color: $neutral-pure;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        flex-grow: 1;
+      }
+    }
+  }
+  .Wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 124px;
+  }
+}
