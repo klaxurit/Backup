@@ -51,8 +51,8 @@ const FAQ: React.FC = () => {
         </div>
         <div className="FAQ__content">
           <div className="FAQ__content__questions">
-            {orderedQuestions.map((questionTitle, index) => (
-              <div key={index} className="FAQ__content__questions__content">
+            {orderedQuestions.map((questionTitle) => (
+              <div key={questionTitle} className="FAQ__content__questions__content">
                 <div className="FAQ__content__questions__content__question">
                   {isDesktop ? (
                     <h4 onClick={() => setOpenQuestion(questionTitle)}>{questionTitle}</h4>
@@ -76,8 +76,12 @@ const FAQ: React.FC = () => {
             ))}
           </div>
           <div className="FAQ__content__buttons">
-            {orderedQuestions.map((questionTitle, index) => (
-              <p className="FAQ__content__buttons__button" onClick={() => setOpenQuestion(questionTitle)}>
+            {orderedQuestions.map((questionTitle) => (
+              <p
+                key={questionTitle}
+                className={`FAQ__content__buttons__button ${openQuestion === questionTitle ? 'FAQ__content__buttons__button--active' : ''}`}
+                onClick={() => setOpenQuestion(questionTitle)}
+              >
                 {questionTitle}
               </p>
             ))}

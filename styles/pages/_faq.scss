@@ -119,21 +119,45 @@
       justify-content: space-between;
       &__questions {
         width: 60%;
+        &__content {
+          &__question {
+            h4 {
+              margin-top: 0;
+              margin-bottom: 0;
+              padding-bottom: 10px;
+            }
+          }
+          &__answer {
+            border: none;
+            border-bottom: 0.50px #FFFFFF1F solid;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+          }
+        }
       }
       &__buttons {
         display: flex;
         flex-direction: column;
+        margin-top: 15px;
         width: 30%;
         gap: 10px;
         &__button {
+          cursor: pointer;
           display: flex;
-          color: white;
+          color: $neutral-pure;
           padding: 12px 14px 12px 20px;
           gap: 8px;
           border: 2px solid #1f1a34;
           border-radius: 16px;
           width: 100%;
           flex-grow: 1;
+          margin: 0;
+          &--active {
+            color: white;
+            border-radius: 16px;
+            border: 2px solid var(--neutral-onyx-blacker, #1F1A34);
+            background: rgba(255, 255, 255, 0.04);
+          }
         }
       }
     }
