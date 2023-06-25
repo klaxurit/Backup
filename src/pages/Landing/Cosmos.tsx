@@ -7,16 +7,16 @@ import SmallCoin from "../../assets/images/smallcoin.png";
 import BigFrCoin from "../../assets/images/bigfrcoin.png";
 import BigCosmosCoin from "../../assets/images/bigcosmoscoin.png";
 import BigCoin from "../../assets/images/bigcoin.png";
-import { LogoTwitter, LogoMail, LogoYoutube, LogoMedium, LogoTwitch, LogoSpotify } from "../SVGs";
+import { LogoTwitter, LogoMail, LogoYoutube, LogoMedium, LogoTwitch, LogoSpotify } from "../../components/SVGs";
 
 const Cosmos: React.FC = () => {
   return (
     <section className="Cosmos">
       <div className="Cosmos__content">
         <div className="Cosmos__content__mobileIMG">
-          <img src={FrCoin} alt="French flag coin" className="Cosmos__content__mobileIMG__frCoin"/>
-          <img src={CosmosCoin} alt="Cosmos logo coin" className="Cosmos__content__mobileIMG__cosmosCoin"/>
-          <img src={Coin} alt="A simple coin" className="Cosmos__content__mobileIMG__coin"/>
+          <img src={FrCoin} alt="French flag coin" className="Cosmos__content__mobileIMG__frCoin" />
+          <img src={CosmosCoin} alt="Cosmos logo coin" className="Cosmos__content__mobileIMG__cosmosCoin" />
+          <img src={Coin} alt="A simple coin" className="Cosmos__content__mobileIMG__coin" />
         </div>
         <div className="Cosmos__content__desktopIMG">
           <img src={BigFrCoin} alt="French flag coin" className="Cosmos__content__desktopIMG__bigFrCoin" />

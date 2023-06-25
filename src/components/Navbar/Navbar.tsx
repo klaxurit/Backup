@@ -14,6 +14,7 @@ const Navbar = () => {
       image: stakeLab,
       title: 'StakeLab',
       subtitle: 'Live',
+      path: 'stakelab'
     },
     {
       image: appLab,

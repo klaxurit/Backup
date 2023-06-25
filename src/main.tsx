@@ -4,17 +4,18 @@ import "../styles/index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Networks from "./pages/Networks";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Landing from "./pages/Landing";
 import Legal from "./pages/Legal";
+import { StakeLab } from "./pages/Products/StakeLab";
 
 const router = createBrowserRouter([
-  { 
-    path: "/", 
-    element: <App /> ,
+  {
+    path: "/",
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -37,9 +38,13 @@ const router = createBrowserRouter([
         path: "legal",
         element: <Legal />,
       },
+      {
+        path: "stakelab",
+        element: <StakeLab />,
+      },
     ]
   },
-  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

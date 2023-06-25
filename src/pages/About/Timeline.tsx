@@ -1,6 +1,6 @@
 import { useRef, useCallback, useState } from "react";
 
-import { LogoNext, LogoPrevious } from "../SVGs";
+import { LogoNext, LogoPrevious } from "../../components/SVGs";
 import { Story } from "./Story";
 import { stories } from './storyData';
 

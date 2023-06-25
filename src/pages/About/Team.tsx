@@ -1,7 +1,7 @@
 import Member1 from "../../assets/images/member1.png";
 import Member2 from "../../assets/images/member2.png";
 import Member3 from "../../assets/images/member3.png";
-import { LogoTwitter } from "../SVGs";
+import { LogoTwitter } from "../../components/SVGs";
 
 export const Team: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { LogoArrowLink } from "../components/SVGs";
+import { LogoArrowLink } from "../../components/SVGs";
 
 type QuestionsType = {
   [key: string]: string[];

@@ -1,6 +1,6 @@
-import { Team } from "../components/About/Team";
-import { Timeline } from "../components/About/Timeline";
-import Contact from "../components/Contact/Contact";
+import { Team } from "./Team";
+import { Timeline } from "./Timeline";
+import Contact from "../../components/Contact";
 
 const About: React.FC = () => {
   return (
@@ -46,9 +46,9 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <Team/>
-        <Timeline/>
-        <Contact/>
+        <Team />
+        <Timeline />
+        <Contact />
       </div>
     </section>
   );

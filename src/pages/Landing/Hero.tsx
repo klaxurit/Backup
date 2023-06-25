@@ -1,4 +1,4 @@
-import { LogoTwitter, LogoMail, LogoGithub } from "../SVGs";
+import { LogoTwitter, LogoMail, LogoGithub } from "../../components/SVGs";
 
 export const Hero: React.FC = () => {
   return (
