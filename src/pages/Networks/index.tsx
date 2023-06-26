@@ -11,6 +11,8 @@ interface NetworkProps {
 
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
   const [search, setSearch] = useState('');
+  const [showAllOptions, setShowAllOptions] = useState(false);
+  const [showOrderOptions, setShowOrderOptions] = useState(false);
 
   const filteredNetworks = networks.filter(network =>
     network.title.toLowerCase().startsWith(search.toLowerCase())
@@ -37,12 +39,26 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
             </div>
           </div>
           <div className="Networks__content__control__filters">
-            <div className="Networks__content__control__filters__button">
+            <div className="Networks__content__control__filters__button" onClick={() => setShowAllOptions(!showAllOptions)} >
               <p className="Networks__content__control__filters__button__label">All</p>
+              {showAllOptions && (
+                <div>
+                  <div className="Networks__content__control__filters__button__pannel1">
+                    <p className="Networks__content__control__filters__button__pannel1__label">Live</p>
+                    <p className="Networks__content__control__filters__button__pannel1__label">Testnets</p>
+                  </div>
+                </div>
+              )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
             </div>
-            <div className="Networks__content__control__filters__button">
+            <div className="Networks__content__control__filters__button" onClick={() => setShowOrderOptions(!showOrderOptions)}>
               <p className="Networks__content__control__filters__button__label">Order</p>
+              {showOrderOptions && (
+                  <div className="Networks__content__control__filters__button__pannel2">
+                    <p className="Networks__content__control__filters__button__pannel2__label">A > Z</p>
+                    <p className="Networks__content__control__filters__button__pannel2__label">APR</p>
+                  </div>
+              )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
             </div>
           </div>
