@@ -1,0 +1,115 @@
+.Networks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-blacker-bis;
+  padding: 0 24px 0;
+  box-sizing: border-box;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 0;
+    width: 100%;
+    &__head {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 57px;
+        margin: 0;
+        color: white;
+      }
+      &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        color: $neutral-light;
+      }
+    }
+    &__control {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__searchBar {
+        display: flex;
+        height: 26px;
+        padding: 12.5px 20px 14.5px 14px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 16px;
+        border: 1px solid var(--neutral-onyx-darker, #362f50);
+        background: rgba(255, 255, 255, 0.04);
+        &__content {
+          display: flex;
+          align-items: center;
+          &__iconSlash {
+            font-family: "TT Hoves DemiBold";
+            font-size: 12px;
+            line-height: 19px;
+            width: 20px;
+            height: 19px;
+            color: $neutral-pure;
+          }
+          &__iconSearch {
+            stroke: $neutral-pure;
+            width: 13px;
+          }
+          &__input {
+            outline: none;
+            background: none;
+            border: none;
+            padding: 5px 10px;
+            margin: 0;
+            color: $neutral-light;
+            &::placeholder {
+              font-family: "TT Hoves" sans-serif;
+              color: $neutral-pure;
+              font-weight: 500px;
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      &__filters {
+        display: flex;
+        gap: 24px;
+        &__button {
+          color: $neutral-pure;
+          font-size: 18px;
+          line-height: 28px;
+          display: flex;
+          justify-content: space-between;
+          width: 160px;
+          height: 26px;
+          padding: 12px 14px 12px 20px;
+          align-items: center;
+          gap: 8px;
+          border-radius: 16px;
+          border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+          &__label {
+            font-size: 18px;
+            line-height: 28px;
+          }
+          &__icon {
+            width: 12px;
+            stroke: $neutral-pure;
+          }
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+  @media #{$lg} {
+    padding: 50px 128px;
+  }
+}

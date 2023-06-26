@@ -1,15 +1,15 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useStateRef, getRefValue } from "./hooks";
 import { getTouchEventData } from "./dom";
-import SwiperItem from "./SwiperItem";
-import { projects as projectData } from "./projects";
-import { Project } from "../../types";
+import { NetworkItem } from "../../components/NetworkItem";
+import { networks as networkData } from "../../types/networks";
+import { Network } from "../../types";
 
 interface SwiperProps {
-  projects?: Project[];
+  networks?: Network[];
 }
 
-const Swiper: React.FC<SwiperProps> = ({ projects = projectData }) => {
+const Swiper: React.FC<SwiperProps> = ({ networks = networkData }) => {
   const containerRef = useRef<HTMLUListElement>(null);
   const currentOffsetXRef = useRef(0);
   const startXRef = useRef(0);
@@ -90,11 +90,11 @@ const Swiper: React.FC<SwiperProps> = ({ projects = projectData }) => {
   }, [isSwiping]);
 
   return (
-    <div className="Networks">
-      <h1 className="Networks__title desktop">Networks</h1>
-      <h1 className="Networks__title mobile">Our Networks</h1>
+    <div className="CarouselNetworks">
+      <h1 className="CarouselNetworks__title desktop">Networks</h1>
+      <h1 className="CarouselNetworks__title mobile">Our Networks</h1>
       <div
-        className="Networks__swiper__container"
+        className="CarouselNetworks__swiper__container"
         onTouchStart={onTouchStart}
         onMouseDown={onTouchStart}
         onMouseLeave={() => {
@@ -106,24 +106,24 @@ const Swiper: React.FC<SwiperProps> = ({ projects = projectData }) => {
       >
         <ul
           ref={containerRef}
-          className={`Networks__swiper__list ${isSwiping ? "is-swiping" : ""}`}
+          className={`CarouselNetworks__swiper__list ${isSwiping ? "is-swiping" : ""}`}
           style={{ transform: `translate3d(${offsetX}px, 0, 0)` }}
         >
-          {projects.map((project, idx) => (
-            <SwiperItem
+          {networks.map((network, idx) => (
+            <NetworkItem
               key={idx}
-              project={project}
+              network={network}
             />
           ))}
-          {projects.map((project, idx) => (
-            <SwiperItem
-              key={idx + projects.length}
-              project={project}
+          {networks.map((network, idx) => (
+            <NetworkItem
+              key={idx + networks.length}
+              network={network}
             />
           ))}
         </ul>
       </div>
-      <button className="Networks__btn btn--large btn__primary">Stake 'em all!</button>
+      <button className="CarouselNetworks__btn btn--large btn__primary">Stake 'em all!</button>
     </div>
   );
 };

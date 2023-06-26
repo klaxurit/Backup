@@ -77,3 +77,15 @@ export const LogoArrowLink = (props: SVGProps<SVGSVGElement>) => (
     <path d="M1.625 9.87486L10.3699 1.12996M10.3699 1.12996L10.3725 1.12741M10.3699 1.12996L1.63774 1.12741L10.3725 1.12741M10.3699 1.12996L10.375 1.12996V9.86466M10.3725 1.12741L10.3749 1.125" strokeWidth="1.8" />
   </svg>
 )
+
+export const LogoArrowBottom = (props: SVGProps<SVGSVGElement>) => (
+  <svg width="14" height="15" viewBox="0 0 14 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M7.00825 0.8125V13.1894M7.00825 13.1894V13.1928M7.00825 13.1894L13.1877 7.00998L7.00464 13.1894L0.825195 7.00998" strokeWidth="2" />
+  </svg>
+)
+
+export const LogoSearch = (props: SVGProps<SVGSVGElement>) => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M11.3335 11.3333L14.6668 14.6667M13.0002 7.16668C13.0002 10.3883 10.3885 13 7.16683 13C3.94517 13 1.3335 10.3883 1.3335 7.16668C1.3335 3.94502 3.94517 1.33334 7.16683 1.33334C10.3885 1.33334 13.0002 3.94502 13.0002 7.16668Z" strokeWidth="1.8" />
+  </svg>
+)

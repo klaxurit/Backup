@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import stakeLab from "../../assets/images/stakelab.svg"
 import appLab from "../../assets/images/applab.svg"
@@ -9,6 +10,7 @@ import { LogoCross, LogoMenu, Favicon, Logo } from "../SVGs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
   const dropdownItems = [
     {
       image: stakeLab,
@@ -29,6 +31,10 @@ const Navbar = () => {
       disabled: true,
     },
   ];
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   return (
     <nav className="Navbar">
@@ -54,7 +60,7 @@ const Navbar = () => {
             <span className="Navbar__menu--desktop__item__spacer"></span>
             <Dropdown items={dropdownItems}/>
           </div>
-          <Link to={`#`} className="Navbar__link--white">Networks</Link>
+          <Link to={`networks`} className="Navbar__link--white">Networks</Link>
           <Link to={`about`} className="Navbar__link--white">About</Link>
           <Link to={`faq`} className="Navbar__link--white">FAQ</Link>
           <button className="btn--small btn__primary">Stake</button>

@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import Networks from "./pages/Networks";
+import { Networks } from "./pages/Networks";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Landing from "./pages/Landing";

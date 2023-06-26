@@ -35,10 +35,10 @@ body {
   background-color: $primary-blacker-bis;
   line-height: 160%;
   font-size: 16px;
-  font-family: 'TT Hoves DemiBold', sans-serif;
+  font-family: 'TT Hoves', sans-serif;
   font-weight: 500;
   @media #{$lg} {
-    font-family: 'TT Hoves Regular';
+    font-family: 'TT Hoves' sans-serif;
     font-weight: 400;
   }
 }

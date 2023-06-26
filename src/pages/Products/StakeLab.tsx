@@ -28,7 +28,7 @@ export const StakeLab: React.FC = () => {
           </article>
         </div>
         <div className="Product__content__illustration">
-            <img src={StakeLabIMG} alt="StakeLab logo" />
+          <img src={StakeLabIMG} alt="StakeLab logo" />
         </div>
 
       </div>
