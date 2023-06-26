@@ -1,22 +1,36 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import { LogoArrowBottom, LogoSearch } from "../../components/SVGs/SVGs"
 import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
+import useClickOutside from '../../hooks/useClickOutside';
 
 interface NetworkProps {
   networks?: Network[];
 }
 
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch, ] = useState('');
+  const [order, setOrder] = useState('');
   const [showAllOptions, setShowAllOptions] = useState(false);
   const [showOrderOptions, setShowOrderOptions] = useState(false);
+  const allButtonRef = useRef(null);
+  const orderButtonRef = useRef(null);
+
+  useClickOutside(allButtonRef, () => setShowAllOptions(false));
+  useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
 
   const filteredNetworks = networks.filter(network =>
     network.title.toLowerCase().startsWith(search.toLowerCase())
   );
+
+  if (order === 'A > Z') {
+    filteredNetworks.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (order === 'APR') {
+    filteredNetworks.sort((a, b) => b.metrics - a.metrics); // Assuming 'apr' is a property of your network object
+  }
+
   return (
     <div className="Networks">
       <div className="Networks__content">
@@ -39,7 +53,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
             </div>
           </div>
           <div className="Networks__content__control__filters">
-            <div className="Networks__content__control__filters__button" onClick={() => setShowAllOptions(!showAllOptions)} >
+            <div className="Networks__content__control__filters__button" onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
               <p className="Networks__content__control__filters__button__label">All</p>
               {showAllOptions && (
                 <div>
@@ -51,12 +65,16 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
             </div>
-            <div className="Networks__content__control__filters__button" onClick={() => setShowOrderOptions(!showOrderOptions)}>
+            <div className="Networks__content__control__filters__button" onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
               <p className="Networks__content__control__filters__button__label">Order</p>
               {showOrderOptions && (
                   <div className="Networks__content__control__filters__button__pannel2">
-                    <p className="Networks__content__control__filters__button__pannel2__label">A > Z</p>
-                    <p className="Networks__content__control__filters__button__pannel2__label">APR</p>
+                  <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('A > Z')}>
+                      A > Z
+                  </p>
+                  <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('APR')}>
+                    APR
+                  </p>
                   </div>
               )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />

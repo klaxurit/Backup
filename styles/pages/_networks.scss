@@ -44,6 +44,9 @@
         border-radius: 16px;
         border: 1px solid var(--neutral-onyx-darker, #362f50);
         background: rgba(255, 255, 255, 0.04);
+        &:hover {
+          border: 1px solid $primary-light;
+        }
         &__content {
           display: flex;
           align-items: center;
@@ -93,9 +96,13 @@
           gap: 8px;
           border-radius: 16px;
           border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+          &:hover {
+            border: 2px solid $primary-light;
+          }
           &__label {
             font-size: 18px;
             line-height: 28px;
+            margin: 0;
           }
           &__icon {
             width: 12px;
@@ -133,6 +140,10 @@
               align-items: center;
               padding: 12px;
               gap: 14px;
+              &:hover {
+                color: $neutral-pure;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -140,6 +151,7 @@
     }
     &__list {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 24px;
     }

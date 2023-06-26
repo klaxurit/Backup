@@ -17,7 +17,7 @@ export const networks = [
     imageUrl: Cosmos,
     title: 'Cosmo',
     description: 'ATOM',
-    metrics: '16',
+    metrics: 16,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -25,7 +25,7 @@ export const networks = [
     imageUrl: Cronos,
     title: 'Cronos',
     description: 'CRO',
-    metrics: '5',
+    metrics: 5,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -33,7 +33,7 @@ export const networks = [
     imageUrl: BandProtocol,
     title: 'Band Protocol',
     description: 'BAND',
-    metrics: '112',
+    metrics: 112,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -41,7 +41,7 @@ export const networks = [
     imageUrl: Axelar,
     title: 'Axelar',
     description: 'AXL',
-    metrics: '5',
+    metrics: 5,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -49,7 +49,7 @@ export const networks = [
     imageUrl: Stride,
     title: 'Stride',
     description: 'STRD',
-    metrics: '29',
+    metrics: 29,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -57,7 +57,7 @@ export const networks = [
     imageUrl: Kava,
     title: 'Kava',
     description: 'KAVA',
-    metrics: '24',
+    metrics: 24,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -65,7 +65,7 @@ export const networks = [
     imageUrl: Osmosis,
     title: 'Osmosis',
     description: 'OSMO',
-    metrics: '35',
+    metrics: 35,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -73,7 +73,7 @@ export const networks = [
     imageUrl: FetchAi,
     title: 'Fetch.ai',
     description: 'FET',
-    metrics: '48',
+    metrics: 48,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -81,7 +81,7 @@ export const networks = [
     imageUrl: Gitopia,
     title: 'Gitopia',
     description: 'GIT',
-    metrics: '65',
+    metrics: 65,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -89,7 +89,7 @@ export const networks = [
     imageUrl: Gravity,
     title: 'Gravity Bridge',
     description: 'LORE',
-    metrics: '5',
+    metrics: 5,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -97,7 +97,7 @@ export const networks = [
     imageUrl: Iris,
     title: 'Iris Network',
     description: 'IRIS',
-    metrics: '12',
+    metrics: 12,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -105,7 +105,7 @@ export const networks = [
     imageUrl: Idep,
     title: 'Idep',
     description: 'IDEP',
-    metrics: '112',
+    metrics: 112,
     delegated: '341K',
     tvl: '$3.6M'
   },
@@ -113,7 +113,7 @@ export const networks = [
     imageUrl: Injective,
     title: 'Injective',
     description: 'INJ',
-    metrics: '26',
+    metrics: 26,
     delegated: '341K',
     tvl: '$3.6M'
   },
