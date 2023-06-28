@@ -31,7 +31,8 @@
         margin-bottom: 8px;
         &__link {
           color: white;
-          font-family: "TT Hoves Bold", sans-serif;
+          font-family: "TT Hoves Bold";
+          font-weight: 700;
           font-size: 18px;
           line-height: 25px;
           border: none;
@@ -66,8 +67,6 @@
       }
       &__job {
         color: white;
-        font-family: "TT Hoves", sans-serif;
-        font-weight: 500;
         font-size: 14px;
         line-height: 20px;
         padding: 0;
@@ -76,15 +75,19 @@
     }
   }
   @media #{$lg} {
+    h1 {
+      font-size: 48px;
+      line-height: 57px;
+    }
     &__content {
     gap: 40px;
     margin-bottom: 100px;
     &__member {
       width: auto;
       border-radius: 32px;
-      padding: 40px 39px;
+      padding: 38px;
       &__draw {
-        width: 280px;
+        width: 320px;
         border-radius: 32px;
         margin-bottom: 32px;
       }

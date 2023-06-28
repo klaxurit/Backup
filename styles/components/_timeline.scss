@@ -15,7 +15,7 @@
       color: white;
       margin: 0;
       padding: 0;
-      font-family: "TT Hoves Bold", sans-serif;
+      font-family: "TT Hoves Bold";
       font-size: 40px;
       line-height: 48px;
     }
@@ -89,7 +89,6 @@
         padding: 0;
       }
       &__desc {
-        font-family: "TT Hoves", sans-serif;
         color: white;
         font-weight: 400;
         font-size: 18px;
@@ -106,6 +105,7 @@
     padding: 16px;
     white-space: nowrap;
     align-self: center;
+    margin-bottom: 80px;
   }
   @media #{$lg} {
     display: flex;
@@ -114,13 +114,11 @@
     background-color: $primary-blacker;
     gap: 80px;
     &__head {
-      padding: 80px 120px;
-      // padding-left: 120px;
-      // padding-right: 120px;
+      padding: 115px 120px 0 120px;
       overflow-x: hidden;
       &__title {
         font-size: 40px;
-        line-height: 48px;
+        line-height: 57px;
       }
       &__iconsWrapper {
         display: flex;
@@ -162,6 +160,7 @@
       padding: 16px;
       white-space: nowrap;
       align-self: center;
+      margin-bottom: 80px;
     }
   }
 }

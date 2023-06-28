@@ -10,7 +10,7 @@ const About: React.FC = () => {
           <div className="About__content__card__body">
             <h1 className="About__content__card__body__title">About</h1>
             <article className="About__content__card__body__intro">
-              StakeLab was born in 2020 during the Pandemic to gives people ways to access leveraging blockchain and proof of stake technologies. Since it has grown with 70 networks and more coming soon, thousands delegators, and millions USD of delegated assets. Every day, hundreds of StakeLabers trust us and grow their assets on a safe tech with plenty staking opportunities. You too, start growing in Web3 today and join the StakeLab family!!
+              StakeLab was born in 2020 during the Pandemic to gives people ways to access leveraging blockchain and proof of stake technologies. Since it has grown with 70 networks and more coming soon, thousands delegators, and millions USD of delegated assets. Every day, hundreds of StakeLabers trust us and grow their assets on a safe tech with plenty staking opportunities.
             </article>
             <button className="btn--large btn__primary">Stake with us</button>
           </div>

@@ -1,4 +1,5 @@
 .Contact {
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 60px;
   padding-left: 20px;
@@ -16,7 +17,6 @@
       padding: 0;
     }
     &__desc {
-      font-family: "TT Hoves", sans-serif;
       color: white;
       font-size: 16px;
       line-height: 25px;
@@ -40,9 +40,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 120px;
-    margin-bottom: 122px;
+    margin-bottom: 130px;
     &__content {
-      width: 38%; 
+      width: 32%; 
       max-height: 170px;
       &__desc {
         font-size: 18px;
