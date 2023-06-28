@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 48px;
+    gap: 24px;
     padding: 0;
     width: 100%;
     &__head {
@@ -33,13 +33,16 @@
     }
     &__control {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       &__searchBar {
+        min-width: 280px;
+        max-width: 280px;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: 26px;
         padding: 12.5px 20px 14.5px 14px;
-        align-items: center;
         gap: 10px;
         border-radius: 16px;
         border: 1px solid var(--neutral-onyx-darker, #362f50);
@@ -50,32 +53,48 @@
         &__content {
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          &__left {
+            display: flex;
+            align-items: center;
+            &__iconSearch {
+              stroke: $neutral-pure;
+              width: 13px;
+            }
+            &__input {
+              outline: none;
+              background: none;
+              border: none;
+              padding: 5px 10px;
+              margin: 0;
+              color: $neutral-light;
+              &::placeholder {
+                font-family: "TT Hoves" sans-serif;
+                color: $neutral-pure;
+                font-weight: 500px;
+                font-size: 18px;
+                line-height: 28px;
+              }
+            }
+          }
+          &__iconParams {
+            display: block;
+            color: transparent;
+            width: 12px;
+            height: 12px;
+            padding: 12px;
+          }
           &__iconSlash {
+            display: none;
             font-family: "TT Hoves DemiBold";
+            font-weight: 600;
             font-size: 12px;
             line-height: 19px;
-            width: 20px;
-            height: 19px;
+            width: 24px;
+            height: 23 px;
             color: $neutral-pure;
-          }
-          &__iconSearch {
-            stroke: $neutral-pure;
-            width: 13px;
-          }
-          &__input {
-            outline: none;
-            background: none;
-            border: none;
-            padding: 5px 10px;
-            margin: 0;
-            color: $neutral-light;
-            &::placeholder {
-              font-family: "TT Hoves" sans-serif;
-              color: $neutral-pure;
-              font-weight: 500px;
-              font-size: 18px;
-              line-height: 28px;
-            }
+            text-align: center;
           }
         }
       }
@@ -156,7 +175,45 @@
       gap: 24px;
     }
   }
+  @media #{$md} {
+    &__content {
+      &__control {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        &__searchBar {
+          width: 30%;
+          &__content {
+            &__iconSlash {
+              display: block;
+            }
+            &__iconParams {
+              display: none;
+            }
+          }
+        }
+        &__filters {
+          display: flex;
+        }
+      }
+    }
+  }
   @media #{$lg} {
     padding: 50px 128px;
+    &__content {
+      gap: 48px;
+      &__control {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__searchBar {
+          width: 35%;
+        }
+        &__filters {
+          align-self: flex-end;
+          display: flex;
+        }
+      }
+    }
   }
 }

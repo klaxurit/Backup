@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import { LogoArrowBottom, LogoSearch } from "../../components/SVGs/SVGs"
+import { LogoArrowBottom, LogoSearch, LogoParams } from "../../components/SVGs/SVGs"
 import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
@@ -41,15 +41,18 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
         <div className="Networks__content__control">
           <div className="Networks__content__control__searchBar">
             <div className="Networks__content__control__searchBar__content">
-              <LogoSearch className="Networks__content__control__searchBar__content__iconSearch" />
-              <input
-                type="text"
-                className="Networks__content__control__searchBar__content__input"
-                placeholder="Search"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-              />
+              <div className="Networks__content__control__searchBar__content__left">
+                <LogoSearch className="Networks__content__control__searchBar__content__left__iconSearch" />
+                <input
+                  type="text"
+                  className="Networks__content__control__searchBar__content__left__input"
+                  placeholder="Search"
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                />
+              </div>
               <span className="Networks__content__control__searchBar__content__iconSlash icon--small icon__white">/</span>
+              <LogoParams className="Networks__content__control__searchBar__content__iconParams icon--small icon__white"/>
             </div>
           </div>
           <div className="Networks__content__control__filters">
