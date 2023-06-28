@@ -14,6 +14,7 @@
     line-height: 38px;
   }
   &__title.desktop {
+    margin-bottom: 0;
     display: none;
   }
   &__title.mobile {
@@ -30,11 +31,8 @@
     width: 100%;
     height: auto;
     touch-action: pan-y;
-    padding-bottom: 20px;
-    padding-top: 20px;
     overflow-x: scroll;
     margin-bottom: 80px;
-    padding-bottom: 18px;
     -ms-overflow-style: none;
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -67,7 +65,7 @@
   }
   @media #{$lg} {
     &__swiper__container {
-      margin-bottom: 10px;
+      margin: 0;
     }
     &__title {
       font-size: 48px;

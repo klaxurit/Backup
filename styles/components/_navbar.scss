@@ -6,7 +6,7 @@
   align-items: center;
   padding: 18px;
   @media #{$lg} {
-    padding: 18px 128px;
+    padding: 18px 120px;
   }
 
   &__logo {
@@ -68,7 +68,7 @@
     &--desktop {
       display: none;
       align-items: center;
-      gap: 32px;
+      gap: 22px;
       .btn--small {
         height: 40px;
         width: 65px;

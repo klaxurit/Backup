@@ -59,19 +59,18 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 380px;
+    height: 370px;
     margin-top: -60px;
 
     h3 {
       margin-right: 0;
-      padding-right: 50px;
       font-size: 48px;
       line-height: 57px;
       margin-bottom: 32px;
     }
 
     &__wrapper {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       gap: 80px;
       &__firstMetric,
       &__secondMetric,
@@ -80,13 +79,16 @@
           font-size: 40px;
           line-height: 48px;
         }
+        p {
+          font-family: 'TT Hoves Medium';
+        }
       }
     }
 
     &__btn {
       margin-left: 1px;
       margin-right: 0;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       &--mobile {
         display: none;
       }
@@ -107,8 +109,9 @@
   padding-right: 5px;
   @media #{$lg} {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 80%; 
+    gap: 110px;
+    // width: 80%; 
   }
 }

@@ -6,13 +6,23 @@
 }
 
 @font-face {
+  font-family: 'TT Hoves Medium';
+  src: url('../../src/assets/fonts/TT Hoves Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Hoves Regular';
+  src: url('../../src/assets/fonts/TT Hoves Regular.otf') format('opentype');
+}
+
+@font-face {
   font-family: 'TT Hoves Bold';
   src: url('../../src/assets/fonts/TT Hoves Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'TT Hoves DemiBold';
-  src: url('../../src/assets/fonts/TT Hoves Bold.otf') format('opentype');
+  src: url('../../src/assets/fonts/TT Hoves DemiBold.otf') format('opentype');
   font-weight: 500;
 }
 
@@ -35,10 +45,10 @@ body {
   background-color: $primary-blacker-bis;
   line-height: 160%;
   font-size: 16px;
-  font-family: 'TT Hoves', sans-serif;
+  font-family: 'TT Hoves Regular', sans-serif;
   font-weight: 500;
   @media #{$lg} {
-    font-family: 'TT Hoves' sans-serif;
+    font-family: 'TT Hoves Regular' sans-serif;
     font-weight: 400;
   }
 }
