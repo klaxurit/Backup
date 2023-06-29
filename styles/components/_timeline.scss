@@ -15,7 +15,7 @@
       color: white;
       margin: 0;
       padding: 0;
-      font-family: "TT Hoves Bold", sans-serif;
+      font-family: "TT Hoves Bold";
       font-size: 32px;
       line-height: 38px;
     }
@@ -81,7 +81,7 @@
       gap: 40px;
       padding: 40px;
       &__date {
-        font-family: "TT Hoves Bold", sans-serif;
+        font-family: "TT Hoves Bold";
         color: white;
         font-size: 40px;
         line-height: 48px;
@@ -136,7 +136,7 @@
       padding-left: 120px;
       &__story {
         border-radius: 32px;
-        flex: 0 0 230px; 
+        flex: 0 0 230px;
         gap: 40px;
         padding: 40px;
         &__date {

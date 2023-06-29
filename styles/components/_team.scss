@@ -31,7 +31,7 @@
         margin-bottom: 8px;
         &__link {
           color: white;
-          font-family: "TT Hoves Bold", sans-serif;
+          font-family: "TT Hoves Bold";
           font-weight: 700;
           font-size: 18px;
           line-height: 25px;
@@ -80,42 +80,42 @@
       line-height: 57px;
     }
     &__content {
-    gap: 40px;
-    margin-bottom: 100px;
-    &__member {
-      width: auto;
-      border-radius: 32px;
-      padding: 38px;
-      &__draw {
-        width: 320px;
+      gap: 40px;
+      margin-bottom: 100px;
+      &__member {
+        width: auto;
         border-radius: 32px;
-        margin-bottom: 32px;
-      }
-      &__twitter {
-        margin-bottom: 8px;
-        &__link {
-          font-size: 18px;
-          line-height: 25px;
-          border: none;
-          height: inherit;
-          width: inherit;
-          padding: inherit;
+        padding: 38px;
+        &__draw {
+          width: 320px;
+          border-radius: 32px;
+          margin-bottom: 32px;
         }
-        &__icon {
-          width: 15px;
-          height: 16px;
-          margin-top: 2px;
-          margin-left: 10px;
+        &__twitter {
+          margin-bottom: 8px;
+          &__link {
+            font-size: 18px;
+            line-height: 25px;
+            border: none;
+            height: inherit;
+            width: inherit;
+            padding: inherit;
+          }
+          &__icon {
+            width: 15px;
+            height: 16px;
+            margin-top: 2px;
+            margin-left: 10px;
+          }
+        }
+        &__job {
+          font-size: 15px;
+          line-height: 20px;
         }
       }
-      &__job {
-        font-size: 15px;
-        line-height: 20px;
-      }
-    }
     }
   }
-  @media#{$xl} {
+  @media #{$xl} {
     &__content {
       flex-direction: row;
     }

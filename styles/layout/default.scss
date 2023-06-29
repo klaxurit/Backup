@@ -1,21 +1,21 @@
 @font-face {
-  font-family: 'TT Hoves Medium', sans-serif;
-  src: url('/src/assets/fonts/TT_Hoves_Medium.otf') format('opentype');
+  font-family: "TT Hoves Medium";
+  src: url("/src/assets/fonts/TT_Hoves_Medium.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'TT Hoves Regular', sans-serif;
-  src: url('/src/assets/fonts/TT_Hoves_Regular.otf') format('opentype');
+  font-family: "TT Hoves Regular";
+  src: url("/src/assets/fonts/TT_Hoves_Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'TT Hoves Bold', sans-serif;
-  src: url('/src/assets/fonts/TT_Hoves_Bold.otf') format('opentype');
+  font-family: "TT Hoves Bold";
+  src: url("/src/assets/fonts/TT_Hoves_Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'TT Hoves DemiBold', sans-serif;
-  src: url('/src/assets/fonts/TT_Hoves_DemiBold.otf') format('opentype');
+  font-family: "TT Hoves DemiBold";
+  src: url("/src/assets/fonts/TT_Hoves_DemiBold.otf") format("opentype");
   font-weight: 500;
 }
 
@@ -23,22 +23,22 @@ body {
   background-color: $primary-blacker-bis;
   line-height: 160%;
   font-size: 16px;
-  font-family: 'TT Hoves Regular', sans-serif;
+  font-family: "TT Hoves Regular";
   font-weight: 500;
   @media #{$lg} {
-    font-family: 'TT Hoves Regular', sans-serif;
+    font-family: "TT Hoves Regular";
     font-weight: 400;
   }
 }
 h1 {
-  font-family: 'TT Hoves Bold', sans-serif;
+  font-family: "TT Hoves Bold";
   font-size: 56px;
   line-height: 120%;
   color: white;
 }
 h2 {
   color: white;
-  font-family: 'TT Hoves Bold', sans-serif;
+  font-family: "TT Hoves Bold";
   font-size: 48px;
   line-height: 120%;
 }
@@ -46,7 +46,7 @@ h3 {
   color: white;
   font-size: 40px;
   line-height: 120%;
-  font-family: 'TT Hoves Bold', sans-serif;
+  font-family: "TT Hoves Bold";
   font-weight: 700;
 }
 h4 {
@@ -56,7 +56,7 @@ h4 {
 h5 {
   font-size: 28px;
   line-height: 120%;
-  font-family: 'TT Hoves Bold', sans-serif;
+  font-family: "TT Hoves Bold";
   font-weight: 700;
 }
 h6 {

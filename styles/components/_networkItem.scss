@@ -23,7 +23,7 @@
       user-select: none;
     }
     &__metrics {
-      font-family: "TT Hoves Medium", sans-serif;
+      font-family: "TT Hoves Medium";
       font-weight: 500;
       font-size: 9px;
       line-height: 10px;
@@ -46,7 +46,7 @@
         user-select: none;
       }
       &__title {
-        font-family: "TT Hoves DemiBold", sans-serif;
+        font-family: "TT Hoves DemiBold";
         font-weight: 500;
         font-size: 12px;
         line-height: 160%;
@@ -95,7 +95,7 @@
       }
       &__metrics {
         align-self: flex-start;
-        font-family: "TT Hoves Medium", sans-serif;
+        font-family: "TT Hoves Medium";
         font-weight: 500;
         font-size: 9px;
         line-height: 10px;
@@ -122,7 +122,7 @@
       }
       &__value {
         color: $white;
-        font-family: 'TT Hoves Medium', sans-serif;
+        font-family: "TT Hoves Medium";
         font-weight: 500;
         font-size: 14px;
         line-height: 22px;

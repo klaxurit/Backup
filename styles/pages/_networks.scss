@@ -70,7 +70,7 @@
               margin: 0;
               color: $neutral-light;
               &::placeholder {
-                font-family: "TT Hoves", sans-serif;
+                font-family: "TT Hoves";
                 color: $neutral-pure;
                 font-weight: 500px;
                 font-size: 18px;
@@ -87,7 +87,7 @@
           }
           &__iconSlash {
             display: none;
-            font-family: "TT Hoves DemiBold", sans-serif;
+            font-family: "TT Hoves DemiBold";
             font-weight: 600;
             font-size: 12px;
             line-height: 19px;

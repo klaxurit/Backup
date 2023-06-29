@@ -42,7 +42,6 @@
     gap: 4px;
     width: 100%;
 
-
     &__questions {
       display: flex;
       flex-direction: column;
@@ -72,7 +71,7 @@
             flex-grow: 1;
           }
           h4 {
-            font-family: "TT Hoves Medium", sans-serif;
+            font-family: "TT Hoves Medium";
             font-weight: 500;
             font-size: 28px;
             line-height: 33px;
@@ -127,7 +126,7 @@
           }
           &__answer {
             border: none;
-            border-bottom: 0.50px #FFFFFF1F solid;
+            border-bottom: 0.5px #ffffff1f solid;
             margin-bottom: 40px;
             padding-bottom: 40px;
           }
@@ -140,7 +139,7 @@
         width: 30%;
         gap: 10px;
         &__button {
-          font-family: 'TT Hoves Medium', sans-serif;
+          font-family: "TT Hoves Medium";
           cursor: pointer;
           display: flex;
           color: $neutral-pure;
@@ -154,7 +153,7 @@
           &--active {
             color: white;
             border-radius: 16px;
-            border: 2px solid var(--neutral-onyx-blacker, #1F1A34);
+            border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
             background: rgba(255, 255, 255, 0.04);
           }
         }
@@ -206,7 +205,7 @@
     padding-bottom: 120px;
     margin-bottom: 110px;
     &__content {
-      width: 40%; 
+      width: 40%;
       max-height: 170px;
       &__desc {
         font-size: 18px;

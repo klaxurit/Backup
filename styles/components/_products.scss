@@ -39,13 +39,13 @@
         margin: 0;
       }
       &__btn {
-        font-family: 'TT Hoves DemiBold', sans-serif;
+        font-family: "TT Hoves DemiBold";
         white-space: nowrap;
         margin: 0;
         margin-top: 20px;
         padding: 16px 20px 18px 20px;
         &--soon {
-          font-family: 'TT Hoves Medium', sans-serif;
+          font-family: "TT Hoves Medium";
           background-color: $primary-dark;
           color: $primary-lighter;
           font-size: 12px;
@@ -66,7 +66,7 @@
   }
 }
 @media #{$lg} {
-  .products{
+  .products {
     &__content {
       align-items: center;
       margin-top: 70px;
@@ -115,8 +115,8 @@
           }
         }
       }
-      &__item:nth-child(3) { 
-        flex-direction: row-reverse; 
+      &__item:nth-child(3) {
+        flex-direction: row-reverse;
       }
     }
   }

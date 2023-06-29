@@ -35,7 +35,7 @@
           line-height: 25px;
         }
         button {
-          font-family: 'TT Hoves DemiBold', sans-serif;
+          font-family: "TT Hoves DemiBold";
           font-weight: 600;
           font-size: 18px;
           line-height: 28px;
@@ -112,7 +112,7 @@
     }
   }
   @media #{$md} {
-    &__content{
+    &__content {
       &__card {
         width: 800px;
         &__body {
