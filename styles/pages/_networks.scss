@@ -5,6 +5,7 @@
   background-color: $primary-blacker-bis;
   padding: 0 24px 0;
   box-sizing: border-box;
+  margin-top: 50px;
   &__content {
     display: flex;
     flex-direction: column;
@@ -60,7 +61,7 @@
             align-items: center;
             &__iconSearch {
               stroke: $neutral-pure;
-              width: 13px;
+              width: 14px;
             }
             &__input {
               outline: none;
@@ -70,7 +71,8 @@
               margin: 0;
               color: $neutral-light;
               &::placeholder {
-                font-family: "TT Hoves";
+                font-family: "TT Hoves Medium";
+                font-weight: 500;
                 color: $neutral-pure;
                 font-weight: 500px;
                 font-size: 18px;
@@ -83,7 +85,8 @@
             color: transparent;
             width: 12px;
             height: 12px;
-            padding: 12px;
+            padding: 8px;
+            border-radius: 6px;
           }
           &__iconSlash {
             display: none;
@@ -95,6 +98,8 @@
             height: 23px;
             color: $neutral-pure;
             text-align: center;
+            padding: 1px;
+            border-radius: 6px;
           }
         }
       }
@@ -119,6 +124,9 @@
             border: 2px solid $primary-light;
           }
           &__label {
+            font-family: "TT Hoves Medium";
+            font-weight: 500;
+            color: $neutral-pure;
             font-size: 18px;
             line-height: 28px;
             margin: 0;
