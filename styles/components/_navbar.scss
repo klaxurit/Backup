@@ -158,10 +158,24 @@
         width: 42px;
         height: 42px;
       }
+      &__svg {
+        display: none;
+        @media #{$lg} {
+          display: flex;
+          position: absolute;
+          right: 20px;
+        }
+      }
     }
 
     &__item.isDisabled {
       pointer-events: none;
+      .Navbar__dropdown__item__svg {
+        display: none;
+        @media #{$lg} {
+          display: none;
+        }
+      }
     }
   }
 

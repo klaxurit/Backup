@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LogoArrowRight } from "../SVGs/SVGs";
 
 interface DropdownItem {
   image: string;
@@ -23,6 +24,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ items }) => {
               <p className={`Navbar__link Navbar__link--title ${item.disabled ? 'Navbar__link--title--disabled' : ''}`}>{item.title}</p>
               <p className={`Navbar__link Navbar__link--subtitle ${item.disabled ? 'Navbar__link--subtitle--disabled' : ''}`}>{item.subtitle}</p>
             </div>
+            <LogoArrowRight className="Navbar__dropdown__item__svg"/>
           </div>
         </Link>
       ))}

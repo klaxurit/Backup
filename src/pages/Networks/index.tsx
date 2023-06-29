@@ -28,7 +28,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
   if (order === 'A > Z') {
     filteredNetworks.sort((a, b) => a.title.localeCompare(b.title));
   } else if (order === 'APR') {
-    filteredNetworks.sort((a, b) => b.metrics - a.metrics); // Assuming 'apr' is a property of your network object
+    filteredNetworks.sort((a, b) => b.metrics - a.metrics);
   }
 
   return (
