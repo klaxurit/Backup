@@ -73,7 +73,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               {showOrderOptions && (
                   <div className="Networks__content__control__filters__button__pannel2">
                   <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('A > Z')}>
-                      A > Z
+                    A {'>'} Z
                   </p>
                   <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('APR')}>
                     APR
