@@ -161,9 +161,18 @@
       &__svg {
         display: none;
         @media #{$lg} {
-          display: flex;
+          display: none;
           position: absolute;
           right: 20px;
+        }
+      }
+      &:hover {
+        .Navbar__dropdown__item__svg {
+          @media #{$lg} {
+            display: flex;
+            position: absolute;
+            right: 20px;
+          }
         }
       }
     }
