@@ -19,7 +19,6 @@
 
       &__subtitle,
       &__updated {
-        font-family: "TT Hoves", sans-serif;
         font-weight: 500;
         font-size: 18px;
         line-height: 160%;
@@ -28,7 +27,6 @@
       }
 
       &__title {
-        font-family: "TT Hoves", sans-serif;
         font-weight: 700;
         font-size: 40px;
         line-height: 120%;
@@ -39,7 +37,6 @@
 
       &__intro {
         color: white;
-        font-family: "TT Hoves", sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
@@ -51,7 +48,6 @@
       &__article {
         h4 {
           color: white;
-          font-family: "TT Hoves", sans-serif;
           font-size: 28px;
           font-weight: 500;
           line-height: 34px;
@@ -61,7 +57,6 @@
         p,
         li {
           color: white;
-          font-family: "TT Hoves", sans-serif;
           font-size: 18px;
           font-weight: 400;
           line-height: 28px;
@@ -82,7 +77,6 @@
       flex-grow: 1;
       p {
         color: $neutral-pure;
-        font-family: "TT Hoves", sans-serif;
         cursor: pointer;
         font-weight: 500;
         color: $neutral-pure;
@@ -134,7 +128,6 @@
         gap: 8px;
         p {
           color: white;
-          font-family: "TT Hoves", sans-serif;
           cursor: pointer;
           font-weight: 500;
           font-size: 18px;
@@ -144,7 +137,6 @@
         }
       }
       p {
-        font-family: "TT Hoves", sans-serif;
         cursor: pointer;
         font-weight: 500;
         color: $neutral-pure;
