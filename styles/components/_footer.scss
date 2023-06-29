@@ -12,8 +12,8 @@
       gap: 8px;
       max-width: 400px;
       &__separator {
-        color: white;
-        font-family: "TT Hoves", sans-serif;
+        color: $neutral-pure;
+        font-family: "TT Hoves medium", sans-serif;
         font-weight: 500;
         &--desktop {
           display: none;
@@ -72,9 +72,9 @@
           font-size: 5px;
           &--desktop {
             display: block;
-            color: white;
-            font-family: "TT Hoves", sans-serif;
-            font-weight: 400;
+            color: $neutral-pure;
+            font-family: "TT Hoves medium", sans-serif;
+            font-weight: 500;
             font-size: 5px;
           }
         }

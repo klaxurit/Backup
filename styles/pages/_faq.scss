@@ -18,7 +18,6 @@
     margin-bottom: 10px;
 
     p {
-      font-family: "TT Hoves", sans-serif;
       font-weight: 500;
       font-size: 18px;
       line-height: 160%;
@@ -27,7 +26,6 @@
     }
 
     h1 {
-      font-family: "TT Hoves", sans-serif;
       font-weight: 700;
       font-size: 40px;
       line-height: 120%;
@@ -74,7 +72,7 @@
             flex-grow: 1;
           }
           h4 {
-            font-family: "TT Hoves", sans-serif;
+            font-family: "TT Hoves Medium", sans-serif;
             font-weight: 500;
             font-size: 28px;
             line-height: 33px;
@@ -82,7 +80,6 @@
             align-self: flex-start;
           }
           p {
-            font-family: "TT Hoves", sans-serif;
             cursor: pointer;
             font-weight: 500;
             color: $neutral-pure;
@@ -100,7 +97,6 @@
 
         &__answer {
           p {
-            font-family: "TT Hoves", sans-serif;
             font-weight: 400;
             font-size: 18px;
             line-height: 160%;
@@ -144,6 +140,7 @@
         width: 30%;
         gap: 10px;
         &__button {
+          font-family: 'TT Hoves Medium';
           cursor: pointer;
           display: flex;
           color: $neutral-pure;
@@ -167,7 +164,7 @@
 }
 
 .Help {
-  margin-top: -50px;
+  margin-top: 50px;
   margin-bottom: 50px;
   padding: 40px 10px;
   background-color: $primary-blacker;

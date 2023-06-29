@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
         <div className="Footer__content__linksWrapper">
           <a href="#" className="Footer__content__linksWrapper__link link__white">Product</a>
           <span className="Footer__content__linksWrapper__separator">•</span>
-          <a href="#" className="Footer__content__linksWrapper__link link__white">Networks</a>
+          <a href={`networks`} className="Footer__content__linksWrapper__link link__white">Networks</a>
           <span className="Footer__content__linksWrapper__separator">•</span>
           <Link to={`about`} className="Footer__content__linksWrapper__link link__white">About</Link>
           <span className="Footer__content__linksWrapper__separator">•</span>
@@ -36,4 +36,3 @@ export const Footer: React.FC = () => {
     </div>
   );
 }
-          

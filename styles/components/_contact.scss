@@ -25,7 +25,6 @@
       padding: 0;
     }
     &__mail {
-      font-family: "TT Hoves", sans-serif;
       color: $primary-light;
       font-size: 18px;
       line-height: 29px;
@@ -51,6 +50,9 @@
       &__title {
         font-size: 48px;
         line-height: 57px;
+      }
+      &__mail {
+        margin-top: -5px;
       }
     }
   }
