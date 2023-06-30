@@ -1,3 +1,5 @@
+// import { useState } from "react";
+
 import { Network } from "../types";
 
 interface NetworkItemProps {
@@ -6,9 +8,28 @@ interface NetworkItemProps {
 }
 
 export const NetworkItem: React.FC<NetworkItemProps> = ({ network, detailed = false }: NetworkItemProps) => {
+  // const [showTooltip, setShowTooltip] = useState(false);
+
+  // const handleMouseOver = () => {
+  //   setShowTooltip(true);
+  // };
+
+  // const handleMouseOut = () => {
+  //   setShowTooltip(false);
+  // };
+
   if (detailed) {
     return (
-      <div className="Network__item Network__item--detailed">
+      <div 
+        className="Network__item Network__item--detailed"
+        // onMouseOver={handleMouseOver}
+        // onMouseOut={handleMouseOut}
+      >
+        {/* {showTooltip && (
+          <div className="Network__item__tooltip">
+            {network.title}
+          </div>
+        )} */}
         <div className="Network__item__header">
           <img src={network.imageUrl} className="Network__item__header__img" draggable={false} />
           <div className="Network__item__header__info">
