@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { useStateRef, getRefValue } from "./hooks";
 import { getTouchEventData } from "./dom";
 import { NetworkItem } from "../../components/NetworkItem";
@@ -123,7 +124,7 @@ const Swiper: React.FC<SwiperProps> = ({ networks = networkData }) => {
           ))}
         </ul>
       </div>
-      <button className="CarouselNetworks__btn btn--large btn__primary">Stake 'em all!</button>
+      <Link to={`networks`}><button className="CarouselNetworks__btn btn--large btn__primary">Stake 'em all!</button></Link>
     </div>
   );
 };

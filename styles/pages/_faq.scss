@@ -260,6 +260,9 @@
       margin: 0;
       padding: 0;
     }
+    a {
+      text-decoration: none;
+    }
     &__mail {
       color: $primary-light;
       font-size: 18px;

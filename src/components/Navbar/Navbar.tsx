@@ -63,7 +63,7 @@ const Navbar = () => {
           <Link to={`networks`} className="Navbar__link--white">Networks</Link>
           <Link to={`about`} className="Navbar__link--white">About</Link>
           <Link to={`faq`} className="Navbar__link--white">FAQ</Link>
-          <button className="btn--small btn__primary">Stake</button>
+          <button className="btn--small btn__primary"><Link to={`networks`} >Stake</Link></button>
         </div>
       </div>
     </nav>

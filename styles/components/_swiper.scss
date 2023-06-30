@@ -20,6 +20,9 @@
   &__title.mobile {
     display: block;
   }
+  a {
+    text-decoration: none;
+  }
   &__btn {
     display: none;
     margin-bottom: 80px;

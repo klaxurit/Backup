@@ -120,7 +120,7 @@ const FAQ: React.FC = () => {
             Any question about staking or the services we provide? We would be
             glad to help you. Contact us at
           </p>
-          <p className="Help__content__mail">contact@stakelab.fr</p>
+          <a href="mailto:contact@stakelab.fr" className="Help__content__mail">contact@stakelab.fr</a>
         </div>
       </section>
     </>
