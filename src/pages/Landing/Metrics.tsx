@@ -22,7 +22,7 @@ export const Metrics: React.FC = () => {
             <p>Delegators</p>
           </div>
         </div>
-        <button className="metrics__btn metrics__btn--mobile btn--large btn__white">Explore networks</button>
+        <Link to={`networks`}><button className="metrics__btn metrics__btn--mobile btn--large btn__white">Explore networks</button></Link>
       </div>
     </div> 
   );
