@@ -39,6 +39,11 @@
           height: inherit;
           width: inherit;
           padding: inherit;
+          &:hover {
+            .Team__content__member__twitter__icon {
+              color: $neutral-pure;
+            }
+          }
         }
         &__icon {
           color: $neutral-pure-bis;
