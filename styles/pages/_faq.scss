@@ -152,6 +152,8 @@
         margin-top: 15px;
         width: 30%;
         gap: 10px;
+        position: sticky;
+        top: 20px;
         &__button {
           font-family: "TT Hoves Medium";
           cursor: pointer;
