@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Team } from "./Team";
 import { Timeline } from "./Timeline";
 import Contact from "../../components/Contact";
@@ -12,7 +14,7 @@ const About: React.FC = () => {
             <article className="About__content__card__body__intro">
               StakeLab was born in 2020 during the Pandemic to gives people ways to access leveraging blockchain and proof of stake technologies. Since it has grown with 70 networks and more coming soon, thousands delegators, and millions USD of delegated assets. Every day, hundreds of StakeLabers trust us and grow their assets on a safe tech with plenty staking opportunities.
             </article>
-            <button className="btn--large btn__primary">Stake with us</button>
+            <Link to={`../networks`}><button className="btn--large btn__primary">Stake with us</button></Link>
           </div>
         </div>
         <div className="About__content__facts">

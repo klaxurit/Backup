@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import StakeLab from "../../assets/images/stakelab.svg";
 import AppLab from "../../assets/images/applab.svg";
 import DataLab from "../../assets/images/datalab.svg";
@@ -14,7 +16,7 @@ const Products: React.FC = () => {
           <div className="products__content__item__preview">
             <h2 className="products__content__item__title">StakeLab</h2>
             <p className="products__content__item__desc">StakeLab is a secure infrastructure that provides validating and relaying services for Proof of Stake blockchains based...</p>
-          <button className="btn--large btn__primary products__content__item__btn">Discover</button>
+            <Link to={`networks`}><button className="btn--large btn__primary products__content__item__btn">Discover</button></Link>
           </div>
         </div>
         <div className="products__content__item">

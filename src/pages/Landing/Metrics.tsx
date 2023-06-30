@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export const Metrics: React.FC = () => {
   return (
     <div className="metrics">
       <div className="metrics__content">
         <div className="metrics__left">
           <h3>Experiment staking</h3>
-          <button className="metrics__btn metrics__btn--desktop btn--large btn__white">Explore networks</button>
+          <Link to={`networks`}><button className="metrics__btn metrics__btn--desktop btn--large btn__white">Explore networks</button></Link>
         </div>
         <div className="metrics__wrapper">
           <div className="metrics__wrapper__firstMetric">

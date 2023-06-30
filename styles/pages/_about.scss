@@ -21,6 +21,9 @@
         justify-content: center;
         gap: 28px;
         width: 90%;
+        a {
+          text-decoration: none;
+        }
         &__title {
           color: white;
           font-size: 32px;

@@ -1,4 +1,5 @@
 import { useRef, useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { LogoNext, LogoPrevious } from "../../components/SVGs";
 import { Story } from "./Story";
@@ -53,7 +54,7 @@ export const Timeline: React.FC = () => {
           <Story key={index} date={story.date} description={story.description} />
         ))}
       </section>
-      <button className="Timeline__btn btn--large btn__primary">Start staking</button>
+      <Link to={`../networks`}><button className="Timeline__btn btn--large btn__primary">Start staking</button></Link>
     </div>
   );
 }

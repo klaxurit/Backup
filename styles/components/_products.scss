@@ -22,6 +22,9 @@
       border-radius: 32px;
       padding: 32px 25px;
       color: white;
+      a {
+        text-decoration: none;
+      }
       &__preview {
         display: flex;
         flex-direction: column;

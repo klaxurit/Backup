@@ -15,7 +15,7 @@ import Gitopia from "../assets/images/gitopia.svg";
 export const networks = [
   {
     imageUrl: Cosmos,
-    title: 'Cosmo',
+    title: 'Cosmos',
     description: 'ATOM',
     metrics: 16,
     delegated: '341K',

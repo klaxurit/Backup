@@ -67,6 +67,59 @@
             gap: 8px;
             border: 2px solid #1f1a34;
             border-radius: 16px;
+            width: auto;
+            flex-grow: 1;
+          }
+          h4 {
+            font-family: "TT Hoves Medium";
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 33px;
+            color: white;
+            align-self: flex-start;
+          }
+          p {
+            cursor: pointer;
+            font-weight: 500;
+            color: $neutral-pure;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0;
+            flex-grow: 1;
+          }
+          &__icon {
+            width: 10px;
+            stroke: $neutral-pure;
+            flex-shrink: 0;
+            padding-left: 20px;
+          }
+        }
+
+        &__answer {
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    &__buttons {
+      display: none;
+      &--mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &__btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 14px 12px 20px;
+            gap: 8px;
+            border: 2px solid #1f1a34;
+            border-radius: 16px;
             width: 100%;
             flex-grow: 1;
           }
@@ -92,20 +145,33 @@
             stroke: $neutral-pure;
             flex-shrink: 0;
           }
-        }
-
-        &__answer {
-          p {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 160%;
-            color: #ffffff;
+      }
+      &--desktop {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        width: 30%;
+        gap: 10px;
+        &__button {
+          font-family: "TT Hoves Medium";
+          cursor: pointer;
+          display: flex;
+          color: $neutral-pure;
+          padding: 12px 14px 12px 20px;
+          gap: 8px;
+          border: 2px solid #1f1a34;
+          border-radius: 16px;
+          width: 100%;
+          flex-grow: 1;
+          margin: 0;
+          &--active {
+            color: white;
+            border-radius: 16px;
+            border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+            background: rgba(255, 255, 255, 0.04);
           }
         }
       }
-    }
-    &__buttons {
-      display: none;
     }
   }
   @media #{$lg} {
@@ -159,6 +225,12 @@
         }
       }
     }
+  }
+}
+
+#question-1, #question-2, #question-3 {
+  &.hidden {
+    display: none;
   }
 }
 

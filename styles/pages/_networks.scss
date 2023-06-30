@@ -139,12 +139,12 @@
           &__pannel2 {
             position: absolute;
             right: 135px;
-            top: 340px;
+            top: 365px;
           }
           &__pannel1 {
             position: absolute;
             right: 320px;
-            top: 340px;
+            top: 365px;
           }
           &__pannel1,
           &__pannel2 {
@@ -159,7 +159,7 @@
             z-index: 1000;
             &__label {
               margin: 0;
-              color: white;
+              color: $neutral-pure;
               font-size: 18px;
               line-height: 28px;
               text-decoration: none;
@@ -169,7 +169,7 @@
               padding: 12px;
               gap: 14px;
               &:hover {
-                color: $neutral-pure;
+                color: white;
                 cursor: pointer;
               }
             }
