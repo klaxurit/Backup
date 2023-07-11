@@ -1,10 +1,21 @@
+// MainIllustration.scss
 .main-illustration {
-  .illustration {
-    width: 350px;
+  z-index: -1;
+  .main-video {
+    margin: -50px 0;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
   }
-  @media #{$lg} {
-    .illustration {
-      width: 500px;
+  @media (min-width: 992px) {
+    .main-video {
+      margin: 0;
+      position: absolute;
+      width: 850px;
+      height: 850px;
+      object-fit: cover;
+      left: 460px;
+      bottom: -90px;
     }
   }
 }

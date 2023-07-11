@@ -15,19 +15,19 @@ const Navbar = () => {
     {
       image: stakeLab,
       title: 'StakeLab',
-      subtitle: 'Live',
+      subtitle: 'LIVE',
       path: 'stakelab'
     },
     {
       image: appLab,
       title: 'AppLab',
-      subtitle: 'Coming soon',
+      subtitle: 'LAUNCH IN 2023',
       disabled: true,
     },
     {
       image: dataLab,
       title: 'DataLab',
-      subtitle: 'Coming soon',
+      subtitle: 'LAUNCH IN 2024',
       disabled: true,
     },
   ];

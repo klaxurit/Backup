@@ -1,19 +1,20 @@
+// Header.scss
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-    .header__firstBlock {
+  .header__firstBlock {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  @media #{$lg} {
+  @media (min-width: 992px) {
     .header__firstBlock {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      gap: 100px;
+      justify-content: flex-start;
     }
   }
 }

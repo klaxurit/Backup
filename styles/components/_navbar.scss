@@ -1,12 +1,18 @@
 @import "../utils/variables";
+@keyframes bounce {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
 
 .Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px;
+  padding: 0 18px;
+  height: 72px;
   @media #{$lg} {
-    padding: 18px 120px;
+    padding: 0px 120px;
   }
 
   &__logo {
@@ -68,11 +74,12 @@
     &--desktop {
       display: none;
       align-items: center;
-      gap: 22px;
+      gap: 24px;
       a {
         text-decoration: none;
       }
       .btn--small {
+        font-family: 'TT Hoves DemiBold';
         height: 40px;
         width: 65px;
         border-radius: 12px;
@@ -179,6 +186,7 @@
             display: flex;
             position: absolute;
             right: 20px;
+            animation: bounce 0.5s ease-in-out;
           }
         }
       }
@@ -191,6 +199,16 @@
         @media #{$lg} {
           display: none;
         }
+      }
+      .Navbar__link--subtitle {
+        color: $neutral-light;
+        background-color: $neutral-black;
+      }
+      .Navbar__link--title {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600;
       }
     }
   }
@@ -235,11 +253,11 @@
       padding: 5px;
       padding-bottom: 5px;
       margin: 0;
-      &:active {
-        color: white;
-      }
       &:hover {
         color: $neutral-lighter;
+      }
+      &:active {
+        color: white;
       }
       &--disabled {
         text-decoration: none;
@@ -291,12 +309,16 @@
     }
 
     &--subtitle {
-      color: $neutral-pure;
+      font-family: 'TT Hoves Medium';
       font-weight: 500;
-      font-size: 12px;
-      line-height: 19px;
+      color: $primary-lighter;
+      font-size: 8px;
+      line-height: 10px;
       margin-top: 0;
       margin-bottom: 0;
+      padding: 4px;
+      background-color: $primary-dark;
+      border-radius: 4px;
       &--disabled {
         color: $neutral-medium;
 
@@ -325,7 +347,7 @@
       align-items: center;
       margin-top: 6px;
 
-      &:focus {
+      &:focus-visible {
         outline: none;
         border-color: $primary-light;
         box-shadow: 0px 0px 0px 6px #7950f23d;
@@ -337,5 +359,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 4px;
   }
 }
