@@ -115,6 +115,9 @@
             height: 34px;
             border-radius: 8px;
           }
+          &:focus-visible {
+            outline: none;
+          }
         }
       }
       &__item:nth-child(3) {

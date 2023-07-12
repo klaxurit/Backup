@@ -16,7 +16,7 @@ const Products: React.FC = () => {
           <div className="products__content__item__preview">
             <h2 className="products__content__item__title">StakeLab</h2>
             <p className="products__content__item__desc">StakeLab is a secure infrastructure that provides validating and relaying services for Proof of Stake blockchains based...</p>
-            <Link to={`networks`}><button className="btn--large btn__primary products__content__item__btn">Discover</button></Link>
+            <Link to={`stakelab`}><button className="btn--large btn__primary products__content__item__btn">Discover</button></Link>
           </div>
         </div>
         <div className="products__content__item">

@@ -28,9 +28,9 @@ export const Footer: React.FC = () => {
           <Link to={`legal`} className="Footer__content__linksWrapper__link link__white">Legal</Link>
         </div>
         <div className="Footer__content__iconWrapper">
-          <a href="https://t.me/stakelab_fr" target="_blank"><LogoMail className="Footer__content__iconWrapper__icon icon__link" /></a>
+          <a href="https://t.me/stakelab_zone" target="_blank"><LogoMail className="Footer__content__iconWrapper__icon icon__link" /></a>
           <a href="https://twitter.com/StakeLab" target="_blank"><LogoTwitter className="Footer__content__iconWrapper__icon icon__link" /></a>
-          <a href="https://github.com/" target="_blank"><LogoGithub className="Footer__content__iconWrapper__icon icon__link" /></a>
+          <a href="https://github.com/StakeLab-Zone" target="_blank"><LogoGithub className="Footer__content__iconWrapper__icon icon__link" /></a>
         </div>
       </div>
     </div>

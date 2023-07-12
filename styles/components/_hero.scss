@@ -9,7 +9,7 @@
   row-gap: 16px;
   z-index: 999;
   @media #{$lg} {
-    padding: 100px 80px;
+    padding: 100px 80px 80px 80px;
     border-radius: 80px;
     row-gap: 40px;
     margin-right: 590px;
@@ -35,23 +35,22 @@
   &__iconWrapper {
     display: flex;
     gap: 24px;
-  }
-  &__icon {
-    cursor: pointer;
-    width: 18px;
-    height: 15px;
-    padding: 10px;
-    @media #{$lg} {
-      width: 24px;
-      height: 20px;
-      padding: 15px;
+    a {
+      border: 1px solid transparent;
+    }
+    a:focus-visible {
+      border-radius: 12px;
+      border: 1px solid $primary-light;
+      background-color: $neutral-dark;
+      box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+      outline: none;
     }
   }
   @media #{$lg} {
     &__title {
       font-size: 80px;
       line-height: 96px;
-      width: 440px;
+      width: 455px;
     }
     &__desc {
       font-size: 24px;
@@ -61,11 +60,6 @@
     &__iconWrapper {
       display: flex;
       gap: 24px;
-    }
-    &__icon {
-      width: 18px;
-      height: 15px;
-      padding: 10px;
     }
   }
 }
