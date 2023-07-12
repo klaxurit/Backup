@@ -26,7 +26,7 @@ const Products: React.FC = () => {
           <div className="products__content__item__preview">
             <h2 className="products__content__item__title">AppLab</h2>
             <p className="products__content__item__desc">We provide a decentralized application that allows users to manage their assets from all the StakeLab supported blockchains...</p>
-          <button className="btn--medium btn__primary products__content__item__btn--soon">Launch early 2023</button>
+          <button className="btn--medium btn__primary products__content__item__btn--soon">Launch in 2023</button>
           </div>
         </div>
         <div className="products__content__item">
@@ -36,7 +36,7 @@ const Products: React.FC = () => {
           <div className="products__content__item__preview">
             <h2 className="products__content__item__title">DataLab</h2>
             <p className="products__content__item__desc">Heard about DCA (Dollar Cost Average)? We automated the on-ramp from fiat to crypto right in your wallet with our in-house app...</p>
-          <button className="btn--medium btn__primary products__content__item__btn--soon">Launch in 2023</button>
+          <button className="btn--medium btn__primary products__content__item__btn--soon">Launch in 2024</button>
           </div>
         </div>
       </div>

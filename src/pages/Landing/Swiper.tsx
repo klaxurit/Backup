@@ -92,8 +92,7 @@ const Swiper: React.FC<SwiperProps> = ({ networks = networkData }) => {
 
   return (
     <div className="CarouselNetworks">
-      <h1 className="CarouselNetworks__title desktop">Networks</h1>
-      <h1 className="CarouselNetworks__title mobile">Our Networks</h1>
+      <h1 className="CarouselNetworks__title">Our Networks</h1>
       <div
         className="CarouselNetworks__swiper__container"
         onTouchStart={onTouchStart}

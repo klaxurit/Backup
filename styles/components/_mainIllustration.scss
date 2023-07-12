@@ -1,4 +1,3 @@
-// MainIllustration.scss
 .main-illustration {
   z-index: -1;
   .main-video {
@@ -10,12 +9,13 @@
   @media (min-width: 992px) {
     .main-video {
       margin: 0;
+      margin-left: 110px;
       position: absolute;
-      width: 850px;
-      height: 850px;
+      width: 675px;
+      height: 800px;
       object-fit: cover;
       left: 500px;
-      bottom: -90px;
+      bottom: -80px;
     }
   }
 }

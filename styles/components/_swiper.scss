@@ -13,13 +13,6 @@
     font-size: 32px;
     line-height: 38px;
   }
-  &__title.desktop {
-    margin-bottom: 0;
-    display: none;
-  }
-  &__title.mobile {
-    display: block;
-  }
   a {
     text-decoration: none;
   }
@@ -73,12 +66,6 @@
     &__title {
       font-size: 48px;
       line-height: 57px;
-    }
-    &__title.desktop {
-      display: block;
-    }
-    &__title.mobile {
-      display: none;
     }
     &__btn {
       display: flex;
