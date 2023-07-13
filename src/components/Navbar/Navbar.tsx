@@ -49,8 +49,14 @@ const Navbar = () => {
 
       <div className="Navbar__menu">
         {/* Mobile */}
-        <div className="Navbar__menu--mobile" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {/* <div className="Navbar__menu--mobile" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           { isMenuOpen ? <LogoCross className="icon--small icon--small--cross icon__white" /> : <LogoMenu className="icon--small icon__white" /> }
+        </div> */}
+        <div className={`Navbar__menu--mobile burger ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className="burger-inner">
+            <div></div>
+            <div></div>
+          </div>
         </div>
 
         {/* Desktop */}
