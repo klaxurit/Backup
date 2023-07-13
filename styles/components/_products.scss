@@ -64,6 +64,7 @@
         margin-top: 15px;
         padding: 16px 20px;
         &--soon {
+          outline: none;
           font-family: "TT Hoves Medium";
           background-color: $primary-dark;
           color: $primary-lighter;

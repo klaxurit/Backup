@@ -6,10 +6,8 @@
   border-radius: 32px;
   background: #16102C;
   margin-top: 10px;
-  // margin-left: 10px;
-  // margin-right: 10px;
   row-gap: 16px;
-  z-index: 999;
+  z-index: 99;
   max-width: 345px;
   max-height: 305px;
   @media #{$lg} {
@@ -17,6 +15,8 @@
     border-radius: 80px;
     row-gap: 40px;
     margin-right: 590px;
+    max-width: 580px;
+    max-height: 470px;
   }
   &__title {
     color: white;

@@ -71,12 +71,16 @@
     }
   }
   &--detailed {
-    min-width: 280px;
-    min-height: 110px;
+    width: 280px;
+    max-width: 140px;
     background: #16102c;
     border: 1px solid #1f1a34;
-    padding: 16px;
+    padding: 4px 12px;
     gap: 24px;
+    @media #{$lg} {
+      max-width: 252px;
+      max-height: 144px;
+    }
   }
   &__header {
     width: 100%;

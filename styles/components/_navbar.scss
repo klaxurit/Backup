@@ -122,7 +122,7 @@
         background-color: $primary-blacker-bis;
         z-index: 1000;
         .btn--small {
-          margin-bottom: 300px;
+          margin-bottom: 200px;
         }
       }
 
@@ -366,7 +366,7 @@
 .burger {
   width: 12px;
   height: 1rem;
-  padding: 0.7rem 0.8rem;
+  padding: 0.6rem 0.7rem;
   box-sizing: content-box; /* Ajoutez cette ligne */
   position: relative;
   transform: rotate(0deg);
@@ -411,11 +411,13 @@
 
 .burger.open .burger-inner div:nth-child(1) {
   transform: rotate(45deg);
+  height: 2.5px;
   top: 6px;
 }
 
 .burger.open .burger-inner div:nth-child(2) {
   transform: rotate(-45deg);
+  height: 2.5px;
   top: 6px;
 }
 

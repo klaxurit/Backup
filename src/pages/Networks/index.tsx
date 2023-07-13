@@ -15,6 +15,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
   const [order, setOrder] = useState('');
   const [showAllOptions, setShowAllOptions] = useState(false);
   const [showOrderOptions, setShowOrderOptions] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const allButtonRef = useRef(null);
   const orderButtonRef = useRef(null);
 
@@ -48,10 +49,13 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                   className="Networks__content__control__searchBar__content__left__input"
                   placeholder="Search"
                   value={search}
-                  onChange={e => setSearch(e.target.value)}
+                  onChange={e => {
+                    setSearch(e.target.value);
+                    setIsTyping(e.target.value !== '');
+                  }}
                 />
               </div>
-              <span className="Networks__content__control__searchBar__content__iconSlash icon--small icon__white">/</span>
+              <span className={`Networks__content__control__searchBar__content__iconSlash icon--small icon__white ${isTyping ? 'icon--active' : ''}`} onClick={() => { setSearch(''); setIsTyping(false); }}></span>
               <LogoParams className="Networks__content__control__searchBar__content__iconParams icon--small icon__white"/>
             </div>
           </div>
