@@ -9,12 +9,13 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 8px;
+      padding: 0 22px;
       max-width: 400px;
       &__separator {
         color: $neutral-pure;
         font-family: "TT Hoves Medium";
         font-weight: 500;
+        font-size: 10px;
         &--desktop {
           display: none;
         }
@@ -22,26 +23,32 @@
     }
     &__iconWrapper {
       display: flex;
+      justify-content: center;
+      align-items: center;
       margin-top: 35px;
       margin-bottom: 40px;
       gap: 15px;
+      a {
+        display: flex;
+        outline: none;
+        border: 1px solid transparent;
+        &:focus-visible {
+          border-radius: 4px;
+          border: 1px solid $primary-light;
+        }
+      }
       &__icon {
+        outline: none;
         cursor: pointer;
         width: 17px;
         height: 18px;
-        padding: 0;
+        padding: 2px;
         margin: 0;
         color: $neutral-pure-bis;
-        background-color: $primary-blacker-bis;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         border: 1px solid transparent;
-        &:focus {
-          border-radius: 5px;
-          color: $neutral-pure;
-          border: 1px solid $primary-light;
-        }
         &:hover {
           color: $neutral-pure;
         }
@@ -57,8 +64,9 @@
     }
   }
   @media #{$lg} {
-    height: 80px;
-    padding: 0 130px;
+    min-height: 80px;
+    padding: 25px 130px 0px 130px;
+    margin-bottom: -16px;
     &__content {
       width: 100%;
       display: flex;

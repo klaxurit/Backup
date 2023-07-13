@@ -34,6 +34,16 @@
     width: 50px;
     border-radius: 5px;
     padding: 2px;
+    &:hover {
+      color: $neutral-lighter;
+    }
+    &:focus-visible {
+      outline: none;
+      border-radius: 4px;
+      border: 1px solid $primary-light;
+      background-color: rgba(255, 255, 255, 0.00);
+      box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+    }
   }
   &__primary,
   &__white {
