@@ -62,7 +62,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
             </div>
           </div>
           <div className="Networks__content__control__filters">
-            <div className="Networks__content__control__filters__button" onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
+            <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
               <p className="Networks__content__control__filters__button__label">{allButtonLabel}</p>
               {showAllOptions && (
                 <div>
@@ -80,7 +80,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
             </div>
-            <div className="Networks__content__control__filters__button" onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
+            <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
               <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
               {showOrderOptions && (
                   <div className="Networks__content__control__filters__button__pannel2">

@@ -135,12 +135,19 @@
           display: flex;
           justify-content: space-between;
           width: 160px;
-          height: 56px;
+          max-height: 56px;
           padding: 12px 14px 12px 20px;
           align-items: center;
           gap: 8px;
           border-radius: 16px;
           border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+          &:focus-visible {
+            outline: none;
+            border-radius: 16px;
+            border: 2px solid var(--primary-tanzanite-light, #7950F2);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+          }
           &:hover {
             .Networks__content__control__filters__button__label {
               color: $neutral-lighter;
@@ -174,7 +181,7 @@
             margin: 0;
           }
           &__icon {
-            width: 12px;
+            width: 20px;
             stroke: $neutral-pure;
           }
           &__pannel2 {
@@ -200,7 +207,7 @@
             border-radius: 16px;
             z-index: 1000;
             &__label {
-              border: solid 2px transparent   ;
+              border: solid 2px transparent;
               box-sizing: border-box;
               margin: 0;
               width: 100%;
@@ -218,7 +225,7 @@
                 outline: none;
                 border-radius: 16px;
                 border: 2px solid $primary-light;
-                background: rgba(255, 255, 255, 0.00);
+                background: rgba(255, 255, 255, 0);
                 box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
               }
               &:hover {

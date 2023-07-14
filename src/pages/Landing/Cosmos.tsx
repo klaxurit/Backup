@@ -7,7 +7,7 @@ import SmallCoin from "../../assets/images/smallcoin.png";
 import BigFrCoin from "../../assets/images/bigfrcoin.png";
 import BigCosmosCoin from "../../assets/images/bigcosmoscoin.png";
 import BigCoin from "../../assets/images/bigcoin.png";
-import { LogoTwitter, LogoMail, LogoYoutube, LogoMedium, LogoTwitch, LogoSpotify } from "../../components/SVGs";
+import { LogoTwitter, LogoMail, LogoSpotify } from "../../components/SVGs";
 
 const Cosmos: React.FC = () => {
   return (

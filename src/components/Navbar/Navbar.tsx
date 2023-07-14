@@ -6,7 +6,7 @@ import appLab from "../../assets/images/applab.svg"
 import dataLab from "../../assets/images/datalab.svg"
 import { Dropdown } from "./Dropdown";
 import { Link } from "react-router-dom";
-import { LogoCross, LogoMenu, Favicon, Logo } from "../SVGs";
+import { Favicon, Logo } from "../SVGs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
