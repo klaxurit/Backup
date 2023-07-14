@@ -78,7 +78,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                   </div>
                 </div>
               )}
-              <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
+              <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showAllOptions ? 'rotate' : ''}`} />
             </div>
             <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
               <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
@@ -94,7 +94,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                   </p>
                   </div>
               )}
-              <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
+              <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
             </div>
           </div>
         </div>

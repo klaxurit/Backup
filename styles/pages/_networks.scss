@@ -10,13 +10,15 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
     padding: 0;
     width: 100%;
     &__head {
       display: flex;
+      width: 100%;
       flex-direction: column;
+      align-items: flex-start;
       gap: 4px;
       &__title {
         font-weight: 700;
@@ -240,10 +242,11 @@
       }
     }
     &__list {
-      display: flex;
+      display: grid;
       justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   @media #{$md} {
@@ -267,6 +270,9 @@
           display: flex;
         }
       }
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
   @media #{$lg} {
@@ -285,6 +291,16 @@
           align-self: flex-end;
           display: flex;
         }
+      }
+      &__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  @media #{$xl} {
+    &__content{
+      &__list {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   }
@@ -343,4 +359,9 @@
     opacity: 1;
     transform: rotate(45deg);
   }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
 }
