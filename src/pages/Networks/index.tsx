@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import { LogoArrowBottom, LogoSearch, LogoParams } from "../../components/SVGs/SVGs"
+import { LogoArrowBottom, LogoSearch, LogoParams, LogoCheck } from "../../components/SVGs/SVGs"
 import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
@@ -11,6 +11,8 @@ interface NetworkProps {
 }
 
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
+  const [allButtonLabel, setAllButtonLabel] = useState('All');
+  const [orderButtonLabel, setOrderButtonLabel] = useState('Order');
   const [search, setSearch, ] = useState('');
   const [order, setOrder] = useState('');
   const [showAllOptions, setShowAllOptions] = useState(false);
@@ -61,26 +63,34 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
           </div>
           <div className="Networks__content__control__filters">
             <div className="Networks__content__control__filters__button" onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
-              <p className="Networks__content__control__filters__button__label">All</p>
+              <p className="Networks__content__control__filters__button__label">{allButtonLabel}</p>
               {showAllOptions && (
                 <div>
                   <div className="Networks__content__control__filters__button__pannel1">
-                    <p className="Networks__content__control__filters__button__pannel1__label">Live</p>
-                    <p className="Networks__content__control__filters__button__pannel1__label">Testnets</p>
+                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setShowAllOptions(false); }}>
+                      Live
+                      {allButtonLabel === 'Live' && <LogoCheck />}
+                    </p>
+                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setShowAllOptions(false); }}>
+                      Testnets
+                      {allButtonLabel === 'Testnets' && <LogoCheck />}
+                    </p>
                   </div>
                 </div>
               )}
               <LogoArrowBottom className="Networks__content__control__filters__button__icon" />
             </div>
             <div className="Networks__content__control__filters__button" onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
-              <p className="Networks__content__control__filters__button__label">Order</p>
+              <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
               {showOrderOptions && (
                   <div className="Networks__content__control__filters__button__pannel2">
-                  <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('A > Z')}>
-                    A {'>'} Z
+                  <p className="Networks__content__control__filters__button__pannel2__label" tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
+                    A {'>'} Z*
+                    {orderButtonLabel === 'A > Z' && <LogoCheck />}
                   </p>
-                  <p className="Networks__content__control__filters__button__pannel2__label" onClick={() => setOrder('APR')}>
+                  <p className="Networks__content__control__filters__button__pannel2__label" tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
                     APR
+                    {orderButtonLabel === 'APR' && <LogoCheck />}
                   </p>
                   </div>
               )}

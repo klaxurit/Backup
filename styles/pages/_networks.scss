@@ -147,7 +147,7 @@
             }
           }
           &:active {
-            border: 2px solid var(--neutral-onyx-blacker, #1F1A34);
+            border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
             background: rgba(255, 255, 255, 0.04);
             .Networks__content__control__filters__button__label {
               color: white;
@@ -160,11 +160,12 @@
           }
           &:focus-visible {
             border-radius: 16px;
-            border: 2px solid var(--primary-tanzanite-light, #7950F2);
+            border: 2px solid var(--primary-tanzanite-light, #7950f2);
             background: rgba(255, 255, 255, 0.04);
             box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
           }
           &__label {
+            width: 100%;
             font-family: "TT Hoves Medium";
             font-weight: 500;
             color: $neutral-pure;
@@ -189,6 +190,7 @@
           &__pannel1,
           &__pannel2 {
             box-sizing: border-box;
+            overflow: hidden;
             width: 160px;
             flex-direction: column;
             align-items: flex-start;
@@ -198,19 +200,32 @@
             border-radius: 16px;
             z-index: 1000;
             &__label {
+              border: solid 2px transparent   ;
+              box-sizing: border-box;
               margin: 0;
+              width: 100%;
               color: $neutral-pure;
               font-size: 18px;
               line-height: 28px;
               text-decoration: none;
               display: flex;
               flex-direction: row;
+              justify-content: space-between;
               align-items: center;
-              padding: 12px;
+              padding: 12px 20px;
               gap: 14px;
+              &:focus-visible {
+                outline: none;
+                border-radius: 16px;
+                border: 2px solid $primary-light;
+                background: rgba(255, 255, 255, 0.00);
+                box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+              }
               &:hover {
-                color: white;
+                color: $neutral-light;
                 cursor: pointer;
+                background-color: $primary-blacker;
+                border-radius: 16px;
               }
             }
           }
@@ -322,9 +337,3 @@
     transform: rotate(45deg);
   }
 }
-
-
-
-
-
-

@@ -86,7 +86,7 @@ export const LogoArrowBottom = (props: SVGProps<SVGSVGElement>) => (
 )
 
 export const LogoSearch = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0)" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path d="M11.3335 11.3333L14.6668 14.6667M13.0002 7.16668C13.0002 10.3883 10.3885 13 7.16683 13C3.94517 13 1.3335 10.3883 1.3335 7.16668C1.3335 3.94502 3.94517 1.33334 7.16683 1.33334C10.3885 1.33334 13.0002 3.94502 13.0002 7.16668Z" strokeWidth="1.8" />
   </svg>
 )
@@ -102,3 +102,10 @@ export const LogoArrowRight = (props: SVGProps<SVGSVGElement>) => (
     <path d="M0.8125 7.00178H13.1841M13.1841 7.00178H13.1875M13.1841 7.00178L7.00731 0.824997L13.1841 7.00539L7.00731 13.1822" stroke="#A29FAB" strokeWidth="1.8" />
   </svg>
 )
+
+export const LogoCheck = (props: SVGProps<SVGSVGElement>) => (
+  <svg width="18" height="14" viewBox="0 0 18 14" xmlns="http://www.w3.org/2000/svg" {...props} fill="rgba(0, 0, 0, 0)">
+    <path d="M1.5 5.875L7.5 11.875L16.5 1.375" stroke="white" strokeWidth="1.8" />
+  </svg>
+)
+
