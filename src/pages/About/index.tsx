@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
 
 import { Team } from "./Team";
 import { Timeline } from "./Timeline";
 import Contact from "../../components/Contact";
 
 const About: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <section className="About">
       <div className="About__content">
@@ -20,8 +34,9 @@ const About: React.FC = () => {
         <div className="About__content__facts">
           <div className="About__content__facts__section">
             <h1 className="About__content__facts__section__title">Fun facts</h1>
-            <div className="About__content__facts__section__wrapper">
-              <div className="About__content__facts__section__wrapper__firstFacts">
+            <div className="About__content__facts__section__wrapper" ref={scrollRef}>
+              <div className="About__content__facts__section__wrapper__firstFacts"
+                style={{ marginRight: windowWidth <= 768 ? '20px' : '0' }}>
                 <h5>1</h5>
                 <p>Cosmos Network. The most valuable in Web3</p>
               </div>

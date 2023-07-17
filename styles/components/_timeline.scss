@@ -3,18 +3,22 @@
   flex-direction: column;
   width: 100%;
   background-color: $primary-blacker;
-  gap: 80px;
+  gap: 32px;
   &__head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    padding: 40px  0px;
+    padding-bottom: 0;
+    padding-right: 12px;
     overflow-x: hidden;
     &__title {
       color: white;
       margin: 0;
       padding: 0;
+      padding-left: 20px;
+      padding-right: 20px;
       font-family: "TT Hoves Bold";
       font-size: 32px;
       line-height: 38px;
@@ -63,7 +67,7 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
-    padding-left: 120px;
+    padding-left: 12px;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -77,29 +81,33 @@
       align-items: flex-start;
       background-color: $primary-black;
       border-radius: 32px;
-      flex: 0 0 230px; /* Ajouté */
-      gap: 40px;
-      padding: 40px;
+      max-width: 220px;
+      min-width: 220px;
+      max-height: 120px;
+      min-height: 120px;
+      gap: 12px;
+      padding: 32px 32px 40px 32px;
       &__date {
         font-family: "TT Hoves Bold";
         color: white;
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 28px;
+        line-height: 33px;
         margin: 0;
         padding: 0;
       }
       &__desc {
         color: white;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 25px;
         margin: 0;
         padding: 0;
       }
     }
   }
   a {
-    align-self: center;
+    align-self: flex-start;
+    padding-left: 12px;
     text-decoration: none;
   }
   &__btn {
@@ -108,7 +116,6 @@
     width: 153px;
     padding: 16px;
     white-space: nowrap;
-    align-self: center;
     margin-bottom: 80px;
   }
   @media #{$lg} {
@@ -117,10 +124,16 @@
     width: 100%;
     background-color: $primary-blacker;
     gap: 80px;
+    a {
+      align-self: center;
+      padding-left: 12px;
+      text-decoration: none;
+    }
     &__head {
       padding: 115px 120px 0 120px;
       overflow-x: hidden;
       &__title {
+        padding-left: 0;
         font-size: 40px;
         line-height: 57px;
       }
@@ -140,8 +153,9 @@
       padding-left: 120px;
       &__story {
         border-radius: 32px;
-        flex: 0 0 230px;
-        gap: 40px;
+        max-width: 280px;
+        max-height: 227px;
+        gap: 12px;
         padding: 40px;
         &__date {
           font-size: 40px;

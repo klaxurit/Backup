@@ -58,6 +58,13 @@ import Stargaze from "../assets/images/stargaze.svg";
 import Teritori from "../assets/images/teritori.svg";
 import Umee from "../assets/images/umee.svg";
 import UnUnifi from "../assets/images/ununifi.svg";
+import Althea from "../assets/images/althea.svg";
+import Burnt from "../assets/images/burnt.svg";
+import HumansAi from "../assets/images/humansai.svg";
+import Lava from "../assets/images/lava.svg";
+import Okp4 from "../assets/images/lava.svg";
+import Sei from "../assets/images/sei.svg";
+import Sigma from "../assets/images/sigma.svg";
 
 export const networks = [
   {
@@ -66,7 +73,8 @@ export const networks = [
     description: 'ATOM',
     metrics: 16,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Cronos,
@@ -74,7 +82,8 @@ export const networks = [
     description: 'CRO',
     metrics: 5,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: BandProtocol,
@@ -82,7 +91,8 @@ export const networks = [
     description: 'BAND',
     metrics: 112,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Axelar,
@@ -90,7 +100,8 @@ export const networks = [
     description: 'AXL',
     metrics: 5,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Stride,
@@ -98,7 +109,8 @@ export const networks = [
     description: 'STRD',
     metrics: 29,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Kava,
@@ -106,7 +118,8 @@ export const networks = [
     description: 'KAVA',
     metrics: 24,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Osmosis,
@@ -114,7 +127,8 @@ export const networks = [
     description: 'OSMO',
     metrics: 35,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: FetchAi,
@@ -122,7 +136,8 @@ export const networks = [
     description: 'FET',
     metrics: 48,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Gitopia,
@@ -130,7 +145,8 @@ export const networks = [
     description: 'GIT',
     metrics: 65,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Gravity,
@@ -138,7 +154,8 @@ export const networks = [
     description: 'LORE',
     metrics: 5,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Iris,
@@ -146,7 +163,8 @@ export const networks = [
     description: 'IRIS',
     metrics: 12,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Idep,
@@ -154,7 +172,8 @@ export const networks = [
     description: 'IDEP',
     metrics: 112,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Injective,
@@ -162,7 +181,8 @@ export const networks = [
     description: 'INJ',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: AkashNetwork,
@@ -170,7 +190,8 @@ export const networks = [
     description: 'AKT',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Archway,
@@ -178,7 +199,8 @@ export const networks = [
     description: 'ARCH',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: AssetMantle,
@@ -186,7 +208,8 @@ export const networks = [
     description: 'MNTL',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: BitCanna,
@@ -194,7 +217,8 @@ export const networks = [
     description: 'BCNA',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: BitSong,
@@ -202,7 +226,8 @@ export const networks = [
     description: 'BTSG',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Canto,
@@ -210,7 +235,8 @@ export const networks = [
     description: 'CANTO',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Chain4Energy,
@@ -218,7 +244,8 @@ export const networks = [
     description: 'C4E',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Chihuahua,
@@ -226,7 +253,8 @@ export const networks = [
     description: 'HUAHUA',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Comdex,
@@ -234,7 +262,8 @@ export const networks = [
     description: 'CMDX',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Commercio,
@@ -242,7 +271,8 @@ export const networks = [
     description: 'COMM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Coreum,
@@ -250,7 +280,8 @@ export const networks = [
     description: 'CORE',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Crescent,
@@ -258,7 +289,8 @@ export const networks = [
     description: 'CRE',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Decentr,
@@ -266,7 +298,8 @@ export const networks = [
     description: 'DEC',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Desmos,
@@ -274,7 +307,8 @@ export const networks = [
     description: 'DSM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: DigChain,
@@ -282,7 +316,8 @@ export const networks = [
     description: 'DIG',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: eMoney,
@@ -290,7 +325,8 @@ export const networks = [
     description: 'NGM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Evmos,
@@ -298,7 +334,8 @@ export const networks = [
     description: 'EVMOS',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Ixo,
@@ -306,7 +343,8 @@ export const networks = [
     description: 'IXO',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Juno,
@@ -314,7 +352,8 @@ export const networks = [
     description: 'JUNO',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: KiFoundation,
@@ -322,7 +361,8 @@ export const networks = [
     description: 'XKI',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: KonstellationNetwork,
@@ -330,7 +370,8 @@ export const networks = [
     description: 'DARC',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Kujira,
@@ -338,7 +379,8 @@ export const networks = [
     description: 'KUJI',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Kyve,
@@ -346,7 +388,8 @@ export const networks = [
     description: 'KYVE',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: LumNetwork,
@@ -354,7 +397,8 @@ export const networks = [
     description: 'LUM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: MarsProtocol,
@@ -362,7 +406,8 @@ export const networks = [
     description: 'MARS',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: MediBloc,
@@ -370,7 +415,8 @@ export const networks = [
     description: 'MED',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: MemeNetwork,
@@ -378,7 +424,8 @@ export const networks = [
     description: 'MEME',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Migaloo,
@@ -386,7 +433,8 @@ export const networks = [
     description: 'WHALE',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Neutron,
@@ -394,7 +442,8 @@ export const networks = [
     description: 'NTRN',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Nomic,
@@ -402,7 +451,8 @@ export const networks = [
     description: 'NOM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Omniflix,
@@ -410,7 +460,8 @@ export const networks = [
     description: 'FLIX',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Oraichain,
@@ -418,7 +469,8 @@ export const networks = [
     description: 'ORAI',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Passage,
@@ -426,7 +478,8 @@ export const networks = [
     description: 'PASG',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Persistance,
@@ -434,7 +487,8 @@ export const networks = [
     description: 'XPRT',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: QuicksilverZone,
@@ -442,7 +496,8 @@ export const networks = [
     description: 'QCK',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Rebuschain,
@@ -450,7 +505,8 @@ export const networks = [
     description: 'REBUS',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Regen,
@@ -458,7 +514,8 @@ export const networks = [
     description: 'REGEN',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Rizon,
@@ -466,7 +523,8 @@ export const networks = [
     description: 'ATOLO',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Sentinel,
@@ -474,7 +532,8 @@ export const networks = [
     description: 'DVPN',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Shentu,
@@ -482,7 +541,8 @@ export const networks = [
     description: 'CTK',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Sifchain,
@@ -490,7 +550,8 @@ export const networks = [
     description: 'EROWAN',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Sommelier,
@@ -498,7 +559,8 @@ export const networks = [
     description: 'SOMM',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: StaFiHub,
@@ -506,7 +568,8 @@ export const networks = [
     description: 'FIS',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Stargaze,
@@ -514,7 +577,8 @@ export const networks = [
     description: 'STARS',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Teritori,
@@ -522,7 +586,8 @@ export const networks = [
     description: 'TORI',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: Umee,
@@ -530,7 +595,8 @@ export const networks = [
     description: 'UMEE',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
   },
   {
     imageUrl: UnUnifi,
@@ -538,6 +604,70 @@ export const networks = [
     description: 'GUU',
     metrics: 26,
     delegated: '341K',
-    tvl: '$3.6M'
+    tvl: '$3.6M',
+    live: true
+  },
+  {
+    imageUrl: Althea,
+    title: 'Althea',
+    description: 'SOON',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: Burnt,
+    title: 'Burnt',
+    description: 'XION',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: HumansAi,
+    title: 'Humans.ai',
+    description: 'HEART',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: Lava,
+    title: 'Lava',
+    description: 'LAVA',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: Okp4,
+    title: 'Okp4',
+    description: 'SOON',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: Sei,
+    title: 'Sei',
+    description: 'SEI',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
+  },
+  {
+    imageUrl: Sigma,
+    title: 'Sigma',
+    description: 'SIGMA',
+    metrics: 26,
+    delegated: '341K',
+    tvl: '$3.6M',
+    live: false
   },
 ];

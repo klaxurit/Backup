@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 24px 0px;
-  gap: 40px;
   height: auto;
   margin-bottom: 32px;
-  margin-top: 40px;
+  margin-top: 30px;
+
 
   &__head {
     display: flex;
@@ -15,7 +15,7 @@
     padding: 0px;
     gap: 4px;
     align-self: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     p {
       font-weight: 500;
@@ -49,6 +49,7 @@
       padding: 0px;
       gap: 10px;
       width: 100%;
+      
       &__content {
         display: flex;
         flex-direction: column;
@@ -77,6 +78,7 @@
             line-height: 33px;
             color: white;
             align-self: flex-start;
+            margin-bottom: 20px;
           }
           p {
             cursor: pointer;
@@ -96,11 +98,16 @@
         }
 
         &__answer {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 15px;
           p {
             font-weight: 400;
             font-size: 18px;
             line-height: 160%;
             color: #ffffff;
+            margin-top: 0;
           }
         }
       }
@@ -110,7 +117,14 @@
       &--mobile {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 12px;
+        cursor: pointer;
+        font-weight: 500;
+        color: $neutral-pure;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        flex-grow: 1;
         &__btn {
             display: flex;
             flex-direction: row;
@@ -131,15 +145,6 @@
             color: white;
             align-self: flex-start;
           }
-          p {
-            cursor: pointer;
-            font-weight: 500;
-            color: $neutral-pure;
-            font-size: 18px;
-            line-height: 28px;
-            margin: 0;
-            flex-grow: 1;
-          }
           &__icon {
             width: 10px;
             stroke: $neutral-pure;
@@ -149,10 +154,10 @@
       &--desktop {
         display: flex;
         flex-direction: column;
+        position: sticky;
         margin-top: 15px;
         width: 30%;
         gap: 10px;
-        position: sticky;
         top: 20px;
         &__button {
           font-family: "TT Hoves Medium";

@@ -5,4 +5,5 @@ export interface Network {
   metrics: number;
   delegated?: string;
   tvl?: string;
+  live: boolean;
 }

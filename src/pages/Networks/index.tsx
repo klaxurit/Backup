@@ -12,6 +12,7 @@ interface NetworkProps {
 
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
   const [allButtonLabel, setAllButtonLabel] = useState('All');
+  const [liveStatus, setLiveStatus] = useState('All');
   const [orderButtonLabel, setOrderButtonLabel] = useState('Order');
   const [search, setSearch, ] = useState('');
   const [order, setOrder] = useState('');
@@ -24,9 +25,18 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
   useClickOutside(allButtonRef, () => setShowAllOptions(false));
   useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
 
-  const filteredNetworks = networks.filter(network =>
-    network.title.toLowerCase().startsWith(search.toLowerCase())
-  );
+  const filteredNetworks = networks.filter(network => {
+    const titleMatch = network.title.toLowerCase().startsWith(search.toLowerCase());
+
+    let liveMatch = true;
+    if (liveStatus === 'Live') {
+      liveMatch = network.live;
+    } else if (liveStatus === 'Testnets') {
+      liveMatch = !network.live;
+    }
+
+    return titleMatch && liveMatch;
+  });
 
   if (order === 'A > Z') {
     filteredNetworks.sort((a, b) => a.title.localeCompare(b.title));
@@ -67,11 +77,15 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               {showAllOptions && (
                 <div>
                   <div className="Networks__content__control__filters__button__pannel1">
-                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setShowAllOptions(false); }}>
+                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
+                      All
+                      {allButtonLabel === 'All' && <LogoCheck />}
+                    </p>
+                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
                       Live
                       {allButtonLabel === 'Live' && <LogoCheck />}
                     </p>
-                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setShowAllOptions(false); }}>
+                    <p className="Networks__content__control__filters__button__pannel1__label" tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
                       Testnets
                       {allButtonLabel === 'Testnets' && <LogoCheck />}
                     </p>
@@ -83,7 +97,11 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
             <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
               <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
               {showOrderOptions && (
-                  <div className="Networks__content__control__filters__button__pannel2">
+                <div className="Networks__content__control__filters__button__pannel2">
+                  <p className="Networks__content__control__filters__button__pannel2__label" tabIndex={0} onClick={() => { setOrderButtonLabel('Order'); setOrder(''); setShowOrderOptions(false); }}>
+                    Order
+                    {orderButtonLabel === 'Order' && <LogoCheck />}
+                  </p>
                   <p className="Networks__content__control__filters__button__pannel2__label" tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
                     A {'>'} Z*
                     {orderButtonLabel === 'A > Z' && <LogoCheck />}
@@ -92,7 +110,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                     APR
                     {orderButtonLabel === 'APR' && <LogoCheck />}
                   </p>
-                  </div>
+                </div>
               )}
               <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
             </div>

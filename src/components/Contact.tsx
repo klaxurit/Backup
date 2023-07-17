@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
           Any question about staking or the services we provide?
           We would be glad to help you. Contact us at
         </p>
-        <a href="mailto:contact@stakelab.fr" className="Contact__content__mail">contact@stakelab.fr</a>
+        <a href="mailto:contact@stakelab.fr" className="Contact__content__mail link__primary">contact@stakelab.fr</a>
       </div>
     </section>
   );

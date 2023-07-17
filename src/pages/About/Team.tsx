@@ -31,7 +31,7 @@ export const Team: React.FC = () => {
         <div className="Team__content__member">
           <img src={Member3} alt="Draw of a member of the team" className="Team__content__member__draw" />
           <div className="Team__content__member__twitter">
-            <a href="https://twitter.com/dianeyes" target="_blank" className="Team__content__member__twitter__link link__white">
+            <a href="https://twitter.com/dianeyes__" target="_blank" className="Team__content__member__twitter__link link__white">
               @dianeyes
               <LogoTwitter className="Team__content__member__twitter__icon icon__link"/>
             </a>

@@ -1,4 +1,4 @@
-import { useRef, useCallback, useState } from "react";
+import { useRef, useCallback, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { LogoNext, LogoPrevious } from "../../components/SVGs";
@@ -9,6 +9,18 @@ export const Timeline: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showPrev, setShowPrev] = useState(false);
   const [disableNext, setDisableNext] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = useCallback(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [handleResize]);
 
   const handleNextClick = useCallback(() => {
     if (scrollRef.current) {
@@ -46,12 +58,17 @@ export const Timeline: React.FC = () => {
         <h1 className="Timeline__head__title">The StakeLab story</h1>
         <div className="Timeline__head__iconsWrapper">
           {showPrev && <LogoPrevious className="Timeline__head__iconsWrapper__icon icon--medium icon__white" onClick={handlePrevClick} />}
-          <LogoNext className={`Timeline__head__iconsWrapper__icon${disableNext ? '--disabled' : ''} icon--medium icon__white`} onClick={handleNextClick} />
+          {!disableNext && <LogoNext className="Timeline__head__iconsWrapper__icon icon--medium icon__white" onClick={handleNextClick} />}
         </div>
       </div>
       <section className="Timeline__content" ref={scrollRef}>
         {stories.map((story, index) => (
-          <Story key={index} date={story.date} description={story.description} />
+          <Story
+            key={index}
+            date={story.date}
+            description={story.description}
+            style={{ marginRight: index === stories.length - 1 ? (windowWidth <= 768 ? '20px' : '120px') : '0' }}
+          />
         ))}
       </section>
       <Link to={`../networks`}><button className="Timeline__btn btn--large btn__primary">Start staking</button></Link>

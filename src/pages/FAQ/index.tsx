@@ -4,6 +4,7 @@ import { LogoArrowLink } from "../../components/SVGs";
 const FAQ: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
   const [activeQuestion, setActiveQuestion] = useState("question-1");
+  const [isScrolling, setIsScrolling] = useState(false); // new state
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,12 +18,23 @@ const FAQ: React.FC = () => {
   }, []);
 
   const handleButtonClick = (questionId: string) => {
+    if (isScrolling) return;
+
+    setIsScrolling(true);
+    setTimeout(() => setIsScrolling(false), 500);
+
     setActiveQuestion(questionId);
-    if (isDesktop) {
-      const element = document.getElementById(questionId);
-      element?.scrollIntoView({ behavior: "smooth" });
-    }
+
+    setTimeout(() => {
+      if (isDesktop) {
+        const element = document.getElementById(questionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 0);
   };
+
 
   const questions = [
     {
@@ -85,7 +97,8 @@ const FAQ: React.FC = () => {
               {questions.map((question) => (
                 <p
                   key={question.id}
-                  className={`FAQ__content__buttons__button ${activeQuestion === question.id
+                  tabIndex={0}
+                  className={`FAQ__content__buttons__button tabs ${activeQuestion === question.id
                       ? "FAQ__content__buttons__button--active"
                       : ""
                     }`}
@@ -102,10 +115,11 @@ const FAQ: React.FC = () => {
                 .map((question) => (
                   <div
                     key={question.id}
-                    className="FAQ__content__questions__content__question__btn"
+                    tabIndex={0}
+                    className="FAQ__content__questions__content__question__btn tabs"
                     onClick={() => handleButtonClick(question.id)}
                   >
-                    <p>{question.title}</p>
+                    {question.title}
                     <LogoArrowLink className="FAQ__content__questions__content__question__icon" />
                   </div>
                 ))}

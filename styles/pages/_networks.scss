@@ -5,20 +5,18 @@
   background-color: $primary-blacker-bis;
   padding: 0 24px 0;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px;
     padding: 0;
     width: 100%;
     &__head {
       display: flex;
-      width: 100%;
       flex-direction: column;
-      align-items: flex-start;
       gap: 4px;
       &__title {
         font-weight: 700;
@@ -38,7 +36,6 @@
     &__control {
       display: flex;
       justify-content: center;
-      width: 100%;
       &__searchBar {
         min-width: 280px;
         max-width: 280px;
@@ -130,6 +127,7 @@
         display: none;
         gap: 24px;
         &__button {
+          outline: none;
           box-sizing: border-box;
           color: $neutral-pure;
           font-size: 18px;
@@ -137,26 +135,19 @@
           display: flex;
           justify-content: space-between;
           width: 160px;
-          max-height: 56px;
+          height: 56px;
           padding: 12px 14px 12px 20px;
           align-items: center;
           gap: 8px;
           border-radius: 16px;
           border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
-          &:focus-visible {
-            outline: none;
-            border-radius: 16px;
-            border: 2px solid var(--primary-tanzanite-light, #7950F2);
-            background: rgba(255, 255, 255, 0.04);
-            box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
-          }
           &:hover {
             .Networks__content__control__filters__button__label {
               color: $neutral-lighter;
             }
           }
           &:active {
-            border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
+            border: 2px solid var(--neutral-onyx-blacker, #1F1A34);
             background: rgba(255, 255, 255, 0.04);
             .Networks__content__control__filters__button__label {
               color: white;
@@ -169,12 +160,11 @@
           }
           &:focus-visible {
             border-radius: 16px;
-            border: 2px solid var(--primary-tanzanite-light, #7950f2);
+            border: 2px solid var(--primary-tanzanite-light, #7950F2);
             background: rgba(255, 255, 255, 0.04);
             box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
           }
           &__label {
-            width: 100%;
             font-family: "TT Hoves Medium";
             font-weight: 500;
             color: $neutral-pure;
@@ -183,7 +173,7 @@
             margin: 0;
           }
           &__icon {
-            width: 20px;
+            width: 12px;
             stroke: $neutral-pure;
           }
           &__pannel2 {
@@ -199,7 +189,6 @@
           &__pannel1,
           &__pannel2 {
             box-sizing: border-box;
-            overflow: hidden;
             width: 160px;
             flex-direction: column;
             align-items: flex-start;
@@ -209,32 +198,19 @@
             border-radius: 16px;
             z-index: 1000;
             &__label {
-              border: solid 2px transparent;
-              box-sizing: border-box;
               margin: 0;
-              width: 100%;
               color: $neutral-pure;
               font-size: 18px;
               line-height: 28px;
               text-decoration: none;
               display: flex;
               flex-direction: row;
-              justify-content: space-between;
               align-items: center;
-              padding: 12px 20px;
+              padding: 12px;
               gap: 14px;
-              &:focus-visible {
-                outline: none;
-                border-radius: 16px;
-                border: 2px solid $primary-light;
-                background: rgba(255, 255, 255, 0);
-                box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
-              }
               &:hover {
-                color: $neutral-light;
+                color: white;
                 cursor: pointer;
-                background-color: $primary-blacker;
-                border-radius: 16px;
               }
             }
           }
@@ -242,11 +218,11 @@
       }
     }
     &__list {
-      display: grid;
+      width: 100%;
+      display: flex;
       justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 24px;
-      grid-template-columns: repeat(1, 1fr);
     }
   }
   @media #{$md} {
@@ -270,14 +246,11 @@
           display: flex;
         }
       }
-      &__list {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
   }
   @media #{$lg} {
     padding: 50px 128px;
-    margin-top: 20px;
+    margin-top: 35px;
     &__content {
       gap: 48px;
       &__control {
@@ -291,16 +264,6 @@
           align-self: flex-end;
           display: flex;
         }
-      }
-      &__list {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-  @media #{$xl} {
-    &__content{
-      &__list {
-        grid-template-columns: repeat(4, 1fr);
       }
     }
   }
@@ -361,7 +324,8 @@
   }
 }
 
-.rotate {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
-}
+
+
+
+
+
