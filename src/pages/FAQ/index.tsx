@@ -78,8 +78,7 @@ const FAQ: React.FC = () => {
               <div
                 key={question.id}
                 id={question.id}
-                className={`FAQ__content__questions__content ${isDesktop || activeQuestion === question.id ? "" : "hidden"
-                  }`}
+                className={`FAQ__content__questions__content ${isDesktop || activeQuestion === question.id ? "" : "hidden"}`}
               >
                 <div className="FAQ__content__questions__content__question">
                   <h4>{question.title}</h4>

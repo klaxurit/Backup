@@ -4,9 +4,8 @@
   align-items: center;
   padding: 0px 24px 0px;
   height: auto;
-  margin-bottom: 32px;
+  margin-bottom: -15px;
   margin-top: 30px;
-
 
   &__head {
     display: flex;
@@ -49,7 +48,7 @@
       padding: 0px;
       gap: 10px;
       width: 100%;
-      
+
       &__content {
         display: flex;
         flex-direction: column;
@@ -126,37 +125,37 @@
         margin: 0;
         flex-grow: 1;
         &__btn {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 14px 12px 20px;
-            gap: 8px;
-            border: 2px solid #1f1a34;
-            border-radius: 16px;
-            width: 100%;
-            flex-grow: 1;
-          }
-          h4 {
-            font-family: "TT Hoves Medium";
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 33px;
-            color: white;
-            align-self: flex-start;
-          }
-          &__icon {
-            width: 10px;
-            stroke: $neutral-pure;
-            flex-shrink: 0;
-          }
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 14px 12px 20px;
+          gap: 8px;
+          border: 2px solid #1f1a34;
+          border-radius: 16px;
+          width: 100%;
+          flex-grow: 1;
+        }
+        h4 {
+          font-family: "TT Hoves Medium";
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 33px;
+          color: white;
+          align-self: flex-start;
+        }
+        &__icon {
+          width: 10px;
+          stroke: $neutral-pure;
+          flex-shrink: 0;
+        }
       }
       &--desktop {
         display: flex;
         flex-direction: column;
         position: sticky;
         margin-top: 15px;
-        width: 30%;
+        max-width: 330px;
         gap: 10px;
         top: 20px;
         &__button {
@@ -164,11 +163,14 @@
           cursor: pointer;
           display: flex;
           color: $neutral-pure;
-          padding: 12px 14px 12px 20px;
+          padding: 12px 20px;
           gap: 8px;
           border: 2px solid #1f1a34;
           border-radius: 16px;
-          width: 100%;
+          min-width: 280px;
+          max-width: 280px;
+          min-height: 31px;
+          max-height: 31px;
           flex-grow: 1;
           margin: 0;
           &--active {
@@ -184,11 +186,13 @@
   @media #{$lg} {
     margin-top: 60px;
     padding: 18px 124px;
+    margin-bottom: 30px;
     &__content {
       flex-direction: row;
       justify-content: space-between;
+      gap: 80px;
       &__questions {
-        width: 60%;
+        max-width: 775px;
         &__content {
           &__question {
             h4 {
@@ -204,25 +208,34 @@
             padding-bottom: 40px;
           }
         }
+        &__content:last-child {
+          .FAQ__content__questions__content__answer {
+            border-bottom: none;
+            margin-bottom: -10px;
+            padding-bottom: 0;
+          }
+        }
       }
       &__buttons {
         display: flex;
         flex-direction: column;
         margin-top: 15px;
-        width: 30%;
+        max-width: 330px;
         gap: 10px;
         &__button {
           font-family: "TT Hoves Medium";
+          line-height: 29px;
           cursor: pointer;
           display: flex;
           color: $neutral-pure;
-          padding: 12px 14px 12px 20px;
+          padding: 12px 20px;
           gap: 8px;
           border: 2px solid #1f1a34;
           border-radius: 16px;
-          width: 100%;
           flex-grow: 1;
           margin: 0;
+          min-width: 280px;
+          min-height: 31px;
           &--active {
             color: white;
             border-radius: 16px;
@@ -235,7 +248,9 @@
   }
 }
 
-#question-1, #question-2, #question-3 {
+#question-1,
+#question-2,
+#question-3 {
   &.hidden {
     display: none;
   }
@@ -271,6 +286,8 @@
       text-decoration: none;
     }
     &__mail {
+      font-family: "TT Hoves Medium";
+      font-weight: 500;
       color: $primary-light;
       font-size: 18px;
       line-height: 29px;
@@ -286,10 +303,11 @@
     justify-content: center;
     padding-top: 120px;
     padding-bottom: 120px;
-    margin-bottom: 110px;
+    margin-bottom: 85px;
     &__content {
       width: 40%;
       max-height: 170px;
+      gap: 15px;
       &__desc {
         font-size: 18px;
         line-height: 29px;
@@ -298,6 +316,9 @@
       &__title {
         font-size: 48px;
         line-height: 57px;
+      }
+      &__mail {
+        margin-top: -5px;
       }
     }
   }

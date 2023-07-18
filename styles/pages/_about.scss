@@ -52,8 +52,8 @@
     &__facts {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      // justify-content: center;
+      // align-items: center;
       margin-top: -25px;
       width: 100%;
       background: $primary-light;
@@ -63,8 +63,8 @@
         flex-direction: column;
         width: auto;
         gap: 32px;
-        padding-top: 30px;
-        padding-bottom: 100px;
+        padding-top: 35px;
+        padding-bottom: 32px;
         &__title {
           margin: 0;
           padding: 0 24px;
@@ -74,18 +74,25 @@
           font-weight: 700;
           align-self: center;
           padding-top: 30px;
-          padding-bottom: 30px;
           align-self: flex-start;
         }
         &__wrapper {
           display: flex;
-          justify-content: center;
-          align-items: center;
           flex-direction: row;
-          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          scroll-behavior: smooth;
           row-gap: 32px;
           column-gap: 24px;
           gap: 32px;
+          padding-left: 24px;
+          &__sixthFacts {
+            margin-right: 24px;
+          }
           &__firstFacts,
           &__secondFacts,
           &__thirdFacts,
@@ -96,7 +103,10 @@
             background-color: $primary-light-bis;
             border-radius: 32px;
             border-radius: 32px;
-            width: 200px;
+            max-width: 200px;
+            min-width: 200px;
+            max-height: 94px;
+            min-height: 94px;
             padding: 40px 40px 48px;
             h5 {
               font-size: 24px;
@@ -119,7 +129,7 @@
     margin-top: 80px;
     &__content {
       &__card {
-        width: 800px;
+        width: 730px;
         &__body {
           gap: 32px;
           width: 600px;
@@ -177,24 +187,28 @@
       &__facts {
         margin-top: -35px;
         align-items: center;
+        justify-content: center;
         &__section {
           display: flex;
           flex-direction: column;
-          width: 890px;
+          width: 1184px;
           gap: 64px;
-          padding-top: 95px;
+          padding-top: 80px;
           padding-bottom: 100px;
           &__title {
             font-size: 48px;
             line-height: 57px;
             align-self: flex-start;
             padding-bottom: 0;
+            padding-left: 148px;
           }
           &__wrapper {
             flex-direction: row;
             flex-wrap: wrap;
             row-gap: 32px;
             column-gap: 24px;
+            padding-left: 128px;
+            padding-right: 128px;
             &__firstFacts,
             &__secondFacts,
             &__thirdFacts,
@@ -203,9 +217,11 @@
             &__sixthFacts {
               background-color: $primary-light-bis;
               border-radius: 32px;
-              width: 200px;
-              height: 115px;
-              padding: 40px 40px 48px;
+              max-width: 200px;
+              min-width: 200px;
+              max-height: 118px;
+              min-height: 118px;
+              padding: 40px 40px 48px 40px;
               h5 {
                 font-size: 40px;
                 line-height: 48px;
