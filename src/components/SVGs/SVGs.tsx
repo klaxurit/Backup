@@ -92,8 +92,8 @@ export const LogoSearch = (props: SVGProps<SVGSVGElement>) => (
 )
 
 export const LogoParams = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M6.78947 8.36842C6.78947 7.20572 7.73203 6.26316 8.89474 6.26316C10.0574 6.26316 11 7.20572 11 8.36842C11 9.53113 10.0574 10.4737 8.89474 10.4737C7.73203 10.4737 6.78947 9.53113 6.78947 8.36842ZM6.78947 8.36842H1.52632M5.21053 3.10526C5.21053 4.26797 4.26797 5.21053 3.10526 5.21053C1.94256 5.21053 1 4.26797 1 3.10526C1 1.94256 1.94256 1 3.10526 1C4.26797 1 5.21053 1.94256 5.21053 3.10526ZM5.21053 3.10526L10.4737 3.10526" stroke="white" strokeWidth="1.6" />
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0)" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M2 4.5H14M3.5 8.25H12.5M5 12H11" stroke="white" stroke-width="1.6" />
   </svg>
 )
 

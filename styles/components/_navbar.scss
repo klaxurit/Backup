@@ -104,7 +104,7 @@
         &__spacer {
           display: block;
           position: absolute;
-          height: 10px; /* Ajustez cette valeur en fonction de l'espace que vous voulez couvrir */
+          height: 10px;
           width: 100%;
         }
       }
@@ -367,7 +367,7 @@
   width: 12px;
   height: 1rem;
   padding: 0.6rem 0.7rem;
-  box-sizing: content-box; /* Ajoutez cette ligne */
+  box-sizing: content-box;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
