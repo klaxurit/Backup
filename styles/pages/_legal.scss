@@ -67,8 +67,11 @@
           text-align: left;
         }
         &__contact {
+          text-decoration: none;
           font-family: 'TT Hoves Medium';
           color: $primary-light;
+          font-size: 18px;
+          line-height: 28px;
         }
       }
     }

@@ -104,7 +104,7 @@ const Legal: React.FC = () => {
               </article>
               <article className="Legal__privacy__body__article">
                 <h4>Contact Us</h4>
-                <p>Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales et <span className="Legal__privacy__body__article__contact">contact@stakelab.fr</span></p>
+                <p>Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales et <a href="mailto:contact@stakelab.fr" className="Legal__privacy__body__article__contact">contact@stakelab.fr</a></p>
               </article>
             </div>
             {!isDesktop && (
