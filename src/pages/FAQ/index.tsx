@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
   const questions = [
     {
       id: "question-1",
-      title: "What is StakeLab ?",
+      title: "What is StakeLab?",
       content: [
         "StakeLab is a provider of tools to leverage the benefits of Proof of Stake (PoS) blockchains.",
         "The StakeLab product - which is the main activity - provide a secure and reliable infrastructure that validate and secure them, known as validators."

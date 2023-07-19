@@ -40,8 +40,8 @@
       &__icon {
         outline: none;
         cursor: pointer;
-        width: 17px;
-        height: 18px;
+        width: 15px;
+        height: 16px;
         padding: 2px;
         margin: 0;
         color: $neutral-pure-bis;
@@ -76,6 +76,7 @@
       &__linksWrapper {
         flex-direction: row;
         flex-wrap: nowrap;
+        padding: 0;
         &__separator {
           font-size: 5px;
           &--desktop {
@@ -85,6 +86,13 @@
             font-weight: 500;
             font-size: 5px;
           }
+        }
+      }
+      &__iconWrapper {
+        gap: 5px;
+        &__icon {
+          width: 13px;
+          height: 14px;
         }
       }
     }

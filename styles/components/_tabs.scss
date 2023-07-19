@@ -3,12 +3,13 @@
   font-family: 'TT Hoves Medium';
   &:hover {
     color: $neutral-lighter;
+    background-color: rgba(255, 255, 255, 0.04);
   }
   &:active {
     border: 2px solid var(--neutral-onyx-blacker, #1F1A34);
     background: rgba(255, 255, 255, 0.04);
-      color: white;
-    }
+    color: white;
+  }
   &:focus-within {
     color: white;
   }
