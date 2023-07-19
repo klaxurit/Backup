@@ -108,7 +108,7 @@ const Legal: React.FC = () => {
               </article>
             </div>
             {!isDesktop && (
-              <div className="Legal__privacy__btn" onClick={() => setActiveSection("terms")}>
+              <div className="Legal__privacy__btn tabs" tabIndex={0} onClick={() => setActiveSection("terms")}>
                 <p>Terms of Service</p>
                 <LogoArrowLink className="Legal__privacy__btn__icon" />
               </div>
@@ -245,7 +245,7 @@ const Legal: React.FC = () => {
               </article>
             </div>
             {!isDesktop && (
-              <div className="Legal__terms__btn" onClick={() => setActiveSection("privacy")}>
+              <div className="Legal__terms__btn tabs" tabIndex={0} onClick={() => setActiveSection("privacy")}>
                 <p>Privacy Policy</p>
                 <LogoArrowLink className="Legal__terms__btn__icon" />
               </div>
@@ -256,13 +256,15 @@ const Legal: React.FC = () => {
       {isDesktop && (
         <div className="Sidebar">
           <div
-            className={`Sidebar__btn${activeSection === "privacy" ? "--active" : ""}`}
+            className={`Sidebar__btn${activeSection === "privacy" ? "--active" : ""} tabs`}
+            tabIndex={0}
             onClick={() => setActiveSection("privacy")}
           >
             <p>Privacy Policy</p>
           </div>
           <div
-            className={`Sidebar__btn${activeSection === "terms" ? "--active" : ""}`}
+            className={`Sidebar__btn${activeSection === "terms" ? "--active" : ""} tabs`}
+            tabIndex={0}
             onClick={() => setActiveSection("terms")}
           >
             <p>Terms of Service</p>
