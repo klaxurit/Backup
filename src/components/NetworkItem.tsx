@@ -22,6 +22,7 @@ export const NetworkItem: React.FC<NetworkItemProps> = ({ network, detailed = fa
     return (
       <div 
         className="Network__item Network__item--detailed"
+        tabIndex={0}
         // onMouseOver={handleMouseOver}
         // onMouseOut={handleMouseOut}
       >
