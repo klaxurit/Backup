@@ -30,7 +30,11 @@ html {
   overflow-y: hidden;
 }
 
-
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
 
 body {
   background-color: $primary-blacker-bis;

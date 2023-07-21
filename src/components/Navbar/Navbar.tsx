@@ -36,6 +36,14 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isMenuOpen]);
+
   return (
     <nav className="Navbar">
       <div className="Navbar__logo--mobile">
