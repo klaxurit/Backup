@@ -16,7 +16,6 @@
 @font-face {
   font-family: "TT Hoves DemiBold";
   src: url("/src/assets/fonts/TT_Hoves_DemiBold.otf") format("opentype");
-  font-weight: 500;
 }
 
 html {
@@ -99,5 +98,9 @@ p {
   }
 }
 a {
+  font-family: 'TT Hoves DemiBold';
   font-size: 14px;
+}
+button {
+  font-family: 'TT Hoves DemiBold';
 }

@@ -15,6 +15,15 @@
     padding: 0px 120px;
   }
 
+  &__content {
+    max-width: 1198px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__logo {
     &--mobile {
       .Favicon {
@@ -76,10 +85,11 @@
       align-items: center;
       gap: 24px;
       a {
+        font-family: "TT Hoves DemiBold";
         text-decoration: none;
       }
       .btn--small {
-        font-family: 'TT Hoves DemiBold';
+        font-family: "TT Hoves DemiBold";
         height: 40px;
         width: 65px;
         border-radius: 12px;
@@ -316,9 +326,10 @@
       line-height: 10px;
       margin-top: 0;
       margin-bottom: 0;
-      padding: 4px;
+      padding: 3px 4px 4px 4px;
       background-color: $primary-dark;
       border-radius: 4px;
+      max-height: 18px;
       &--disabled {
         color: $neutral-medium;
 
