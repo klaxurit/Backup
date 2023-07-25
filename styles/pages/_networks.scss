@@ -81,6 +81,7 @@
             }
             &__input {
               font-family: "TT Hoves Medium";
+              font-weight: 500;
               color: white;
               outline: none;
               background: none;
@@ -97,6 +98,12 @@
                 font-weight: 500px;
                 font-size: 18px;
                 line-height: 28px;
+              }
+              &:hover::placeholder {
+                color: $neutral-light;
+              }
+              &:focus-visible {
+                color: $white;
               }
             }
           }
@@ -230,10 +237,19 @@
   }
   @media #{$md} {
     &__content {
+      justify-content: center;
+      align-items: center;
+      &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 1192px;
+      }
       &__control {
         display: flex;
         justify-content: space-around;
-        width: 100%;
+        max-width: 1192px;
         &__searchBar {
           width: 30%;
           &__content {
@@ -276,7 +292,8 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
       column-gap: 24px;
-      max-width: calc(4 * (25% - 24px));
+      // max-width: calc(4 * (25% - 24px));
+      max-width: 1192px;
       margin: 0 auto;
     }
   }
