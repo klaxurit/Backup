@@ -3,7 +3,7 @@
   font-family: 'TT Hoves Medium';
   &:hover {
     color: $neutral-lighter;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(255, 255, 255, 0.02);
   }
   &:active {
     border: 2px solid var(--neutral-onyx-blacker, #1F1A34);

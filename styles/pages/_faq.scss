@@ -17,6 +17,7 @@
     margin-bottom: 5px;
 
     p {
+      font-family: "TT Hoves Medium";
       font-weight: 500;
       font-size: 18px;
       line-height: 160%;
@@ -65,7 +66,7 @@
             justify-content: space-between;
             padding: 12px 14px 12px 20px;
             gap: 8px;
-            border: 2px solid #1f1a34;
+            border: 2px solid $neutral-blacker;
             border-radius: 16px;
             width: auto;
             flex-grow: 1;
@@ -89,7 +90,7 @@
             flex-grow: 1;
           }
           &__icon {
-            width: 10px;
+            width: 12px;
             stroke: $neutral-pure;
             flex-shrink: 0;
             padding-left: 20px;
@@ -154,7 +155,7 @@
         flex-direction: column;
         position: sticky;
         margin-top: 15px;
-        max-width: 330px;
+        max-width: 320px;
         gap: 10px;
         top: 20px;
         &__button {
@@ -178,33 +179,45 @@
             border: 2px solid var(--neutral-onyx-blacker, #1f1a34);
             background: rgba(255, 255, 255, 0.04);
           }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+          }
         }
       }
     }
   }
   @media #{$lg} {
     margin-top: 60px;
-    padding: 18px 124px;
+    padding: 18px 120px;
     margin-bottom: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    &__head {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 50px;
+    }
     &__content {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       gap: 80px;
       &__questions {
-        max-width: 775px;
+        width: 792px;
         &__content {
           &__question {
             h4 {
               margin-top: 0;
               margin-bottom: 0;
-              padding-bottom: 20px;
+              padding-bottom: 40px;
             }
           }
           &__answer {
             border: none;
-            border-bottom: 0.5px #ffffff1f solid;
+            border-bottom: 2px #ffffff1f solid;
             margin-bottom: 40px;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
           }
         }
         &__content:last-child {
@@ -233,8 +246,8 @@
           border-radius: 16px;
           flex-grow: 1;
           margin: 0;
-          min-width: 280px;
-          min-height: 31px;
+          min-width: 270px;
+          max-height: 55px;
           &--active {
             color: white;
             border-radius: 16px;
@@ -291,9 +304,23 @@
       font-size: 18px;
       line-height: 29px;
       text-align: center;
-      padding: 0;
+      padding: 3px 6px 4px 6px;
+      border: 1px solid transparent;
       margin: 0;
       cursor: pointer;
+      &:hover {
+        color: $primary-lighter;
+      }
+      &:focus-visible {
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid $primary-light;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+      }
+      &:active {
+        color: $primary-light;
+      }
     }
   }
   @media #{$lg} {

@@ -16,11 +16,18 @@
       padding: 0px;
       gap: 4px;
       align-self: flex-start;
-
-      &__subtitle,
-      &__updated {
+      &__subtitle {
         font-family: "TT Hoves Medium";
         font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: $neutral-pure;
+        margin: 0;
+      }
+
+      &__updated {
+        font-family: "TT Hoves Regular";
+        font-weight: 400;
         font-size: 18px;
         line-height: 160%;
         color: $neutral-pure;
@@ -48,6 +55,7 @@
       }
     }
     &__body {
+        margin-bottom: 40px;
       &__article {
         h4 {
           color: white;
@@ -72,6 +80,21 @@
           color: $primary-light;
           font-size: 18px;
           line-height: 28px;
+          padding: 3px 6px 4px 6px;
+          border: 1px solid transparent;
+          &:hover {
+            color: $primary-lighter;
+          }
+          &:focus-visible {
+            outline: none;
+            border-radius: 4px;
+            border: 1px solid $primary-light;
+            background-color: rgba(255, 255, 255, 0.00);
+            box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+          }
+          &:active {
+            color: $primary-light;
+          }
         }
       }
     }
@@ -85,6 +108,7 @@
       border: 2px solid #1f1a34;
       border-radius: 16px;
       flex-grow: 1;
+      margin-bottom: 10px;
       &:hover {
         background-color: rgba(255, 255, 255, 0.04);
       }
@@ -115,8 +139,31 @@
 
 @media #{$lg} {
   .Legal {
-    max-width: 775px;
+    max-width: 792px;
     padding: 0;
+    margin-top: 60px;
+    &__privacy,
+    &__terms {
+      &__head {
+        &__updated {
+          margin-bottom: 12px;
+        }
+        &__intro {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+      &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &__article {
+          &__contact {
+            margin-left: -6px;
+          }
+        }
+      }
+    }
   }
   .Sidebar {
     display: flex;
@@ -134,6 +181,7 @@
       gap: 8px;
       border: 2px solid #1f1a34;
       border-radius: 16px;
+      margin-bottom: 0;
       &:hover {
         background-color: rgba(255, 255, 255, 0.04);
         p {

@@ -11,7 +11,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     margin-bottom: 100px;
     &__member {
       display: flex;
@@ -23,7 +23,7 @@
       &__draw {
         width: 280px;
         border-radius: 28px;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
       }
       &__twitter {
         display: flex;
@@ -34,8 +34,8 @@
           color: white;
           font-family: "TT Hoves Bold";
           font-weight: 700;
-          font-size: 24px;
-          line-height: 29px;
+          font-size: 20px;
+          line-height: 32px;
           border: none;
           height: inherit;
           width: inherit;
@@ -49,8 +49,8 @@
         &__icon {
           color: $neutral-pure-bis;
           cursor: pointer;
-          width: 15px;
-          height: 16px;
+          width: 17px;
+          height: 17px;
           margin-top: 2px;
           margin-left: 10px;
           color: $neutral-pure-bis;
@@ -103,17 +103,17 @@
         &__twitter {
           margin-bottom: 8px;
           &__link {
-            font-size: 18px;
-            line-height: 25px;
+            font-size: 24px;
+            line-height: 28px;
             border: none;
             height: inherit;
             width: inherit;
             padding: inherit;
           }
           &__icon {
-            width: 15px;
-            height: 16px;
-            margin-top: 2px;
+            width: 18px;
+            height: 18px;
+            margin-top: 0;
             margin-left: 10px;
           }
         }
