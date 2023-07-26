@@ -98,7 +98,7 @@
         width: 65px;
         border-radius: 12px;
         padding: 8px 14px 8px 14px;
-        margin-top: 10px;
+        margin: 2px;
         a {
           text-decoration: none;
           color: white;
@@ -360,7 +360,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 6px;
+      margin-top: 1px;
 
       &:focus-visible {
         outline: none;
