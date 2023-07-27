@@ -73,7 +73,6 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                 className="Networks__content__control__searchBar__content__iconParams icon--small icon__white" 
                 onClick={() => {
                   setShowMobileOptions(!showMobileOptions);
-                  console.log('showMobileOptions:', !showMobileOptions); // Ajoutez cette ligne
                 }}
               />
             </div>
