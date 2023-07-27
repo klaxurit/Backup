@@ -437,6 +437,7 @@
           border-radius: 16px;
           z-index: 1000;
           &__label {
+            color: $white;
             &:focus-visible {
               outline: none;
               border-radius: 16px;
