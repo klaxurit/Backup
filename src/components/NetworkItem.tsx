@@ -22,7 +22,7 @@ export const NetworkItem: React.FC<NetworkItemProps> = ({ network, detailed = fa
 
     const truncateTitle = (title: string) => {
       if (title.length > 11) {
-        return title.substring(0, 11) + "...";
+        return title.substring(0, 11) + "..";
       }
       return title;
     };
