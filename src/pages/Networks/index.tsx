@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import { LogoArrowBottom, LogoSearch, LogoParams, LogoCheck } from "../../components/SVGs/SVGs"
+import { LogoArrowBottom, LogoSearch, LogoParams, LogoCheck, LogoCross } from "../../components/SVGs/SVGs"
 import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
@@ -122,48 +122,44 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
             </div>
           </div>
-            {/* {showMobileOptions && (
-              <div className="Networks__content__control__filters__mobile">
-                <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
-                  <p className="Networks__content__control__filters__button__label">{allButtonLabel}</p>
-                    <div>
-                      <div className="Networks__content__control__filters__button__pannel1">
-                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'All' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
-                          All
-                          {allButtonLabel === 'All' && <LogoCheck />}
-                        </p>
-                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Live' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
-                          Live
-                          {allButtonLabel === 'Live' && <LogoCheck />}
-                        </p>
-                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Testnets' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
-                          Testnets
-                          {allButtonLabel === 'Testnets' && <LogoCheck />}
-                        </p>
-                      </div>
-                    </div>
-                  <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showAllOptions ? 'rotate' : ''}`} />
-                </div>
-                <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
-                  <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
-                    <div className="Networks__content__control__filters__button__pannel2">
-                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'Order' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('Order'); setOrder(''); setShowOrderOptions(false); }}>
-                        Order
-                        {orderButtonLabel === 'Order' && <LogoCheck />}
-                      </p>
-                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'A > Z' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
-                        A {'>'} Z*
-                        {orderButtonLabel === 'A > Z' && <LogoCheck />}
-                      </p>
-                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'APR' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
-                        APR
-                        {orderButtonLabel === 'APR' && <LogoCheck />}
-                      </p>
-                    </div>
-                  <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
+          {showMobileOptions && (
+            <div className="Networks__content__control__filters__mobile">
+              <div className="Networks__content__control__filters__mobile__header">
+                <LogoCross onClick={() => setShowMobileOptions(false)} className="Networks__content__control__filters__mobile__header__button icon--small icon__white" />
+              </div>
+              <div className="Networks__content__control__filters__mobile__section first-section">
+                <h5>Filter</h5>
+                <div className="Networks__content__control__filters__mobile__section__button" tabIndex={0} onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'All' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
+                    All
+                    {allButtonLabel === 'All' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'Live' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
+                    Live
+                    {allButtonLabel === 'Live' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'Testnets' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
+                    Testnets
+                    {allButtonLabel === 'Testnets' && <LogoCheck />}
+                  </p>
                 </div>
               </div>
-            )} */}
+              <div className="Networks__content__control__filters__mobile__section">
+                <h5>Sort</h5>
+                <div className="Networks__content__control__filters__mobile__section__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel2__label ${orderButtonLabel === 'A > Z' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
+                    A {'>'} Z*
+                    {orderButtonLabel === 'A > Z' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel2__label ${orderButtonLabel === 'APR' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
+                    APR
+                    {orderButtonLabel === 'APR' && <LogoCheck />}
+                  </p>
+                </div>
+              </div>
+              <button className="btn--large btn__primary" onClick={() => setShowMobileOptions(false)}>Done</button>
+            </div>
+          )}
         </div>
         <div className="Networks__content__list">
           {filteredNetworks.map((network, idx) =>

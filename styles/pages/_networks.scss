@@ -210,17 +210,6 @@
             border-radius: 16px;
             z-index: 1000;
             &__label {
-              margin: 0;
-              color: $neutral-pure;
-              font-size: 18px;
-              line-height: 28px;
-              text-decoration: none;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              padding: 12px 20px;
-              gap: 14px;
-              border: 2px solid transparent;
               &:hover {
                 color: $neutral-light;
                 cursor: pointer;
@@ -310,6 +299,25 @@
   }
 }
 
+.Networks__content__control__filters__button__pannel1__label,
+.Networks__content__control__filters__button__pannel2__label,
+.Networks__content__control__filters__mobile__section__button__pannel1__label,
+.Networks__content__control__filters__mobile__section__button__pannel2__label {
+  font-family: "TT Hoves Medium";
+  margin: 0;
+  color: $neutral-pure;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 14px;
+  border: 2px solid transparent;
+}
+
 .Networks__content__control__searchBar__content__iconSlash {
   position: relative;
   transition: transform 0.3s ease;
@@ -373,25 +381,96 @@
 @media (max-width: 768px) {
   .Networks__content__control__filters__mobile {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: $primary-blacker-bis;
+    border-radius: 24px 24px 0px 0px;
+    background-color: var(--primary-tanzanite-blacker, #100a25);
     padding: 10px;
     box-sizing: border-box;
-    justify-content: space-between;
-    z-index: 1000; // Assurez-vous que le panneau de filtres est au-dessus des autres éléments
+    z-index: 1000;
+    &__header {
+      display: flex;
+      padding: 6px 16px;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      &__button {
+        cursor: pointer;
+        display: flex;
+        width: 13px;
+        height: 13px;
+        padding: 14px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+    }
+    &__section {
+      display: flex;
+      flex-direction: column;
+      h5 {
+        color: var(--neutral-white, #fff);
+        font-family: "TT Hoves Bold";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 0;
+        padding: 0px 0px 8px 20px;
+      }
+      &__button {
+        cursor: pointer;
+        &__pannel1,
+        &__pannel2 {
+          box-sizing: border-box;
+          width: 160px;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 4px;
+          background: $primary-black;
+          box-shadow: 0px 8px 8px rgba(5, 1, 20, 0.64);
+          border-radius: 16px;
+          z-index: 1000;
+          &__label {
+            &:focus-visible {
+              outline: none;
+              border-radius: 16px;
+              border: 2px solid $primary-light;
+              box-shadow: 0px 0px 0px 6px rgba(121, 80, 242, 0.24);
+            }
+          }
+        }
+      }
+    }
+    .first-section {
+      border-bottom: 2px #ffffff1f solid;
+      padding-bottom: 10px;
+      margin-bottom: 32px;
+    }
+    button {
+      text-align: center;
+      width: 327px;
+      height: 56px;
+      padding: 16px 20px 18px 20px;
+      border-radius: 16px;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      align-self: center;
+    }
   }
 }
 
 @media (min-width: 769px) {
   .Networks__content__control__filters__button {
-    display: block;
+    display: flex;
+    justify-content: space-between;
   }
   .Networks__content__control__filters__mobile {
     display: none;
   }
 }
-
-
