@@ -69,7 +69,8 @@
     padding: 25px 130px 0px 130px;
     margin-bottom: -16px;
     &__content {
-      width: 100%;
+      max-width: 1192px;
+      margin: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
