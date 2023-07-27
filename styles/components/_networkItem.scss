@@ -11,20 +11,26 @@
   min-width: 120px;
   min-height: 140px;
   user-select: none;
-  // &__tooltip {
-  //   font-family: 'TT Hoves Medium';
-  //   font-weight: 500;
-  //   position: absolute;
-  //   bottom: 90%;
-  //   left: 50%;
-  //   transform: translate(-50%, -10px);
-  //   background-color: white;
-  //   color: $primary-blacker-bis;
-  //   padding: 8px 12px;
-  //   border-radius: 12px;
-  //   font-size: 14px;
-  //   line-height: 22px;
-  // }
+  &__tooltip {
+    font-family: 'TT Hoves Medium';
+    font-weight: 500;
+    position: absolute;
+    bottom: 92%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background-color: white;
+    color: $primary-blacker-bis;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    &__svg {
+      position: absolute;
+      bottom: -4px; /* Adjust based on the size of your SVG */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
