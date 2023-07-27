@@ -21,6 +21,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
   const [isTyping, setIsTyping] = useState(false);
   const allButtonRef = useRef(null);
   const orderButtonRef = useRef(null);
+  const [showMobileOptions, setShowMobileOptions] = useState(false);
 
   useClickOutside(allButtonRef, () => setShowAllOptions(false));
   useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
@@ -68,7 +69,13 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                 />
               </div>
               <span className={`Networks__content__control__searchBar__content__iconSlash icon--small icon__white ${isTyping ? 'icon--active' : ''}`} onClick={() => { setSearch(''); setIsTyping(false); }}></span>
-              <LogoParams className="Networks__content__control__searchBar__content__iconParams icon--small icon__white"/>
+              <LogoParams 
+                className="Networks__content__control__searchBar__content__iconParams icon--small icon__white" 
+                onClick={() => {
+                  setShowMobileOptions(!showMobileOptions);
+                  console.log('showMobileOptions:', !showMobileOptions); // Ajoutez cette ligne
+                }}
+              />
             </div>
           </div>
           <div className="Networks__content__control__filters">
@@ -115,6 +122,48 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
             </div>
           </div>
+            {/* {showMobileOptions && (
+              <div className="Networks__content__control__filters__mobile">
+                <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
+                  <p className="Networks__content__control__filters__button__label">{allButtonLabel}</p>
+                    <div>
+                      <div className="Networks__content__control__filters__button__pannel1">
+                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'All' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
+                          All
+                          {allButtonLabel === 'All' && <LogoCheck />}
+                        </p>
+                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Live' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
+                          Live
+                          {allButtonLabel === 'Live' && <LogoCheck />}
+                        </p>
+                        <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Testnets' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
+                          Testnets
+                          {allButtonLabel === 'Testnets' && <LogoCheck />}
+                        </p>
+                      </div>
+                    </div>
+                  <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showAllOptions ? 'rotate' : ''}`} />
+                </div>
+                <div className="Networks__content__control__filters__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
+                  <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
+                    <div className="Networks__content__control__filters__button__pannel2">
+                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'Order' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('Order'); setOrder(''); setShowOrderOptions(false); }}>
+                        Order
+                        {orderButtonLabel === 'Order' && <LogoCheck />}
+                      </p>
+                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'A > Z' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
+                        A {'>'} Z*
+                        {orderButtonLabel === 'A > Z' && <LogoCheck />}
+                      </p>
+                      <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'APR' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
+                        APR
+                        {orderButtonLabel === 'APR' && <LogoCheck />}
+                      </p>
+                    </div>
+                  <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
+                </div>
+              </div>
+            )} */}
         </div>
         <div className="Networks__content__list">
           {filteredNetworks.map((network, idx) =>

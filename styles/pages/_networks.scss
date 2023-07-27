@@ -369,3 +369,29 @@
     transform: rotate(45deg);
   }
 }
+
+@media (max-width: 768px) {
+  .Networks__content__control__filters__mobile {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary-blacker-bis;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    z-index: 1000; // Assurez-vous que le panneau de filtres est au-dessus des autres éléments
+  }
+}
+
+@media (min-width: 769px) {
+  .Networks__content__control__filters__button {
+    display: block;
+  }
+  .Networks__content__control__filters__mobile {
+    display: none;
+  }
+}
+
+

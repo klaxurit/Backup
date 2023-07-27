@@ -28,7 +28,12 @@ const FAQ: React.FC = () => {
     setTimeout(() => {
       if (isDesktop) {
         const element = document.getElementById(questionId);
-        element?.scrollIntoView({ behavior: "smooth" });
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const offset = 100; // Change this value to the desired offset
+          const top = rect.top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: "smooth" });
+        }
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }

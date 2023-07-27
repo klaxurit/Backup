@@ -138,6 +138,13 @@
 }
 
 @media #{$lg} {
+  .Wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 18px 124px;
+    gap: 80px;
+    margin-bottom: 40px;
+  }
   .Legal {
     max-width: 792px;
     padding: 0;
@@ -166,6 +173,8 @@
     }
   }
   .Sidebar {
+    position: sticky;
+    top: 80px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -214,12 +223,5 @@
         flex-grow: 1;
       }
     }
-  }
-  .Wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 124px;
-    gap: 80px;
-    margin-bottom: 40px;
   }
 }

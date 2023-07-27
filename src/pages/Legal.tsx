@@ -6,6 +6,11 @@ const Legal: React.FC = () => {
   const [activeSection, setActiveSection] = useState("privacy");
 
   const isDesktop = window.innerWidth > 1024;
+
+  const handleSectionChange = (section: string) => {
+    setActiveSection(section);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   return (
     <div className="Wrapper">
       <section className="Legal">
@@ -258,14 +263,14 @@ const Legal: React.FC = () => {
           <div
             className={`Sidebar__btn${activeSection === "privacy" ? "--active" : ""} tabs`}
             tabIndex={0}
-            onClick={() => setActiveSection("privacy")}
+            onClick={() => handleSectionChange("privacy")}
           >
             <p>Privacy Policy</p>
           </div>
           <div
             className={`Sidebar__btn${activeSection === "terms" ? "--active" : ""} tabs`}
             tabIndex={0}
-            onClick={() => setActiveSection("terms")}
+            onClick={() => handleSectionChange("terms")}
           >
             <p>Terms of Service</p>
           </div>
