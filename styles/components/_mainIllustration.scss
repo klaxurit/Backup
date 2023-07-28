@@ -2,13 +2,13 @@
   z-index: -1;
   .main-video {
     margin: -100px 0;
-    width: 515px;
+    max-width: 515px;
     height: 515px;
     object-fit: cover;
   }
   @media #{$lg} {
     .main-video {
-    width: 615px;
+    max-width: 615px;
     height: 800px;
     }
   }
@@ -17,7 +17,7 @@
       margin: 0;
       margin-left: 110px;
       position: absolute;
-      width: 675px;
+      max-width: 675px;
       height: 800px;
       object-fit: cover;
       left: 500px;

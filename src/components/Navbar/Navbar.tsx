@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* Desktop */}
           <div className={`Navbar__menu--desktop ${isMenuOpen ? 'open' : ''}`}>
             <div className="Navbar__menu--desktop__item">
-              <Link to={`#`} className="Navbar__link--white">Products</Link>
+              <Link to={`stakelab`} className="Navbar__link--white">Products</Link>
               <span className="Navbar__menu--desktop__item__spacer"></span>
               <Dropdown items={dropdownItems}/>
             </div>
