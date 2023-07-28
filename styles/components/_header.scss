@@ -10,7 +10,15 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  @media (min-width: 992px) {
+  @media #{$xl} {
+    .header__firstBlock {
+      margin-top: 12px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: flex-start;
+    }
+  }
+  @media #{$xxl} {
     .header__firstBlock {
       margin-top: 12px;
       display: flex;

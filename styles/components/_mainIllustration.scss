@@ -6,7 +6,13 @@
     height: 515px;
     object-fit: cover;
   }
-  @media (min-width: 992px) {
+  @media #{$lg} {
+    .main-video {
+    width: 615px;
+    height: 800px;
+    }
+  }
+  @media #{$xl} {
     .main-video {
       margin: 0;
       margin-left: 110px;
