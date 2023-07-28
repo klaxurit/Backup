@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { LogoArrowBottom, LogoSearch, LogoParams, LogoCheck, LogoCross } from "../../components/SVGs/SVGs"
 import { Network } from "../../types";
@@ -21,6 +21,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
   const [isTyping, setIsTyping] = useState(false);
   const allButtonRef = useRef(null);
   const orderButtonRef = useRef(null);
+  const searchRef = useRef<HTMLInputElement>(null);
   const [showMobileOptions, setShowMobileOptions] = useState(false);
 
   useClickOutside(allButtonRef, () => setShowAllOptions(false));
@@ -38,6 +39,21 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
 
     return titleMatch && liveMatch;
   });
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "/") {
+        event.preventDefault();
+        searchRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   if (order === 'A > Z') {
     filteredNetworks.sort((a, b) => a.title.localeCompare(b.title));
@@ -58,6 +74,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               <div className="Networks__content__control__searchBar__content__left">
                 <LogoSearch className="Networks__content__control__searchBar__content__left__iconSearch" />
                 <input
+                  ref={searchRef}
                   type="text"
                   className="Networks__content__control__searchBar__content__left__input"
                   placeholder="Search"
