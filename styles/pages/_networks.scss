@@ -510,6 +510,11 @@
   }
 }
 
+.rotate {
+  transition: all 0.4s ease;
+  transform: rotateZ(-180deg);
+}
+
 #overlay {
   position: fixed;
   top: 0;

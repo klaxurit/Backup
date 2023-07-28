@@ -5,6 +5,7 @@ import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
 import useClickOutside from '../../hooks/useClickOutside';
+import { FilterSortOption } from "../../components/FilterSortOption";
 
 interface NetworkProps {
   networks?: Network[];
@@ -128,18 +129,21 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               {showAllOptions && (
                 <div>
                   <div className="Networks__content__control__filters__button__pannel1">
-                    <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'All' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
-                      All
-                      {allButtonLabel === 'All' && <LogoCheck />}
-                    </p>
-                    <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Live' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
-                      Live
-                      {allButtonLabel === 'Live' && <LogoCheck />}
-                    </p>
-                    <p className={`Networks__content__control__filters__button__pannel1__label ${allButtonLabel === 'Testnets' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
-                      Testnets
-                      {allButtonLabel === 'Testnets' && <LogoCheck />}
-                    </p>
+                    <FilterSortOption
+                      label='All'
+                      currentLabel={allButtonLabel}
+                      onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}
+                    />
+                    <FilterSortOption
+                      label='Live'
+                      currentLabel={allButtonLabel}
+                      onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}
+                    />
+                    <FilterSortOption
+                      label='Testnets'
+                      currentLabel={allButtonLabel}
+                      onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}
+                    />
                   </div>
                 </div>
               )}
@@ -149,18 +153,21 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               <p className="Networks__content__control__filters__button__label">{orderButtonLabel}</p>
               {showOrderOptions && (
                 <div className="Networks__content__control__filters__button__pannel2">
-                  <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'Order' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('Order'); setOrder(''); setShowOrderOptions(false); }}>
-                    Order
-                    {orderButtonLabel === 'Order' && <LogoCheck />}
-                  </p>
-                  <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'A > Z' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
-                    A {'>'} Z*
-                    {orderButtonLabel === 'A > Z' && <LogoCheck />}
-                  </p>
-                  <p className={`Networks__content__control__filters__button__pannel2__label ${orderButtonLabel === 'APR' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
-                    APR
-                    {orderButtonLabel === 'APR' && <LogoCheck />}
-                  </p>
+                  <FilterSortOption
+                    label='Order'
+                    currentLabel={orderButtonLabel}
+                    onClick={() => { setOrderButtonLabel('Order'); setOrder(''); setShowOrderOptions(false); }}
+                  />
+                  <FilterSortOption
+                    label='A > Z'
+                    currentLabel={orderButtonLabel}
+                    onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}
+                  />
+                  <FilterSortOption
+                    label='APR'
+                    currentLabel={orderButtonLabel}
+                    onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}
+                  />
                 </div>
               )}
               <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
