@@ -11,18 +11,20 @@ interface NetworkProps {
 }
 
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
+  const allButtonRef = useRef(null);
+  const orderButtonRef = useRef(null);
+  const searchRef = useRef<HTMLInputElement>(null);
   const [allButtonLabel, setAllButtonLabel] = useState('All');
   const [liveStatus, setLiveStatus] = useState('All');
   const [orderButtonLabel, setOrderButtonLabel] = useState('Order');
-  const [search, setSearch, ] = useState('');
+  const [search, setSearch,] = useState('');
   const [order, setOrder] = useState('');
   const [showAllOptions, setShowAllOptions] = useState(false);
   const [showOrderOptions, setShowOrderOptions] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
-  const allButtonRef = useRef(null);
-  const orderButtonRef = useRef(null);
-  const searchRef = useRef<HTMLInputElement>(null);
   const [showMobileOptions, setShowMobileOptions] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState<boolean>(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   useClickOutside(allButtonRef, () => setShowAllOptions(false));
   useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
@@ -61,8 +63,36 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
     filteredNetworks.sort((a, b) => b.metrics - a.metrics);
   }
 
+  const handleLogoParamsClick = () => {
+    setIsOverlayVisible(!isOverlayVisible);
+    setShowMobileOptions(!showMobileOptions);
+  };
+
+  const handleLogoCrossClick = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOverlayVisible(false);
+      setShowMobileOptions(false);
+      setIsClosing(false);
+    }, 500);
+  };
+
+  const handleDoneClick = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOverlayVisible(false);
+      setShowMobileOptions(false);
+      setIsClosing(false);
+    }, 500);
+  };
+
+
   return (
     <div className="Networks">
+      <div id="overlay" style={{
+        opacity: isOverlayVisible ? 0.6399999856948853 : 0,
+        pointerEvents: isOverlayVisible ? 'auto' : 'none'
+      }}></div>
       <div className="Networks__content">
         <div className="Networks__content__head">
           <h1 className="Networks__content__head__title">Networks</h1>
@@ -86,11 +116,9 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                 />
               </div>
               <span className={`Networks__content__control__searchBar__content__iconSlash icon--small icon__white ${isTyping ? 'icon--active' : ''}`} onClick={() => { setSearch(''); setIsTyping(false); }}></span>
-              <LogoParams 
-                className="Networks__content__control__searchBar__content__iconParams icon--small icon__white" 
-                onClick={() => {
-                  setShowMobileOptions(!showMobileOptions);
-                }}
+              <LogoParams
+                className="Networks__content__control__searchBar__content__iconParams icon--small icon__white"
+                onClick={handleLogoParamsClick}
               />
             </div>
           </div>
@@ -138,10 +166,14 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
               <LogoArrowBottom className={`Networks__content__control__filters__button__icon ${showOrderOptions ? 'rotate' : ''}`} />
             </div>
           </div>
-          {showMobileOptions && (
-            <div className="Networks__content__control__filters__mobile">
+          {showMobileOptions && !isClosing && (
+            <div className={`Networks__content__control__filters__mobile fadeInUpBig`}>
               <div className="Networks__content__control__filters__mobile__header">
-                <LogoCross onClick={() => setShowMobileOptions(false)} className="Networks__content__control__filters__mobile__header__button icon--small icon__white" />
+                <LogoCross
+                  onClick={handleLogoCrossClick}
+                  className="Networks__content__control__filters__mobile__header__button icon--small icon__white"
+                />
+
               </div>
               <div className="Networks__content__control__filters__mobile__section first-section">
                 <h5>Filter</h5>
@@ -173,7 +205,59 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
                   </p>
                 </div>
               </div>
-              <button className="btn--large btn__primary" onClick={() => setShowMobileOptions(false)}>Done</button>
+              <button
+                className="btn--large btn__primary"
+                onClick={handleDoneClick}
+              >
+                Done
+              </button>
+            </div>
+          )}
+          {isClosing && (
+            <div className={`Networks__content__control__filters__mobile fadeOutDownBig`}>
+              <div className="Networks__content__control__filters__mobile__header">
+                <LogoCross
+                  onClick={handleLogoCrossClick}
+                  className="Networks__content__control__filters__mobile__header__button icon--small icon__white"
+                />
+
+              </div>
+              <div className="Networks__content__control__filters__mobile__section first-section">
+                <h5>Filter</h5>
+                <div className="Networks__content__control__filters__mobile__section__button" tabIndex={0} onClick={() => setShowAllOptions(!showAllOptions)} ref={allButtonRef}>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'All' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('All'); setLiveStatus('All'); setShowAllOptions(false); }}>
+                    All
+                    {allButtonLabel === 'All' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'Live' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Live'); setLiveStatus('Live'); setShowAllOptions(false); }}>
+                    Live
+                    {allButtonLabel === 'Live' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel1__label ${allButtonLabel === 'Testnets' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setAllButtonLabel('Testnets'); setLiveStatus('Testnets'); setShowAllOptions(false); }}>
+                    Testnets
+                    {allButtonLabel === 'Testnets' && <LogoCheck />}
+                  </p>
+                </div>
+              </div>
+              <div className="Networks__content__control__filters__mobile__section">
+                <h5>Sort</h5>
+                <div className="Networks__content__control__filters__mobile__section__button" tabIndex={0} onClick={() => setShowOrderOptions(!showOrderOptions)} ref={orderButtonRef}>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel2__label ${orderButtonLabel === 'A > Z' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('A > Z'); setOrder('A > Z'); setShowOrderOptions(false); }}>
+                    A {'>'} Z*
+                    {orderButtonLabel === 'A > Z' && <LogoCheck />}
+                  </p>
+                  <p className={`Networks__content__control__filters__mobile__section__button__pannel2__label ${orderButtonLabel === 'APR' ? 'selected' : ''}`} tabIndex={0} onClick={() => { setOrderButtonLabel('APR'); setOrder('APR'); setShowOrderOptions(false); }}>
+                    APR
+                    {orderButtonLabel === 'APR' && <LogoCheck />}
+                  </p>
+                </div>
+              </div>
+              <button
+                className="btn--large btn__primary"
+                onClick={handleDoneClick}
+              >
+                Done
+              </button>
             </div>
           )}
         </div>

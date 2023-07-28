@@ -1,3 +1,36 @@
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig;
+  animation-duration: 1s;
+}
+
 .Networks {
   display: flex;
   flex-direction: column;
@@ -392,9 +425,10 @@
     padding: 10px;
     box-sizing: border-box;
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
     &__header {
       display: flex;
-      padding: 6px 16px;
+      padding: 12px 13px;
       justify-content: flex-end;
       align-items: center;
       gap: 10px;
@@ -455,7 +489,7 @@
     }
     button {
       text-align: center;
-      width: 327px;
+      width: 95%;
       height: 56px;
       padding: 16px 20px 18px 20px;
       border-radius: 16px;
@@ -474,4 +508,17 @@
   .Networks__content__control__filters__mobile {
     display: none;
   }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-blacker-bis; 
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
 }
