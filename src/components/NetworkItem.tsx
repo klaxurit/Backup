@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Network } from "../types";
 
@@ -9,9 +9,28 @@ interface NetworkItemProps {
 
 export const NetworkItem: React.FC<NetworkItemProps> = ({ network, detailed = false }: NetworkItemProps) => {
     const [showTooltip, setShowTooltip] = useState(false);
+    const [truncateLength, setTruncateLength] = useState(11);
+
+  useEffect(() => {
+    const updateTruncateLength = () => {
+      if (window.innerWidth < 1400) {
+        setTruncateLength(6);
+      } else {
+        setTruncateLength(11);
+      }
+    };
+
+    updateTruncateLength();
+
+    window.addEventListener("resize", updateTruncateLength);
+
+    return () => {
+      window.removeEventListener("resize", updateTruncateLength);
+    };
+  }, []);
 
     const handleMouseOver = () => {
-      if (network.title.length > 11) {
+      if (network.title.length > truncateLength) {
         setShowTooltip(true);
       }
     };
@@ -21,8 +40,8 @@ export const NetworkItem: React.FC<NetworkItemProps> = ({ network, detailed = fa
     };
 
     const truncateTitle = (title: string) => {
-      if (title.length > 11) {
-        return title.substring(0, 11) + "..";
+      if (title.length > truncateLength) {
+        return title.substring(0, truncateLength) + "..";
       }
       return title;
     };
