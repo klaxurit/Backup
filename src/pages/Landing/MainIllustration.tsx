@@ -16,19 +16,14 @@ export const MainIllustration: React.FC = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.addEventListener('loadeddata', handleVideoLoad);
+      videoRef.current.load();
     }
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener('loadeddata', handleVideoLoad);
-      }
-    };
   }, []);
 
   return (
     <div className="main-illustration">
       {!videoLoaded && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />}
-      <video ref={videoRef} playsInline autoPlay loop muted className="main-video">
+      <video ref={videoRef} playsInline autoPlay loop muted className="main-video" onLoadedData={handleVideoLoad}>
         <source src={MainIllustrationSVG} type="video/mp4" />
         <source src={MainIllustrationWEBM} type="video/webm" />
       </video>
