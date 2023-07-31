@@ -7,8 +7,6 @@ export const MainIllustration: React.FC = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
   const handleVideoLoad = () => {
     setVideoLoaded(true);
     if (videoRef.current) {
@@ -24,8 +22,8 @@ export const MainIllustration: React.FC = () => {
 
   return (
     <div className="main-illustration">
-      {!videoLoaded && !isSafari && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />}
-      <video ref={videoRef} playsInline autoPlay loop muted className="main-video" onLoadedData={handleVideoLoad}>
+      {!videoLoaded && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />}
+      <video ref={videoRef} playsInline autoPlay loop muted className="main-video" preload="none" onLoadedData={handleVideoLoad}>
         <source src={MainIllustrationSVG} type="video/mp4" />
         <source src={MainIllustrationWEBM} type="video/webm" />
       </video>
