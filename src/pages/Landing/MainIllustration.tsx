@@ -4,26 +4,26 @@ import MainIllustrationWEBM from "../../assets/images/Logo.webm";
 import MainIllustrationPNG from "../../assets/images/mainillustration.png";
 
 export const MainIllustration: React.FC = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  // const [videoLoaded, setVideoLoaded] = useState(false);
+  // const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleVideoLoad = () => {
-    setVideoLoaded(true);
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
+  // const handleVideoLoad = () => {
+  //   setVideoLoaded(true);
+  //   if (videoRef.current) {
+  //     videoRef.current.play();
+  //   }
+  // };
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.load();
+  //   }
+  // }, []);
 
   return (
     <div className="main-illustration">
-      {!videoLoaded && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />}
-      <video ref={videoRef} playsInline autoPlay loop muted className="main-video" preload="none" onLoadedData={handleVideoLoad}>
+      {/* {!videoLoaded && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />} */}
+      <video playsInline autoPlay loop muted className="main-video" preload="metadata" src={MainIllustrationWEBM}>
         <source src={MainIllustrationSVG} type="video/mp4" />
         <source src={MainIllustrationWEBM} type="video/webm" />
       </video>
