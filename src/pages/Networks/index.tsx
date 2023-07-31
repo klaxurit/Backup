@@ -75,7 +75,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
       setIsOverlayVisible(false);
       setShowMobileOptions(false);
       setIsClosing(false);
-    }, 500);
+    }, 200);
   };
 
   const handleDoneClick = () => {
@@ -84,7 +84,7 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
       setIsOverlayVisible(false);
       setShowMobileOptions(false);
       setIsClosing(false);
-    }, 500);
+    }, 200);
   };
 
 
