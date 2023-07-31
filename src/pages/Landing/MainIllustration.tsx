@@ -1,13 +1,20 @@
+import React, { useState } from "react";
 import MainIllustrationSVG from "../../assets/images/Logo.mp4";
-// import MainIllustrationOGV from "../../assets/images/Logo.ogg";
 import MainIllustrationWEBM from "../../assets/images/Logo.webm";
+import MainIllustrationPNG from "../../assets/images/mainillustration2.png";
 
 export const MainIllustration: React.FC = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <div className="main-illustration">
-      <video playsInline autoPlay loop muted className="main-video">
+      {!videoLoaded && <img src={MainIllustrationPNG} className="main-img" alt="Loading..." />}
+      <video playsInline autoPlay loop muted className="main-video" onLoadedData={handleVideoLoad}>
         <source src={MainIllustrationSVG} type="video/mp4" />
-        {/* <source src={MainIllustrationOGV} type="video/ogv" /> */}
         <source src={MainIllustrationWEBM} type="video/webm" />
       </video>
     </div>

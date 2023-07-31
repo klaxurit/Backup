@@ -6,10 +6,28 @@
     height: 515px;
     object-fit: cover;
   }
+  .main-img {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 160px;
+  }
   @media #{$lg} {
     .main-video {
     max-width: 615px;
     height: 800px;
+    }
+    .main-img {
+      position: absolute;
+      width: 600px;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin-top: 280px;
     }
   }
   @media #{$xl} {
@@ -22,6 +40,15 @@
       object-fit: cover;
       left: 500px;
       bottom: -80px;
+    }
+    .main-img {
+      position: absolute;
+      width: 580px;
+      top: 45%;
+      left: 79.5%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin-top: 0;
     }
   }
 }
