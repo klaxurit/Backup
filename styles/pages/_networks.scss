@@ -320,11 +320,27 @@
       }
     }
   }
+  .Networks__content__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 1192px;
+    margin: 0 auto;
+  }
+  @media #{$sm} {
+    .Networks__content__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media #{$md} {
+    .Networks__content__list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
   @media #{$xl} {
     .Networks__content__list {
-      gap: 22px;
-      max-width: 1192px;
-      margin: 0 auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 }
