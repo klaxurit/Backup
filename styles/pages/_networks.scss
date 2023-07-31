@@ -124,7 +124,7 @@
               margin: 0;
               caret-color: $primary-light;
               font-size: 18px;
-              max-width: 200px;
+              max-width: 150px;
               &::placeholder {
                 font-family: "TT Hoves Medium";
                 font-weight: 500;
@@ -364,7 +364,7 @@
   height: 2px;
   background: $neutral-pure;
   top: 47%;
-  left: 25%;
+  left: 26%;
   transition: transform 0.3s ease;
 }
 

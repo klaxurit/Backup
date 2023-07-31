@@ -84,7 +84,7 @@
     }
   }
 
-  @media #{$lg} {
+  @media #{$xl} {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -147,7 +147,7 @@
   a {
     display: inline-block;
   }
-  @media #{$lg} {
+  @media #{$xl} {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
