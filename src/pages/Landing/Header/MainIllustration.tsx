@@ -21,6 +21,7 @@ export const MainIllustration: React.FC = () => {
           .then(() => {
           })
           .catch(error => {
+            console.log(error)
           });
       }
     }
