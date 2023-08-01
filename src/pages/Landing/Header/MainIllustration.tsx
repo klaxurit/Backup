@@ -7,7 +7,7 @@ export const MainIllustration: React.FC = () => {
 
   return (
     <div className="main-illustration">
-      <video playsInline autoPlay loop muted className="main-video">
+      <video playsInline autoPlay loop muted className="main-video" poster={MainIllustrationPNG}>
         <source src={MainIllustrationSVG} type="video/mp4" />
         <source src={MainIllustrationWEBM} type="video/webm" />
         <img className="main-img" src={MainIllustrationPNG} alt="Placeholder" />
