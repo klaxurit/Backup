@@ -5,6 +5,8 @@ import { Network } from "../../types";
 import { NetworkItem } from "../../components/NetworkItem";
 import { networks as networkData } from "../../types/networks";
 import useClickOutside from '../../hooks/useClickOutside';
+import useFilteredNetworks from '../../hooks/useFilteredNetworks';
+import useHandleOverlay from '../../hooks/useHandleOverlay';
 import { FilterSortOption } from "../../components/FilterSortOption";
 
 interface NetworkProps {
@@ -14,34 +16,32 @@ interface NetworkProps {
 export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => {
   const allButtonRef = useRef(null);
   const orderButtonRef = useRef(null);
-  const searchRef = useRef<HTMLInputElement>(null);
-  const [allButtonLabel, setAllButtonLabel] = useState('All');
-  const [liveStatus, setLiveStatus] = useState('All');
-  const [orderButtonLabel, setOrderButtonLabel] = useState('Order');
-  const [search, setSearch,] = useState('');
-  const [order, setOrder] = useState('');
   const [showAllOptions, setShowAllOptions] = useState(false);
   const [showOrderOptions, setShowOrderOptions] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-  const [showMobileOptions, setShowMobileOptions] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState<boolean>(false);
-  const [isClosing, setIsClosing] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
 
-  useClickOutside(allButtonRef, () => setShowAllOptions(false));
-  useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
+  const {
+    allButtonLabel,
+    setAllButtonLabel,
+    setLiveStatus,
+    orderButtonLabel,
+    setOrderButtonLabel,
+    search,
+    setSearch,
+    setOrder,
+    isTyping,
+    setIsTyping,
+    filteredNetworks
+  } = useFilteredNetworks(networks);
 
-  const filteredNetworks = networks.filter(network => {
-    const titleMatch = network.title.toLowerCase().startsWith(search.toLowerCase());
-
-    let liveMatch = true;
-    if (liveStatus === 'Live') {
-      liveMatch = network.live;
-    } else if (liveStatus === 'Testnets') {
-      liveMatch = !network.live;
-    }
-
-    return titleMatch && liveMatch;
-  });
+  const {
+    isOverlayVisible,
+    isClosing,
+    showMobileOptions,
+    handleLogoParamsClick,
+    handleLogoCrossClick,
+    handleDoneClick
+  } = useHandleOverlay();
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -58,35 +58,8 @@ export const Networks: React.FC<NetworkProps> = ({ networks = networkData }) => 
     };
   }, []);
 
-  if (order === 'A > Z') {
-    filteredNetworks.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (order === 'APR') {
-    filteredNetworks.sort((a, b) => b.metrics - a.metrics);
-  }
-
-  const handleLogoParamsClick = () => {
-    setIsOverlayVisible(!isOverlayVisible);
-    setShowMobileOptions(!showMobileOptions);
-  };
-
-  const handleLogoCrossClick = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setIsOverlayVisible(false);
-      setShowMobileOptions(false);
-      setIsClosing(false);
-    }, 200);
-  };
-
-  const handleDoneClick = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setIsOverlayVisible(false);
-      setShowMobileOptions(false);
-      setIsClosing(false);
-    }, 200);
-  };
-
+  useClickOutside(allButtonRef, () => setShowAllOptions(false));
+  useClickOutside(orderButtonRef, () => setShowOrderOptions(false));
 
   return (
     <div className="Networks">
