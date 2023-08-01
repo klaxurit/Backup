@@ -1,5 +1,5 @@
-import Header from './Header';
-import Products from './Products';
+import Header from './Header/Header';
+import Products from './Product/Products';
 import Swiper from './Swiper';
 import Contact from '../../components/Contact';
 import Cosmos from './Cosmos';
