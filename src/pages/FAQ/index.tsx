@@ -4,7 +4,7 @@ import { LogoArrowLink } from "../../components/SVGs";
 const FAQ: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
   const [activeQuestion, setActiveQuestion] = useState("question-1");
-  const [isScrolling, setIsScrolling] = useState(false); // new state
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +30,7 @@ const FAQ: React.FC = () => {
         const element = document.getElementById(questionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          const offset = 100; // Change this value to the desired offset
+          const offset = 100;
           const top = rect.top + window.pageYOffset - offset;
           window.scrollTo({ top: top, behavior: "smooth" });
         }

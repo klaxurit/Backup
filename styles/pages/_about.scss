@@ -20,7 +20,6 @@
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        // width: 90%;
         a {
           text-decoration: none;
         }
@@ -55,8 +54,6 @@
     &__facts {
       display: flex;
       flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       margin-top: -25px;
       width: 100%;
       background: $primary-light;
