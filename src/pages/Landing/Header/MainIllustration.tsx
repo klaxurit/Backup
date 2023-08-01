@@ -1,6 +1,6 @@
 import React from "react";
-import MainIllustrationSVG from "../../assets/images/Logo.mp4";
-import MainIllustrationWEBM from "../../assets/images/Logo.webm";
+import MainIllustrationSVG from "../../../assets/images/Logo.mp4";
+import MainIllustrationWEBM from "../../../assets/images/Logo.webm";
 
 export const MainIllustration: React.FC = () => {
 

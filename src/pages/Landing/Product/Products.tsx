@@ -1,8 +1,8 @@
 import { ProductItem } from "./ProductItem";
 
-import StakeLab from "../../assets/images/stakelab.svg";
-import AppLab from "../../assets/images/applab.svg";
-import DataLab from "../../assets/images/datalab.svg";
+import StakeLab from "../../../assets/images/stakelab.svg";
+import AppLab from "../../../assets/images/applab.svg";
+import DataLab from "../../../assets/images/datalab.svg";
 
 const Products: React.FC = () => {
   return (
